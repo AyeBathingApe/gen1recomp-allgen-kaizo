@@ -1,0 +1,16 @@
+{
+  "id": "gen1_kaizo",
+  "name": "Gen 1 Kaizo",
+  "version": "0.1.0",
+  "api": 2,
+  "entry": "main.lua",
+  "profile": "overhaul",
+  "category": "MECHANIC",
+  "game_version": ">=0.0.0-0 <2.0.0",
+  "priority": 100,
+  "dependencies": [],
+  "optional_dependencies": [],
+  "conflicts": [],
+  "github": "AyeBathingApe/gen1recomp-kaizo",
+  "description": "Kaizo-style difficulty: trainers run themed parties of six with a surprise ace at +3 levels, competitive movesets, and a competitive AI that exploits weaknesses; wild encounter pools widen to keep the player competitive."
+}

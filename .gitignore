@@ -1,0 +1,7 @@
+# Editor and OS noise; the release zip is built by .github/workflows/release.yml
+.vscode/
+.luarc.json
+Thumbs.db
+Desktop.ini
+*.zip
+dist/

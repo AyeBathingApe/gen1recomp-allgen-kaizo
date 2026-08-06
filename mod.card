@@ -1,0 +1,29 @@
+return {
+  summary   = "Trainers: six-mon themed teams, smart AI, +3 levels; wilds widen to match.",
+  author    = "Rafae",
+  tags      = { "hardcore", "balance", "data-only", "mechanics" },
+  differences = {
+    changed = {
+      "Trainer levels: a flat +3 on every Pokemon (static, no scaling)",
+      "Parties padded to 6 with varied species themed to the trainer class",
+      "Each padded party is closed by one surprise ace, one level above the old strongest",
+      "~55 species get a classic RBY competitive moveset on trainer teams",
+      "Trainer AI picks moves competitively: type-chart damage with STAB, status spreading, low-HP healing, situational setup and Explosion, never into an immunity",
+      "Each zone's rare encounter slots carry fresh progression-tier species",
+      "Wild levels: a flat +2 so catches stay viable against buffed trainers",
+    },
+    added = {},
+    known = {
+      "The first rival battle is left completely vanilla (one starter)",
+      "Padding species come from hand-picked per-class pools; unknown classes get a normal-type staple bench",
+      "Curated sets only apply from level 25 up; earlier teams (and early aces) keep vanilla moves",
+      "Movesets ride the trainer.party hook (registry party slots are schema-strict {level, species}); a slot already carrying moves from another mod is kept",
+      "Species without a curated set keep their vanilla trainer moves",
+      "The AI rewrites move choice only; switching and item use stay vanilla",
+      "Wild Pokemon keep the vanilla AI; only trainers fight smart",
+      "Common encounter slots keep each area's vanilla identity; only the rare tail changes",
+    },
+  },
+  credits   = {},
+  compat    = { engine = ">=0.0.0-0 <2.0.0", modApi = 2 },
+}
