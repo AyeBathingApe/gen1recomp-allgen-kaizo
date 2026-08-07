@@ -3,6 +3,19 @@
 All notable changes to this mod are documented here. Format follows
 [Keep a Changelog](https://keepachangelog.com/), versions follow semver.
 
+## 0.4.2 - 2026-08-07
+
+### Fixed
+
+- Load failure on real game data (`pokemon already registered: BULBASAUR`):
+  vanilla species whose engine id matches the PBS spelling -- nearly all
+  151 -- were misclassified as new and re-registered, which the registry
+  rejects against base data. Detection now probes the registry directly,
+  so vanilla species are patched in place (Genesis balance, vanilla art)
+  on every engine build. The dev fixture dataset has no Kanto species, so
+  the suite never hit the path; a seeded-base-species regression test now
+  covers it.
+
 ## 0.4.1 - 2026-08-06
 
 ### Changed

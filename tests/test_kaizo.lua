@@ -11,6 +11,16 @@ package.path = "./?.lua;./?/init.lua;" .. package.path
 local T = require("tests.modkit")
 
 local Data = T.fixtures.fresh()
+-- Seed one vanilla-style base species whose engine id equals its PBS
+-- spelling: the mod must patch it in place, never re-register it (the
+-- registry collides register against base data -- the v0.4.1 device bug).
+Data.pokemon.BULBASAUR = {
+  id = "BULBASAUR", name = "Bulbasaur", dex = 1,
+  types = { "FIX_NORMAL" },
+  baseStats = { hp = 45, attack = 49, defense = 49, speed = 45, special = 65 },
+  catchRate = 255, baseExp = 64, growthRate = "MEDIUM_SLOW",
+  level1Moves = { "FIX_TACKLE" }, learnset = {}, evolutions = {},
+}
 local run = T.sdk.loadMod("mods/gen1_kaizo", { data = Data })
 T.eq(#run.errors, 0, "loads clean")
 
@@ -68,6 +78,12 @@ if hasGen then
   T.check(Data.pokemon.TOGEPI ~= nil, "new species TOGEPI registered")
   T.check(Data.pokemon.TOGEPI.baseStats.special ~= nil,
     "SpA/SpD folded into Gen 1 special")
+  -- The seeded base species was patched in place: Genesis types landed,
+  -- vanilla art fields stayed untouched, and no duplicate registration.
+  T.check(Data.pokemon.BULBASAUR.types[1] == "GRASS",
+    "vanilla-id species patched with Genesis types")
+  T.check(Data.pokemon.BULBASAUR.spriteFront == nil,
+    "vanilla-id species keeps vanilla art")
 
   -- Integration: with the whole dex registered, the fixture trainer's
   -- bench fills to six from the Genesis pools, the route's rare tail

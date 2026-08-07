@@ -505,7 +505,10 @@ return function(mod)
                                      species = speciesId[evo.species] })
       end
       local finalId = speciesId[sp.id]
-      if finalId ~= sp.id then
+      -- probe the registry, never the id spelling: a vanilla id that
+      -- matches its PBS spelling (BULBASAUR) must patch -- register
+      -- collides against the engine's base data
+      if pokemonReg:get(finalId) ~= nil then
         -- vanilla species: Genesis balance in place, vanilla art kept
         pokemonReg:patch(finalId, {
           types = sp.types,
