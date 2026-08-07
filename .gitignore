@@ -5,3 +5,6 @@ Thumbs.db
 Desktop.ini
 *.zip
 dist/
+
+# generated PBS port data -- ships once main.lua wires it in
+gen/
