@@ -6,5 +6,5 @@ Desktop.ini
 *.zip
 dist/
 
-# generated PBS port data -- ships once main.lua wires it in
-gen/
+# converter working notes stay local; the data pack itself ships
+gen/REPORT.txt

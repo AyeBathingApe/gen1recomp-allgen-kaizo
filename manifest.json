@@ -1,7 +1,7 @@
 {
   "id": "gen1_kaizo",
   "name": "Gen 1 Kaizo Genesis",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "api": 2,
   "entry": "main.lua",
   "profile": "overhaul",

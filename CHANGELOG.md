@@ -3,13 +3,14 @@
 All notable changes to this mod are documented here. Format follows
 [Keep a Changelog](https://keepachangelog.com/), versions follow semver.
 
-## Unreleased
+## 0.2.0 - 2026-08-06
 
 ### Added
 
 - Genesis roster: the mod becomes Gen 1 Kaizo Genesis. A generated
   RBGenesis data pack (gen/, produced by tools/pbs_convert.py from
-  Pokemon Essentials PBS data) registers the modern type chart (DARK,
+  Pokemon Essentials PBS data, with fan-made battler art) registers the
+  modern type chart (DARK,
   STEEL, FAIRY, SHADOW plus 61 updated matchup rows), 759 moves, and an
   expanded dex of 800+ species with SpA/SpD folded into the Gen 1
   special stat. Vanilla species and moves keep their engine ids: moves
