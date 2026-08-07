@@ -36,7 +36,8 @@ end
 
 -- Stated effect #3: static wild level bump (+2) on grass/water slots.
 -- Fixture: FIX_ROUTE grass = level-3 FIXMON_A, level-4 FIXMON_C. Rare-slot
--- species swaps also require registered species, so here only levels move.
+-- species swaps require registered species: with the gen/ pack present the
+-- rare tail carries a Genesis newcomer, without it only levels move.
 local route = Data.encounters.FIX_ROUTE
 T.check(route and route.grass and type(route.grass.slots) == "table",
   "fixture route present")
@@ -62,9 +63,19 @@ if hasGen then
   hasGen:close()
   T.check(Data.type_chart.types.DARK ~= nil, "DARK type registered")
   T.check(Data.moves.DARKPULSE ~= nil, "new move DARKPULSE registered")
+  T.check(Data.moves.SPORE ~= nil, "new move SPORE registered")
   T.check(Data.pokemon.TOGEPI ~= nil, "new species TOGEPI registered")
   T.check(Data.pokemon.TOGEPI.baseStats.special ~= nil,
     "SpA/SpD folded into Gen 1 special")
+
+  -- Integration: with the whole dex registered, the fixture trainer's
+  -- bench fills to six from the Genesis pools, and the route's rare
+  -- tail slot carries a newcomer instead of its fixture native.
+  T.eq(#party, 6, "party padded to six from the Genesis bench")
+  T.check(route.grass.slots[2].species ~= "FIXMON_C",
+    "rare grass slot swapped for a fresh species")
+  T.check(Data.pokemon[route.grass.slots[2].species] ~= nil,
+    "swapped-in wild species exists in the registry")
 else
   print("note: gen/ data pack absent; Genesis checks skipped")
 end

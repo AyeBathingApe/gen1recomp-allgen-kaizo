@@ -84,9 +84,41 @@ GROWTH_MAP = {
 }
 
 # Essentials function code -> engine move_effects id, only where the mapping
-# is certain; everything else defers to NO_ADDITIONAL_EFFECT and the report
+# is certain; everything else defers to NO_ADDITIONAL_EFFECT and the report.
+# main.lua additionally infers effects at load time by matching fn codes
+# against the vanilla moves the engine already carries.
 FN_EFFECT_MAP = {
     "000": "NO_ADDITIONAL_EFFECT",
+}
+
+# Essentials evolution items -> engine item ids (src/inventory/ItemEffects
+# STONES); the second map is nearest-stone approximations for stones the
+# Gen 1 engine never had.
+EVO_ITEM_MAP = {
+    "FIRESTONE": "FIRE_STONE", "WATERSTONE": "WATER_STONE",
+    "THUNDERSTONE": "THUNDER_STONE", "LEAFSTONE": "LEAF_STONE",
+    "MOONSTONE": "MOON_STONE",
+}
+EVO_ITEM_APPROX = {
+    "SUNSTONE": "LEAF_STONE", "SHINYSTONE": "MOON_STONE",
+    "DUSKSTONE": "MOON_STONE", "DAWNSTONE": "MOON_STONE",
+    "ICESTONE": "WATER_STONE", "OVALSTONE": "MOON_STONE",
+}
+
+# conditional level-up methods the engine can express as a plain level
+EVO_LEVEL_METHODS = {
+    "Level", "LevelMale", "LevelFemale", "LevelDay", "LevelNight",
+    "LevelRain", "LevelDarkInParty", "AttackGreater", "DefenseGreater",
+    "AtkDefEqual", "Silcoon", "Cascoon", "Ninjask",
+}
+
+# methods with no level: approximate with a fixed level-up so every chain
+# stays completable (happiness lines evolve early, trade-hold lines late)
+EVO_LEVEL_APPROX = {
+    "Happiness": 30, "HappinessDay": 30, "HappinessNight": 30,
+    "HappinessMoveType": 30, "Beauty": 30,
+    "HasMove": 32, "HasInParty": 32, "Location": 32,
+    "HoldItem": 38, "DayHoldItem": 38, "NightHoldItem": 38,
 }
 
 TILE = 8
@@ -393,13 +425,42 @@ def build_species_output(species, move_ids, real_type_ids, opts, report):
                 report.append("species %s: evolution target %s outside "
                               "output set, dropped" % (sp["id"], target))
                 continue
-            if method == "Level" and param.isdigit():
+            if method in EVO_LEVEL_METHODS and param.isdigit():
                 evos.append(OrderedDict([("method", "LEVEL"),
                                          ("level", int(param)),
                                          ("species", target)]))
-            elif method == "Trade" and not param:
+                if method != "Level":
+                    report.append("species %s: %s condition dropped, plain "
+                                  "level %s" % (sp["id"], method, param))
+            elif method == "Trade":
                 evos.append(OrderedDict([("method", "TRADE"),
                                          ("species", target)]))
+                if param:
+                    report.append("species %s: trade held item %s ignored"
+                                  % (sp["id"], param))
+            elif method in ("Item", "ItemMale", "ItemFemale"):
+                stone = EVO_ITEM_MAP.get(param) or EVO_ITEM_APPROX.get(param)
+                if stone:
+                    evos.append(OrderedDict([("method", "ITEM"),
+                                             ("item", stone),
+                                             ("species", target)]))
+                    if param in EVO_ITEM_APPROX or method != "Item":
+                        report.append("species %s: %s(%s) -> ITEM %s "
+                                      "(approximation)"
+                                      % (sp["id"], method, param, stone))
+                else:
+                    evos.append(OrderedDict([("method", "LEVEL"),
+                                             ("level", 36),
+                                             ("species", target)]))
+                    report.append("species %s: Item(%s) has no Gen 1 stone, "
+                                  "level 36 instead" % (sp["id"], param))
+            elif method in EVO_LEVEL_APPROX:
+                evos.append(OrderedDict([("method", "LEVEL"),
+                                         ("level", EVO_LEVEL_APPROX[method]),
+                                         ("species", target)]))
+                report.append("species %s: %s(%s) -> level %d approximation"
+                              % (sp["id"], method, param,
+                                 EVO_LEVEL_APPROX[method]))
             else:
                 deferred_evos.append("%s -> %s via %s(%s)"
                                      % (sp["id"], target, method, param))
@@ -428,8 +489,8 @@ def build_species_output(species, move_ids, real_type_ids, opts, report):
         rec["dexEntry"] = dex_entry(sp)
         out.append(rec)
     if deferred_evos:
-        report.append("evolutions deferred (%d): need custom methods/items:"
-                      % len(deferred_evos))
+        report.append("evolutions still deferred (%d): no sane Gen 1 "
+                      "equivalent:" % len(deferred_evos))
         for line in deferred_evos:
             report.append("  " + line)
     return out

@@ -12,9 +12,11 @@
 --
 -- To keep the player competitive, each area's encounter pool is widened:
 -- the rare slots of every zone are replaced with fresh, progression-
--- appropriate species (Abra, Machop, Growlithe early; Scyther, Tangela
--- mid; Dratini, Lapras late), and wild levels get a small static bump so
--- catches stay viable against buffed trainers.
+-- appropriate species drawn from the classic pools AND the Genesis dex
+-- (each map hashes to its own picks, so the new species spread across
+-- the whole region), and wild levels get a small static bump so
+-- catches stay viable against buffed trainers. Trainer benches draw
+-- from the Genesis dex the same way, themed to each class's types.
 --
 -- Follows the gallery discipline (see mods/examples/example_balance_tweaks):
 -- team and encounter changes are patch + each over the merged view, and
@@ -37,7 +39,8 @@
 local PARTY_SIZE       = 6   -- every trainer fields a full team
 local LEVEL_BONUS      = 3   -- flat, static level increase for every trainer Pokemon
 local WILD_LEVEL_BONUS = 2   -- flat, static level increase for wild encounters
-local RARE_SLOT_COUNT  = 3   -- rare slots per zone replaced with fresh species
+local RARE_SLOT_COUNT  = 4   -- rare slots per zone replaced with fresh species
+local BENCH_PICKS      = 3   -- genesis species offered to each trainer bench
 local SET_MIN_LEVEL    = 25  -- curated sets only apply at/above this level, so
                              -- endgame TM sets never appear in the first hour
 local LEVEL_CAP        = 100
@@ -266,6 +269,14 @@ return function(mod)
     return sp ~= nil and pokemonReg ~= nil and pokemonReg:get(sp) ~= nil
   end
 
+  -- Genesis species pools, filled while the roster registers: land/water
+  -- wild tiers parallel to LAND_TIERS/WATER_TIERS, and a by-type index
+  -- for class-themed trainer benches. Empty in classic mode, so every
+  -- consumer degrades to the vanilla pools.
+  local genesisLandTiers = { {}, {}, {}, {} }
+  local genesisWaterTiers = { {}, {} }
+  local genesisByType = {}
+
   -- -------------------------------------------------------------------
   -- 0. Genesis roster: the generated RBGenesis port (tools/pbs_convert.py
   --    output under gen/) registers the modern types + type chart, every
@@ -335,20 +346,77 @@ return function(mod)
 
     -- Moves: an engine move of the same underscore-stripped name is the
     -- same move -- alias to it so vanilla effects (sleep, paralysis,
-    -- Hyper Beam recharge) stay authoritative. Everything else registers;
-    -- ported effects land in a later phase, so new status moves are
-    -- placeholders until then (REPORT.txt lists them).
+    -- Hyper Beam recharge) stay authoritative. The aliased pairs double
+    -- as a Rosetta stone: each Essentials fn code is tallied against the
+    -- engine effect its vanilla moves carry (split by damaging/status
+    -- shape and proc-chance bucket), and new moves inherit the majority
+    -- vote -- so Spore sleeps like Sleep Powder and Dark Pulse flinches
+    -- like Bite. Codes with no vanilla witness stay plain damage.
+    local metaById = {}
+    for _, m in ipairs(genMoves.meta or {}) do metaById[m.id] = m end
+    local function fnKeys(mv)
+      local meta = metaById[mv.id]
+      if not (meta and meta.fn) then return nil end
+      local form = (mv.power or 0) > 0 and "d" or "s"
+      local chance = meta.effectChance or 0
+      local bucket = chance >= 25 and "hi" or chance > 0 and "lo" or "0"
+      return { meta.fn .. "|" .. form .. "|" .. bucket,
+               meta.fn .. "|" .. form, meta.fn }
+    end
+
     local engineMoveByNorm = {}
     for id in moves:each() do
       engineMoveByNorm[id:gsub("_", "")] = id
     end
-    local moveId, newMoves = {}, 0
+    local moveId, tally = {}, {}
     for _, mv in ipairs(genMoves.moves) do
       local engineId = engineMoveByNorm[mv.id:gsub("_", "")]
       if engineId then
         moveId[mv.id] = engineId
-      else
+        local rec = moves:get(engineId)
+        local keys = rec and rec.effect and fnKeys(mv)
+        if keys then
+          for _, key in ipairs(keys) do
+            local votes = tally[key] or {}
+            tally[key] = votes
+            local v = votes[rec.effect] or { count = 0, exemplar = rec }
+            v.count = v.count + 1
+            votes[rec.effect] = v
+          end
+        end
+      end
+    end
+    local function inferEffect(mv)
+      for _, key in ipairs(fnKeys(mv) or {}) do
+        local votes = tally[key]
+        if votes then
+          local bestEffect, best
+          for effect, v in pairs(votes) do
+            if not best or v.count > best.count
+               or (v.count == best.count and effect < bestEffect) then
+              bestEffect, best = effect, v
+            end
+          end
+          if bestEffect then return bestEffect, best.exemplar end
+        end
+      end
+      return nil
+    end
+
+    local newMoves, inferred = 0, 0
+    for _, mv in ipairs(genMoves.moves) do
+      if not moveId[mv.id] then
         mv.type = typeId(mv.type)
+        local effect, exemplar = inferEffect(mv)
+        if effect and effect ~= mv.effect then
+          mv.effect = effect
+          -- damage-shape fields travel with the effect (multi-hit
+          -- counts, fixed damage, Fly/Dig invulnerability)
+          mv.multiHit = exemplar.multiHit
+          mv.fixedDamage = exemplar.fixedDamage
+          mv.semiInvulnerable = exemplar.semiInvulnerable
+          inferred = inferred + 1
+        end
         moves:register(mv.id, mv)
         moveId[mv.id] = mv.id
         newMoves = newMoves + 1
@@ -381,13 +449,27 @@ return function(mod)
       end
       speciesId[sp.id] = found or sp.id
     end
+
+    -- Stone-method rows only survive when the stone actually exists in
+    -- the merged items registry; otherwise the row falls back to a
+    -- level-up so the chain stays completable everywhere.
+    local items = mod.content.items
+    local function guardEvo(evo)
+      if evo.item and not (items and items:get(evo.item)) then
+        return { method = "LEVEL", level = evo.level or 36,
+                 species = evo.species }
+      end
+      return evo
+    end
+
     local patched, registered = 0, 0
     for _, sp in ipairs(genSpecies.species) do
       for i, t in ipairs(sp.types) do sp.types[i] = typeId(t) end
       local evos = {}
       for _, evo in ipairs(sp.evolutions) do
-        evos[#evos + 1] = { method = evo.method, level = evo.level,
-                            species = speciesId[evo.species] }
+        evos[#evos + 1] = guardEvo({ method = evo.method, level = evo.level,
+                                     item = evo.item,
+                                     species = speciesId[evo.species] })
       end
       local finalId = speciesId[sp.id]
       if finalId ~= sp.id then
@@ -420,11 +502,36 @@ return function(mod)
         sp.spriteBack = mod.path .. "/" .. sp.spriteBack
         pokemonReg:register(sp.id, sp)
         registered = registered + 1
+
+        -- File the newcomer into the wild tiers and the by-type bench
+        -- index; strength bands use the folded base stat total.
+        local s = sp.baseStats
+        local bst = s.hp + s.attack + s.defense + s.speed + s.special
+        if bst <= 545 then
+          local tier = bst <= 320 and 1 or bst <= 400 and 2
+            or bst <= 480 and 3 or 4
+          local land = genesisLandTiers[tier]
+          land[#land + 1] = sp.id
+          for _, t in ipairs(sp.types) do
+            if t == "WATER" then
+              local water = genesisWaterTiers[bst <= 400 and 1 or 2]
+              water[#water + 1] = sp.id
+              break
+            end
+          end
+        end
+        for _, t in ipairs(sp.types) do
+          local bucket = genesisByType[t] or {}
+          genesisByType[t] = bucket
+          bucket[#bucket + 1] = { id = sp.id, bst = bst }
+        end
       end
     end
     mod.log:info("genesis roster: %d new types, %d chart rows, %d new "
-      .. "moves, %d species patched, %d species registered",
-      #genTypes.types, #genTypes.matchups, newMoves, patched, registered)
+      .. "moves (%d with inferred effects), %d species patched, "
+      .. "%d species registered",
+      #genTypes.types, #genTypes.matchups, newMoves, inferred,
+      patched, registered)
   end
 
   -- -------------------------------------------------------------------
@@ -433,6 +540,47 @@ return function(mod)
   --    strict {level, species}, so this pass is levels + padding only;
   --    movesets ride the trainer.party hook below.
   -- -------------------------------------------------------------------
+
+  -- A class's type flavor, read off its own bench's registered types (so
+  -- Genesis retypings count), cached per theme table.
+  local themeTypesCache = {}
+  local function themeTypes(theme)
+    local cached = themeTypesCache[theme]
+    if cached then return cached end
+    local set, list = {}, {}
+    local members = { theme.ace }
+    for _, sp in ipairs(theme.pool) do members[#members + 1] = sp end
+    for _, sp in ipairs(members) do
+      local rec = pokemonReg and pokemonReg:get(sp)
+      for _, t in ipairs(rec and rec.types or {}) do
+        if not set[t] then set[t] = true; list[#list + 1] = t end
+      end
+    end
+    themeTypesCache[theme] = list
+    return list
+  end
+
+  -- Up to `count` Genesis newcomers that fit the class's types, capped
+  -- by bench level so early trainers field early-strength species.
+  local function genesisBench(theme, seed, level, count)
+    local cap = 280 + level * 5
+    local candidates = {}
+    for _, t in ipairs(themeTypes(theme)) do
+      for _, c in ipairs(genesisByType[t] or {}) do
+        if c.bst <= cap then candidates[#candidates + 1] = c.id end
+      end
+    end
+    local picks = {}
+    if #candidates == 0 then return picks end
+    local start, offset, seen = seed % #candidates, 0, {}
+    while #picks < count and offset < #candidates do
+      local sp = candidates[(start + offset) % #candidates + 1]
+      offset = offset + 1
+      if not seen[sp] then seen[sp] = true; picks[#picks + 1] = sp end
+    end
+    return picks
+  end
+
   local buffed, skippedRival = 0, 0
   for id, trainer in trainers:each() do
     local parties = trainer.parties
@@ -460,14 +608,22 @@ return function(mod)
             if slot.species then used[slot.species] = true end
           end
 
-          -- Fill to six with varied species from the class's own bench,
-          -- at levels just under the team's strongest, closed out by one
-          -- surprise ace a notch above it.
+          -- Fill to six with varied species from the class's own bench --
+          -- extended with type-matched Genesis newcomers -- at levels just
+          -- under the team's strongest, closed out by one surprise ace a
+          -- notch above it.
           if #newParty < PARTY_SIZE and maxLevel > 0 then
+            local benchLevel = math.max(2, maxLevel - 1)
             local pool = theme.pool
+            local extras = genesisBench(theme, hashId(tostring(id)),
+              benchLevel, BENCH_PICKS)
+            if #extras > 0 then
+              pool = {}
+              for _, sp in ipairs(theme.pool) do pool[#pool + 1] = sp end
+              for _, sp in ipairs(extras) do pool[#pool + 1] = sp end
+            end
             local start = hashId(tostring(id) .. "#" .. pi) % #pool
             local offset = 0
-            local benchLevel = math.max(2, maxLevel - 1)
             while #newParty < PARTY_SIZE - 1 and offset < #pool * 2 do
               local sp = pool[(start + offset) % #pool + 1]
               offset = offset + 1
@@ -699,13 +855,26 @@ return function(mod)
           if slot.species then present[slot.species] = true end
         end
 
-        -- Swap the rare tail slots for fresh species. Common slots keep
-        -- the area's identity; the rares become the reason to explore.
+        -- Swap the rare tail slots for fresh species: the classic tier
+        -- pool plus every Genesis newcomer in the zone's strength band.
+        -- Each map hashes to its own starting pick, so the new dex
+        -- spreads across the whole region instead of repeating.
         if maxLevel > 0 then
           local tiers = zoneName == "water" and WATER_TIERS or LAND_TIERS
+          local genTiers = zoneName == "water" and genesisWaterTiers
+            or genesisLandTiers
           local pool
-          for _, tier in ipairs(tiers) do
-            if maxLevel <= tier.max then pool = tier.pool; break end
+          for ti, tier in ipairs(tiers) do
+            if maxLevel <= tier.max then
+              pool = tier.pool
+              local extra = genTiers[ti]
+              if extra and #extra > 0 then
+                pool = {}
+                for _, sp in ipairs(tier.pool) do pool[#pool + 1] = sp end
+                for _, sp in ipairs(extra) do pool[#pool + 1] = sp end
+              end
+              break
+            end
           end
           local replaceCount = #newSlots >= 6 and RARE_SLOT_COUNT or 1
           local slotIndex = #newSlots - replaceCount + 1

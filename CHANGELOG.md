@@ -3,6 +3,35 @@
 All notable changes to this mod are documented here. Format follows
 [Keep a Changelog](https://keepachangelog.com/), versions follow semver.
 
+## 0.3.0 - 2026-08-06
+
+### Added
+
+- Genesis integration: wild rare slots and trainer benches now draw from
+  the full Genesis dex. Each zone's rare tail (now 4 slots) mixes the
+  classic tier pools with every newcomer in the zone's strength band,
+  hashed per map so the new species spread across the whole region; each
+  trainer's bench offers up to 3 type-matched Genesis species capped by
+  bench level, so classes keep their flavor while fielding the new dex.
+- Move effect inference: each Essentials function code is matched against
+  the vanilla moves the engine already carries (by damage shape and
+  proc-chance bucket), and new moves inherit the winning effect -- Spore
+  sleeps like Sleep Powder, Dark Pulse flinches like Bite, and multi-hit/
+  fixed-damage/semi-invulnerable shapes travel with it. Roughly 240 of
+  594 new moves gain real Gen 1 effects; the rest are Gen 2+ mechanics
+  with no Gen 1 equivalent and stay plain damage.
+- Evolution mapping: stone evolutions map to the five Gen 1 stones
+  (nearest-stone approximations for newer stones), conditional level-ups
+  keep their level, and happiness/held-item/location methods become
+  fixed level-ups (30/38/32) so every chain stays completable. Only
+  Nincada's Shedinja split remains unported. Stone rows fall back to
+  level-ups on engines whose items registry lacks the stone.
+
+### Fixed
+
+- Trainer padding and wild swaps now recognize the expanded registry, so
+  parties reliably reach six and rare slots always find a fresh species.
+
 ## 0.2.0 - 2026-08-06
 
 ### Added
