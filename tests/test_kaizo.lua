@@ -45,10 +45,12 @@ T.eq(route.grass.slots[2].level, 6, "grass slot 2 bumped 4 -> 6")
 
 -- Stated effect #4: both battle seams are armed -- trainer.party carries
 -- the curated movesets past the schema-strict registry slots, and
--- battle.enemy_action carries the competitive AI.
-local Runtime = require("src.mods.Runtime")
-T.check(Runtime.wantsHook("trainer.party"), "trainer.party hook registered")
-T.check(Runtime.wantsHook("battle.enemy_action"), "battle.enemy_action hook registered")
+-- battle.enemy_action carries the competitive AI. The loader's own hook
+-- bus is queried (run.loader.hooks) rather than engine internals, so no
+-- engine_internals permission is needed.
+local chains = run.loader.hooks.chains
+T.check(chains["trainer.party"] ~= nil, "trainer.party hook registered")
+T.check(chains["battle.enemy_action"] ~= nil, "battle.enemy_action hook registered")
 
 run.release()
 T.finish("gen1_kaizo")
