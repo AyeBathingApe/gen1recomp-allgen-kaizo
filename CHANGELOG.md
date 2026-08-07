@@ -3,6 +3,36 @@
 All notable changes to this mod are documented here. Format follows
 [Keep a Changelog](https://keepachangelog.com/), versions follow semver.
 
+## 0.4.0 - 2026-08-06
+
+### Added
+
+- Starter generations: touching the first ball in Oak's lab opens a menu
+  asking which region's trio (Kanto through Alola; Galar's trio lacks
+  battler art) fills the three balls. Each ball keeps its element --
+  grass in Bulbasaur's ball, fire in Charmander's, water in Squirtle's --
+  so the rival still counter-picks the Gen 1 elemental answer to your
+  choice and his rosters stay coherent for the whole run. The pick is
+  remembered per save file.
+- Legendary dens: legendaries and mythicals (standalone species with
+  legendary catch rates or plainly overpowered stat totals -- 57 of them)
+  are pulled out of the wild tiers and trainer benches and instead haunt
+  one rare slot in each late-game grass zone (zone strength 25+), hashed
+  per map, sitting 7 levels above the local ceiling with their real
+  (brutal) catch rates. Mewtwo, the birds, and Mew keep their vanilla
+  static encounters.
+
+### Fixed
+
+- The Pokedex now pages through the entire Genesis dex: `dexSize` is
+  widened to the highest registered dex number (865) instead of stopping
+  at 151.
+- Wild tier bands rebalanced for folded stat totals (Special = averaged
+  SpA/SpD); the top band previously held only 10 species, starving
+  late-game zones of variety.
+- Trainer bench strength cap clamped so very high-level benches can't
+  reach past the wild-tier ceiling.
+
 ## 0.3.0 - 2026-08-06
 
 ### Added

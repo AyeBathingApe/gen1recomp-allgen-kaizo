@@ -2,7 +2,9 @@
 -- keeps pace -- on a dramatically expanded roster. The generated
 -- RBGenesis port (gen/, from tools/pbs_convert.py) registers the modern
 -- type chart, every portable move, and the full 900+ species dex;
--- vanilla species are rebalanced in place. Every trainer fields a full
+-- vanilla species are rebalanced in place. In Oak's lab the player picks
+-- which region's starter trio fills the three balls (the rival still
+-- counter-picks his Gen 1 elemental answer). Every trainer fields a full
 -- party of six padded with varied
 -- species that fit the trainer's class, topped by one surprise ace, at a
 -- flat static level bump. Species with a known competitive Gen 1 set get
@@ -41,6 +43,8 @@ local LEVEL_BONUS      = 3   -- flat, static level increase for every trainer Po
 local WILD_LEVEL_BONUS = 2   -- flat, static level increase for wild encounters
 local RARE_SLOT_COUNT  = 4   -- rare slots per zone replaced with fresh species
 local BENCH_PICKS      = 3   -- genesis species offered to each trainer bench
+local LEGEND_MIN_LEVEL = 25  -- zones at/above this strength may hide a legendary
+local LEGEND_LEVEL_UP  = 7   -- the den legendary sits this far above the zone
 local SET_MIN_LEVEL    = 25  -- curated sets only apply at/above this level, so
                              -- endgame TM sets never appear in the first hour
 local LEVEL_CAP        = 100
@@ -171,6 +175,23 @@ local GENERIC_THEME = {
   ace  = "KANGASKHAN",
 }
 
+-- Starter trios by region, element-aligned to the vanilla balls: the
+-- grass pick sits in Bulbasaur's ball, fire in Charmander's, water in
+-- Squirtle's. A region is only offered when its whole trio made it into
+-- the registry. Galar is out: Scorbunny/Sobble lack battler art.
+local STARTER_GENS = {
+  { label = "KANTO",  grass = "BULBASAUR", fire = "CHARMANDER", water = "SQUIRTLE" },
+  { label = "JOHTO",  grass = "CHIKORITA", fire = "CYNDAQUIL",  water = "TOTODILE" },
+  { label = "HOENN",  grass = "TREECKO",   fire = "TORCHIC",    water = "MUDKIP" },
+  { label = "SINNOH", grass = "TURTWIG",   fire = "CHIMCHAR",   water = "PIPLUP" },
+  { label = "UNOVA",  grass = "SNIVY",     fire = "TEPIG",      water = "OSHAWOTT" },
+  { label = "KALOS",  grass = "CHESPIN",   fire = "FENNEKIN",   water = "FROAKIE" },
+  { label = "ALOLA",  grass = "ROWLET",    fire = "LITTEN",     water = "POPPLIO" },
+}
+local BALL_SPECIES = {
+  BULBASAUR = "grass", CHARMANDER = "fire", SQUIRTLE = "water",
+}
+
 -- Wild-encounter variety pools, picked by the zone's strongest slot level
 -- so what you can catch keeps pace with what you are fighting. Land and
 -- water zones draw from separate pools; a species already native to the
@@ -270,12 +291,14 @@ return function(mod)
   end
 
   -- Genesis species pools, filled while the roster registers: land/water
-  -- wild tiers parallel to LAND_TIERS/WATER_TIERS, and a by-type index
-  -- for class-themed trainer benches. Empty in classic mode, so every
-  -- consumer degrades to the vanilla pools.
+  -- wild tiers parallel to LAND_TIERS/WATER_TIERS, a by-type index for
+  -- class-themed trainer benches, and the legendary/mythical set kept
+  -- out of both and placed as late-zone dens instead. Empty in classic
+  -- mode, so every consumer degrades to the vanilla pools.
   local genesisLandTiers = { {}, {}, {}, {} }
   local genesisWaterTiers = { {}, {} }
   local genesisByType = {}
+  local genesisLegends = {}
 
   -- -------------------------------------------------------------------
   -- 0. Genesis roster: the generated RBGenesis port (tools/pbs_convert.py
@@ -462,8 +485,18 @@ return function(mod)
       return evo
     end
 
-    local patched, registered = 0, 0
+    -- Evolution family map (PBS id space) so standalone species --
+    -- legendaries and mythicals -- are recognizable below.
+    local evoTargetOf = {}
     for _, sp in ipairs(genSpecies.species) do
+      for _, evo in ipairs(sp.evolutions) do
+        evoTargetOf[evo.species] = true
+      end
+    end
+
+    local patched, registered, maxDex = 0, 0, 151
+    for _, sp in ipairs(genSpecies.species) do
+      if type(sp.dex) == "number" and sp.dex > maxDex then maxDex = sp.dex end
       for i, t in ipairs(sp.types) do sp.types[i] = typeId(t) end
       local evos = {}
       for _, evo in ipairs(sp.evolutions) do
@@ -503,35 +536,53 @@ return function(mod)
         pokemonReg:register(sp.id, sp)
         registered = registered + 1
 
-        -- File the newcomer into the wild tiers and the by-type bench
-        -- index; strength bands use the folded base stat total.
+        -- File the newcomer: legendaries and mythicals (standalone with
+        -- a legendary catch rate, or standalone and plainly overpowered)
+        -- go to the den pool; everyone else joins the wild tiers and the
+        -- by-type bench index. Strength bands use the folded stat total.
         local s = sp.baseStats
         local bst = s.hp + s.attack + s.defense + s.speed + s.special
-        if bst <= 545 then
-          local tier = bst <= 320 and 1 or bst <= 400 and 2
-            or bst <= 480 and 3 or 4
-          local land = genesisLandTiers[tier]
-          land[#land + 1] = sp.id
-          for _, t in ipairs(sp.types) do
-            if t == "WATER" then
-              local water = genesisWaterTiers[bst <= 400 and 1 or 2]
-              water[#water + 1] = sp.id
-              break
+        local standalone = #sp.evolutions == 0 and not evoTargetOf[sp.id]
+        if standalone
+           and (sp.catchRate <= 5 or (bst >= 490 and sp.catchRate <= 45)) then
+          genesisLegends[#genesisLegends + 1] = sp.id
+        else
+          if bst <= 545 then
+            -- bands sized for FOLDED totals (SpA/SpD averaged), which run
+            -- ~60 under 6-stat BSTs: 310/370/430 splits the pool evenly
+            local tier = bst <= 310 and 1 or bst <= 370 and 2
+              or bst <= 430 and 3 or 4
+            local land = genesisLandTiers[tier]
+            land[#land + 1] = sp.id
+            for _, t in ipairs(sp.types) do
+              if t == "WATER" then
+                local water = genesisWaterTiers[bst <= 370 and 1 or 2]
+                water[#water + 1] = sp.id
+                break
+              end
             end
           end
-        end
-        for _, t in ipairs(sp.types) do
-          local bucket = genesisByType[t] or {}
-          genesisByType[t] = bucket
-          bucket[#bucket + 1] = { id = sp.id, bst = bst }
+          for _, t in ipairs(sp.types) do
+            local bucket = genesisByType[t] or {}
+            genesisByType[t] = bucket
+            bucket[#bucket + 1] = { id = sp.id, bst = bst }
+          end
         end
       end
     end
+
+    -- The Pokedex list iterates 1..constants.dexSize; widen it so every
+    -- Genesis entry paginates in (seen/owned are id-keyed sets already).
+    local constants = mod.content.constants
+    if constants and maxDex > 151 then
+      constants:patch("dexSize", maxDex)
+    end
     mod.log:info("genesis roster: %d new types, %d chart rows, %d new "
       .. "moves (%d with inferred effects), %d species patched, "
-      .. "%d species registered",
+      .. "%d species registered (%d legendaries reserved for dens), "
+      .. "dex widened to %d",
       #genTypes.types, #genTypes.matchups, newMoves, inferred,
-      patched, registered)
+      patched, registered, #genesisLegends, maxDex)
   end
 
   -- -------------------------------------------------------------------
@@ -561,9 +612,10 @@ return function(mod)
   end
 
   -- Up to `count` Genesis newcomers that fit the class's types, capped
-  -- by bench level so early trainers field early-strength species.
+  -- by bench level so early trainers field early-strength species (and
+  -- never a legendary: the den pool is excluded from the type index).
   local function genesisBench(theme, seed, level, count)
-    local cap = 280 + level * 5
+    local cap = math.min(280 + level * 5, 545)
     local candidates = {}
     for _, t in ipairs(themeTypes(theme)) do
       for _, c in ipairs(genesisByType[t] or {}) do
@@ -822,6 +874,109 @@ return function(mod)
   mod.log:info("kaizo: competitive trainer AI armed (battle.enemy_action)")
 
   -- -------------------------------------------------------------------
+  -- 3b. Starter generations. At the first starter ball in Oak's lab the
+  --    player is asked which region's trio sits in the three balls.
+  --    Each ball keeps its element -- the grass pick sits in Bulbasaur's
+  --    ball, fire in Charmander's, water in Squirtle's -- so the vanilla
+  --    counter-pick logic holds untouched: the rival grabs the Gen 1
+  --    elemental starter that beats yours, and his later rosters (built
+  --    from that Gen 1 line) stay coherent. The seam is the
+  --    script.command hook: the ball scripts' dex preview, the "You
+  --    want X?" ask, the received-mon text and give_pokemon all carry
+  --    the swapped species; the rival's own rows are left alone.
+  -- -------------------------------------------------------------------
+  local function starterGens()
+    local gens = {}
+    for _, gen in ipairs(STARTER_GENS) do
+      if inRegistry(gen.grass) and inRegistry(gen.fire)
+         and inRegistry(gen.water) then
+        gens[#gens + 1] = gen
+      end
+    end
+    return gens
+  end
+
+  local function starterFor(vanilla)
+    local element = BALL_SPECIES[vanilla]
+    if not (element and mod.save) then return vanilla end
+    local pick = tonumber(mod.save:get("starter_gen")) or 1
+    local gen = starterGens()[pick]
+    local sp = gen and gen[element]
+    if sp and inRegistry(sp) then return sp end
+    return vanilla
+  end
+
+  -- Only the window between Oak walking the player in and the starter
+  -- being taken is live; everything else passes through untouched.
+  local function starterPending(ctx)
+    local flags = ctx and ctx.save and ctx.save.flags
+    return type(flags) == "table"
+      and flags.EVENT_FOLLOWED_OAK_INTO_LAB == true
+      and flags.EVENT_GOT_STARTER ~= true
+  end
+
+  local ASK_TEXTS = {
+    _OaksLabYouWantBulbasaurText = "BULBASAUR",
+    _OaksLabYouWantCharmanderText = "CHARMANDER",
+    _OaksLabYouWantSquirtleText = "SQUIRTLE",
+  }
+
+  mod.hooks:wrap("script.command", function(nextCmd, ctx, name, args)
+    if type(args) ~= "table" or not starterPending(ctx) then
+      return nextCmd(ctx, name, args)
+    end
+    if name == "push_screen" and args[1] == "DexEntryMenu"
+       and type(args[2]) == "table" and BALL_SPECIES[args[2].species] then
+      -- first ball touched this save: ask the generation before the dex
+      -- preview, blocking the script coroutine the way show_text does
+      if mod.save and mod.save:get("starter_gen") == nil then
+        local gens = starterGens()
+        if #gens > 1 then
+          local ok, err = pcall(function()
+            local items = {}
+            for i, gen in ipairs(gens) do
+              items[i] = { label = gen.label, onSelect = function()
+                mod.save:set("starter_gen", i)
+                ctx.runner:resume()
+              end }
+            end
+            local menu = mod.ui.Menu.new(ctx.game, items,
+              { cancelable = false, tx = 1, ty = 0, tw = 8 })
+            ctx.game.stack:push(mod.ui.TextBox.new(ctx.game,
+              "First, tell me!\nWhich region's\vPokémon should\vI offer you?",
+              function() ctx.game.stack:push(menu) end))
+          end)
+          if ok then
+            ctx.runner:yield()
+          else
+            mod.log:warn("starter generation menu failed (%s); keeping "
+              .. "Gen 1 starters -- check mod.ui against the engine version",
+              tostring(err))
+            mod.save:set("starter_gen", 1)
+          end
+        end
+      end
+      args[2].species = starterFor(args[2].species)
+    elseif name == "ask" and ASK_TEXTS[args[1]] then
+      local vanilla = ASK_TEXTS[args[1]]
+      local swapped = starterFor(vanilla)
+      if swapped ~= vanilla then
+        local rec = pokemonReg and pokemonReg:get(swapped)
+        args[1] = "So! You want\n" .. ((rec and rec.name or swapped):upper()) .. "?"
+      end
+    elseif name == "show_text" and args[1] == "_OaksLabReceivedMonText"
+       and type(args[2]) == "table" and BALL_SPECIES[args[2].RAM] then
+      args[2].RAM = starterFor(args[2].RAM)
+    elseif name == "give_pokemon" and BALL_SPECIES[args[1]]
+       and (tonumber(args[2]) or 0) == 5 then
+      args[1] = starterFor(args[1])
+    end
+    return nextCmd(ctx, name, args)
+  end)
+  mod.log:info("kaizo: starter generation menu armed (script.command)")
+
+
+  -- -------------------------------------------------------------------
   -- 4. Wild encounters: variety keeps pace with difficulty. An area
   --    record carries `grass` and `water` zones of {rate, slots}; every
   --    slot gets a small static level bump, and each zone's rare tail
@@ -836,7 +991,7 @@ return function(mod)
     return
   end
 
-  local areas, freshened = 0, 0
+  local areas, freshened, dens = 0, 0, 0
   for id, area in encounters:each() do
     local patchArea = {}
     local touched = false
@@ -891,6 +1046,23 @@ return function(mod)
           end
         end
 
+        -- Late grass zones hide one legendary den in the rarest slot: a
+        -- hard, over-leveled catch (legendary catch rates apply), hashed
+        -- per map so the legends spread across the endgame region.
+        if zoneName == "grass" and maxLevel >= LEGEND_MIN_LEVEL
+           and #genesisLegends > 0 and #newSlots > 1 then
+          local pick = genesisLegends[
+            hashId("legend" .. tostring(id)) % #genesisLegends + 1]
+          if not present[pick] and inRegistry(pick) then
+            newSlots[#newSlots] = {
+              level = math.min(LEVEL_CAP, maxLevel + LEGEND_LEVEL_UP),
+              species = pick,
+            }
+            present[pick] = true
+            dens = dens + 1
+          end
+        end
+
         patchArea[zoneName] = { slots = newSlots }
         touched = true
       end
@@ -901,5 +1073,5 @@ return function(mod)
     end
   end
   mod.log:info("kaizo: refreshed %d encounter areas (%d rare slots now carry "
-    .. "new species)", areas, freshened)
+    .. "new species, %d legendary dens placed)", areas, freshened, dens)
 end

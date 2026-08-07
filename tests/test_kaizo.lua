@@ -52,6 +52,7 @@ T.eq(route.grass.slots[2].level, 6, "grass slot 2 bumped 4 -> 6")
 local chains = run.loader.hooks.chains
 T.check(chains["trainer.party"] ~= nil, "trainer.party hook registered")
 T.check(chains["battle.enemy_action"] ~= nil, "battle.enemy_action hook registered")
+T.check(chains["script.command"] ~= nil, "script.command hook registered (starter gens)")
 
 -- Stated effect #5: the Genesis roster. When the generated gen/ data pack
 -- is present (tools/pbs_convert.py output; gitignored, so absent in bare
@@ -69,13 +70,18 @@ if hasGen then
     "SpA/SpD folded into Gen 1 special")
 
   -- Integration: with the whole dex registered, the fixture trainer's
-  -- bench fills to six from the Genesis pools, and the route's rare
-  -- tail slot carries a newcomer instead of its fixture native.
+  -- bench fills to six from the Genesis pools, the route's rare tail
+  -- slot carries a newcomer, and the Pokedex widens past 151.
   T.eq(#party, 6, "party padded to six from the Genesis bench")
   T.check(route.grass.slots[2].species ~= "FIXMON_C",
     "rare grass slot swapped for a fresh species")
   T.check(Data.pokemon[route.grass.slots[2].species] ~= nil,
     "swapped-in wild species exists in the registry")
+  T.check((Data.constants or {}).dexSize ~= nil and Data.constants.dexSize > 151,
+    "constants.dexSize widened for the Genesis dex")
+  -- The generation menu only offers trios whose species all registered.
+  T.check(Data.pokemon.CYNDAQUIL ~= nil and Data.pokemon.TOTODILE ~= nil
+    and Data.pokemon.CHIKORITA ~= nil, "Johto starter trio registered")
 else
   print("note: gen/ data pack absent; Genesis checks skipped")
 end
