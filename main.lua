@@ -580,6 +580,22 @@ return function(mod)
     if constants and maxDex > 151 then
       constants:patch("dexSize", maxDex)
     end
+
+    -- Dex flavor prose: dexEntry.text is an id resolved through data.text,
+    -- so the converter's wrapped entries register into the text registry
+    -- (a raw string there renders as "Data unknown.").
+    local textReg = mod.content.text
+    local genText = loadGen("text.lua")
+    if textReg and genText and type(genText.text) == "table" then
+      local entries = 0
+      for id, s in pairs(genText.text) do
+        if textReg:get(id) == nil then
+          textReg:register(id, s)
+          entries = entries + 1
+        end
+      end
+      mod.log:info("genesis dex text: %d entries registered", entries)
+    end
     mod.log:info("genesis roster: %d new types, %d chart rows, %d new "
       .. "moves (%d with inferred effects), %d species patched, "
       .. "%d species registered (%d legendaries reserved for dens), "

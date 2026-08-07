@@ -78,6 +78,12 @@ if hasGen then
   T.check(Data.pokemon.TOGEPI ~= nil, "new species TOGEPI registered")
   T.check(Data.pokemon.TOGEPI.baseStats.special ~= nil,
     "SpA/SpD folded into Gen 1 special")
+  -- Dex flavor prose routes through the text registry (a raw string in
+  -- dexEntry.text renders as "Data unknown." on the entry page).
+  T.check(type(Data.pokemon.TOGEPI.dexEntry.text) == "string"
+    and Data.text ~= nil
+    and Data.text[Data.pokemon.TOGEPI.dexEntry.text] ~= nil,
+    "dex entry text id resolves through the text registry")
   -- The seeded base species was patched in place: Genesis types landed,
   -- vanilla art fields stayed untouched, and no duplicate registration.
   T.check(Data.pokemon.BULBASAUR.types[1] == "GRASS",

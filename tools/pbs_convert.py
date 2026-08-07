@@ -23,8 +23,6 @@ import csv
 import io
 import os
 import re
-import shutil
-import struct
 import sys
 from collections import OrderedDict
 
@@ -122,8 +120,10 @@ EVO_LEVEL_APPROX = {
 }
 
 TILE = 8
-FRONT_TARGET_PX = 56   # native Gen 1 front pic at 1x
-BACK_TARGET_PX = 96    # native 48px back pic at the engine's default 2x
+FRONT_TARGET_PX = 56   # native Gen 1 front pic, drawn at 1x everywhere
+BACK_TARGET_PX = 32    # native Gen 1 back pic; battle draws backs at 2x
+DEX_TEXT_WIDTH = 18    # dex flavor line budget (x=8, 8px glyphs)
+DEX_TEXT_LINES = 6     # DexEntryMenu draws y=72..132, 10px leading
 VANILLA_DEX_MAX = 151  # dex <= 151 patch the engine's own records at runtime
 
 # ------------------------------------------------------------------ parsing
@@ -313,52 +313,73 @@ def build_move_output(moves, real_type_ids, report):
     return out, meta
 
 
-def png_size(path):
-    with open(path, "rb") as fh:
-        head = fh.read(24)
-    if len(head) < 24 or head[:8] != b"\x89PNG\r\n\x1a\n":
-        return None
-    w, h = struct.unpack(">II", head[16:24])
-    return w, h
-
-
 def sprite_fields(dex, battlers, report):
     fields = OrderedDict()
     fields["spriteFront"] = "gen/battlers/%03d.png" % dex
     fields["spriteBack"] = "gen/battlers/%03db.png" % dex
     fields["frontSize"] = 7
-    if not battlers:
-        return fields
-    front = os.path.join(battlers, "%03d.png" % dex)
-    back = os.path.join(battlers, "%03db.png" % dex)
-    for path, key, target in ((front, "battleScaleFront", FRONT_TARGET_PX),
-                              (back, "battleScaleBack", BACK_TARGET_PX)):
-        if os.path.exists(path):
-            size = png_size(path)
-            if size:
-                scale = max(0.25, min(4.0, target / max(size)))
-                fields[key] = round(scale, 3)
-        else:
-            report.append("dex %03d: missing battler %s"
-                          % (dex, os.path.basename(path)))
+    if battlers:
+        for suffix in ("%03d.png" % dex, "%03db.png" % dex):
+            if not os.path.exists(os.path.join(battlers, suffix)):
+                report.append("dex %03d: missing battler %s" % (dex, suffix))
     fields["trueColor"] = True
     return fields
 
 
-def dex_entry(sp):
+def fit_sprite(src, dst, target_px):
+    """Crop to opaque content and shrink to fit target_px square.
+
+    The engine draws fronts native (7x7-tile buffer, 56px max) and backs
+    at 2x, and the dex/party screens draw native too -- so oversized
+    modern battlers (112/96px) must shrink on disk. NEAREST keeps the
+    pixel-art edges; only downscale, never blow small art up."""
+    from PIL import Image
+    img = Image.open(src).convert("RGBA")
+    box = img.getbbox()
+    if box:
+        img = img.crop(box)
+    w, h = img.size
+    scale = min(1.0, float(target_px) / max(w, h))
+    if scale < 1.0:
+        img = img.resize((max(1, int(round(w * scale))),
+                          max(1, int(round(h * scale)))), Image.NEAREST)
+    img.save(dst)
+    return img.size
+
+
+def wrap_dex_text(prose):
+    words = (prose or "").split()
+    lines, line = [], ""
+    for word in words:
+        if line and len(line) + 1 + len(word) > DEX_TEXT_WIDTH:
+            lines.append(line)
+            line = word
+            if len(lines) == DEX_TEXT_LINES:
+                break
+        else:
+            line = word if not line else line + " " + word
+    if line and len(lines) < DEX_TEXT_LINES:
+        lines.append(line)
+    return "\n".join(lines)
+
+
+def dex_entry(sp, dex_texts):
     total_in = sp["heightM"] * 39.3701
     ft = int(total_in // 12)
     inch = int(round(total_in - ft * 12))
     if inch == 12:
         ft, inch = ft + 1, 0
     e = OrderedDict()
-    e["kind"] = sp["kind"] or "???"
+    e["kind"] = (sp["kind"] or "???").upper()
     e["heightFt"] = ft
     e["heightIn"] = inch
-    e["weight"] = round(sp["weightKg"] * 2.20462, 1)
-    e["heightM"] = sp["heightM"]
-    e["weightKg"] = sp["weightKg"]
-    e["text"] = sp["pokedex"] or "No data."
+    # the dex prints e.weight / 10 as pounds, so store tenths of a pound
+    e["weight"] = int(round(sp["weightKg"] * 22.0462))
+    # flavor text routes through the text registry: dexEntry.text is an
+    # id looked up in data.text (a raw string here rendered "Data unknown.")
+    text_id = "_GenDex%sText" % sp["id"]
+    dex_texts[text_id] = wrap_dex_text(sp["pokedex"] or "No data.")
+    e["text"] = text_id
     return e
 
 
@@ -375,7 +396,8 @@ def has_battlers(dex, battlers):
             and os.path.exists(os.path.join(battlers, "%03db.png" % dex)))
 
 
-def build_species_output(species, move_ids, real_type_ids, opts, report):
+def build_species_output(species, move_ids, real_type_ids, opts, report,
+                         dex_texts):
     # pass 1: the kept set, so evolution refs only point at emitted records.
     # dex <= VANILLA_DEX_MAX always stays (patches the engine record, no art
     # needed); new species need both battler pics or the engine would crash
@@ -486,7 +508,7 @@ def build_species_output(species, move_ids, real_type_ids, opts, report):
                            for lvl, mv in learn]
         rec["evolutions"] = evos
         rec.update(sprite_fields(sp["dex"], opts.battlers, report))
-        rec["dexEntry"] = dex_entry(sp)
+        rec["dexEntry"] = dex_entry(sp, dex_texts)
         out.append(rec)
     if deferred_evos:
         report.append("evolutions still deferred (%d): no sane Gen 1 "
@@ -510,7 +532,8 @@ def lua_repr(value, indent=0):
             return str(int(value))
         return repr(value)
     if isinstance(value, str):
-        return '"%s"' % value.replace("\\", "\\\\").replace('"', '\\"')
+        return '"%s"' % (value.replace("\\", "\\\\").replace('"', '\\"')
+                         .replace("\n", "\\n"))
     if isinstance(value, dict):
         parts = []
         for k, v in value.items():
@@ -578,8 +601,9 @@ def main():
     new_types, chart_rows = build_type_output(types, report)
     move_recs, move_meta = build_move_output(moves, real_type_ids, report)
     move_ids = {m["id"] for m in move_recs}
+    dex_texts = OrderedDict()
     species_recs = build_species_output(species, move_ids, real_type_ids,
-                                        opts, report)
+                                        opts, report, dex_texts)
     report.append("species: %d converted (special fold: %s)"
                   % (len(species_recs), opts.special_fold))
 
@@ -599,18 +623,24 @@ def main():
     write_lua(os.path.join(opts.out, "species.lua"),
               "pokemon records; SpA/SpD folded into Gen 1 special",
               OrderedDict([("species", species_recs)]))
+    write_lua(os.path.join(opts.out, "text.lua"),
+              "dex flavor text, wrapped for the entry page",
+              OrderedDict([("text", dex_texts)]))
 
     if opts.copy_sprites and opts.battlers:
         dst = os.path.join(opts.out, "battlers")
         os.makedirs(dst, exist_ok=True)
         copied = 0
         for rec in species_recs:
-            for suffix in ("%03d.png" % rec["dex"], "%03db.png" % rec["dex"]):
+            for suffix, target in (("%03d.png" % rec["dex"], FRONT_TARGET_PX),
+                                   ("%03db.png" % rec["dex"], BACK_TARGET_PX)):
                 src = os.path.join(opts.battlers, suffix)
                 if os.path.exists(src):
-                    shutil.copyfile(src, os.path.join(dst, suffix))
+                    fit_sprite(src, os.path.join(dst, suffix), target)
                     copied += 1
-        report.append("sprites: copied %d battler pics to %s" % (copied, dst))
+        report.append("sprites: fitted %d battler pics to %s "
+                      "(front <=%dpx, back <=%dpx)"
+                      % (copied, dst, FRONT_TARGET_PX, BACK_TARGET_PX))
 
     report_path = os.path.join(opts.out, "REPORT.txt")
     with open(report_path, "w", encoding="utf-8", newline="\n") as fh:

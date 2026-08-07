@@ -3,6 +3,26 @@
 All notable changes to this mod are documented here. Format follows
 [Keep a Changelog](https://keepachangelog.com/), versions follow semver.
 
+## 0.5.0 - 2026-08-07
+
+### Fixed
+
+- Genesis battler sprites drew at their modern source size (112px fronts,
+  96px backs) and dwarfed the vanilla art on the dex page, in battle, and
+  everywhere else that draws pics natively. The converter now crops each
+  battler to its opaque content and fits it to Gen 1 dimensions on disk
+  (fronts <=56px for the 7x7-tile buffer at 1x, backs <=32px for the
+  battle's 2x draw), nearest-neighbor so the pixel art stays crisp. The
+  per-species battle-scale hints are gone -- native sizes are now right
+  at the engine's default scales.
+- Dex entries for new species showed "Data unknown.": `dexEntry.text` is
+  an id looked up in the text registry, not raw prose. The converter now
+  wraps each Pokedex entry to the page's 18x6 line budget and emits a
+  gen/text.lua pack the mod registers at load.
+- Dex height/weight now print in the vanilla imperial style (HT/WT); the
+  weight field previously stored pounds where the page expects tenths of
+  a pound, so it would have printed at a tenth of the real value.
+
 ## 0.4.2 - 2026-08-07
 
 ### Fixed
