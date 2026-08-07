@@ -1,6 +1,6 @@
 {
   "id": "gen1_kaizo",
-  "name": "Gen 1 Kaizo",
+  "name": "Gen 1 Kaizo Genesis",
   "version": "0.1.0",
   "api": 2,
   "entry": "main.lua",
@@ -12,5 +12,5 @@
   "optional_dependencies": [],
   "conflicts": [],
   "github": "AyeBathingApe/gen1recomp-kaizo",
-  "description": "Kaizo-style difficulty: trainers run themed parties of six with a surprise ace at +3 levels, competitive movesets, and a competitive AI that exploits weaknesses; wild encounter pools widen to keep the player competitive."
+  "description": "Kaizo-style difficulty on a dramatically expanded roster: the full RBGenesis dex (900+ species, modern types and type chart, every portable move) joins trainers running themed parties of six with a surprise ace at +3 levels, competitive movesets, and a competitive AI that exploits weaknesses; wild encounter pools widen to keep the player competitive."
 }

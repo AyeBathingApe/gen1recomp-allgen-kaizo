@@ -23,6 +23,7 @@ import csv
 import io
 import os
 import re
+import shutil
 import struct
 import sys
 from collections import OrderedDict
@@ -91,6 +92,7 @@ FN_EFFECT_MAP = {
 TILE = 8
 FRONT_TARGET_PX = 56   # native Gen 1 front pic at 1x
 BACK_TARGET_PX = 96    # native 48px back pic at the engine's default 2x
+VANILLA_DEX_MAX = 151  # dex <= 151 patch the engine's own records at runtime
 
 # ------------------------------------------------------------------ parsing
 
@@ -336,11 +338,17 @@ def fold_special(spa, spd, mode):
     return int(round((spa + spd) / 2.0))
 
 
+def has_battlers(dex, battlers):
+    return (os.path.exists(os.path.join(battlers, "%03d.png" % dex))
+            and os.path.exists(os.path.join(battlers, "%03db.png" % dex)))
+
+
 def build_species_output(species, move_ids, real_type_ids, opts, report):
-    wanted = {sp["id"] for sp in species}
-    out = []
-    deferred_evos = []
-    seen = set()
+    # pass 1: the kept set, so evolution refs only point at emitted records.
+    # dex <= VANILLA_DEX_MAX always stays (patches the engine record, no art
+    # needed); new species need both battler pics or the engine would crash
+    # the first time one appears.
+    kept, seen = [], set()
     for sp in sorted(species, key=lambda s: s["dex"]):
         if sp["id"] in seen:
             report.append("species %s: duplicate InternalName, kept first"
@@ -352,7 +360,17 @@ def build_species_output(species, move_ids, real_type_ids, opts, report):
             report.append("species %s: unported type(s) %s, species dropped"
                           % (sp["id"], ",".join(bad_types)))
             continue
+        if (opts.battlers and sp["dex"] > VANILLA_DEX_MAX
+                and not has_battlers(sp["dex"], opts.battlers)):
+            report.append("species %s (dex %d): battler art missing, "
+                          "species dropped" % (sp["id"], sp["dex"]))
+            continue
+        kept.append(sp)
+    wanted = {sp["id"] for sp in kept}
 
+    out = []
+    deferred_evos = []
+    for sp in kept:
         hp, atk, dfn, spd, spa, spd2 = (sp["stats"] + [0] * 6)[:6]
         special = fold_special(spa, spd2, opts.special_fold)
 
@@ -477,6 +495,8 @@ def main():
                     help="how SpA/SpD fold into Gen 1 special")
     ap.add_argument("--battlers", default=None,
                     help="Graphics/Battlers dir for sprite size probing")
+    ap.add_argument("--copy-sprites", action="store_true",
+                    help="copy battler PNGs into <out>/battlers/")
     opts = ap.parse_args()
 
     report = ["pbs_convert report", "=" * 60]
@@ -518,6 +538,18 @@ def main():
     write_lua(os.path.join(opts.out, "species.lua"),
               "pokemon records; SpA/SpD folded into Gen 1 special",
               OrderedDict([("species", species_recs)]))
+
+    if opts.copy_sprites and opts.battlers:
+        dst = os.path.join(opts.out, "battlers")
+        os.makedirs(dst, exist_ok=True)
+        copied = 0
+        for rec in species_recs:
+            for suffix in ("%03d.png" % rec["dex"], "%03db.png" % rec["dex"]):
+                src = os.path.join(opts.battlers, suffix)
+                if os.path.exists(src):
+                    shutil.copyfile(src, os.path.join(dst, suffix))
+                    copied += 1
+        report.append("sprites: copied %d battler pics to %s" % (copied, dst))
 
     report_path = os.path.join(opts.out, "REPORT.txt")
     with open(report_path, "w", encoding="utf-8", newline="\n") as fh:

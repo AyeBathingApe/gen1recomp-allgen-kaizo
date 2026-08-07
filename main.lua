@@ -1,5 +1,9 @@
--- Gen 1 Kaizo: trainers hit harder, fight smarter, and the wild keeps
--- pace. Every trainer fields a full party of six padded with varied
+-- Gen 1 Kaizo Genesis: trainers hit harder, fight smarter, and the wild
+-- keeps pace -- on a dramatically expanded roster. The generated
+-- RBGenesis port (gen/, from tools/pbs_convert.py) registers the modern
+-- type chart, every portable move, and the full 900+ species dex;
+-- vanilla species are rebalanced in place. Every trainer fields a full
+-- party of six padded with varied
 -- species that fit the trainer's class, topped by one surprise ace, at a
 -- flat static level bump. Species with a known competitive Gen 1 set get
 -- it, and trainer AI picks moves competitively: exploiting type weaknesses,
@@ -260,6 +264,167 @@ return function(mod)
   local pokemonReg = mod.content.pokemon
   local function inRegistry(sp)
     return sp ~= nil and pokemonReg ~= nil and pokemonReg:get(sp) ~= nil
+  end
+
+  -- -------------------------------------------------------------------
+  -- 0. Genesis roster: the generated RBGenesis port (tools/pbs_convert.py
+  --    output under gen/) registers the modern types + type chart, every
+  --    portable move, and the full expanded dex. Vanilla species and
+  --    moves already in the engine keep their engine ids: moves alias by
+  --    underscore-stripped name (THUNDERSHOCK -> THUNDER_SHOCK) and keep
+  --    their vanilla battle effects; vanilla species are patched in place
+  --    with Genesis stats, types and learnsets while keeping their
+  --    vanilla art. New species register whole, with mod-relative sprite
+  --    paths. A missing gen/ directory (source checkout, release zip
+  --    without the data pack) degrades to classic kaizo with one warn.
+  -- -------------------------------------------------------------------
+  local function loadGen(name)
+    local okRead, source = pcall(function() return mod:read("gen/" .. name) end)
+    if not okRead or type(source) ~= "string" then return nil end
+    local chunk, err = (loadstring or load)(source, "@gen/" .. name)
+    if not chunk then
+      mod.log:warn("gen/%s failed to parse: %s -- regenerate it with "
+        .. "tools/pbs_convert.py", name, tostring(err))
+      return nil
+    end
+    local okRun, data = pcall(chunk)
+    if not okRun or type(data) ~= "table" then
+      mod.log:warn("gen/%s failed to run: %s -- regenerate it with "
+        .. "tools/pbs_convert.py", name, tostring(data))
+      return nil
+    end
+    return data
+  end
+
+  local typeChart = mod.content.type_chart
+  local genTypes = loadGen("types.lua")
+  local genMoves = loadGen("moves.lua")
+  local genSpecies = loadGen("species.lua")
+  if not (genTypes and genMoves and genSpecies) then
+    mod.log:warn("gen/ data pack missing or unreadable; running as classic "
+      .. "kaizo -- run tools/pbs_convert.py to enable the Genesis roster")
+  elseif not (typeChart and moves and pokemonReg) then
+    mod.log:warn("type_chart/moves/pokemon registries unavailable; Genesis "
+      .. "roster skipped -- update the engine")
+  else
+    -- The engine names the Psychic TYPE record PSYCHIC_TYPE (PSYCHIC is
+    -- the move, PSYCHIC_TR the trainer class); PBS data says PSYCHIC.
+    local TYPE_ALIASES = { PSYCHIC = "PSYCHIC_TYPE" }
+    local function typeId(id) return TYPE_ALIASES[id] or id end
+    local function rowId(id)
+      local att, def = id:match("^([^>]+)>([^>]+)$")
+      if not att then return id end
+      return typeId(att) .. ">" .. typeId(def)
+    end
+
+    -- Types and chart rows: new ids register, rows already in the Gen 1
+    -- chart are patched to their Genesis multiplier.
+    for _, t in ipairs(genTypes.types) do
+      if typeChart:get(typeId(t.id)) == nil then
+        typeChart:register(typeId(t.id), { name = t.name, category = t.category })
+      end
+    end
+    for _, row in ipairs(genTypes.matchups) do
+      local id = rowId(row.id)
+      if typeChart:get(id) == nil then
+        typeChart:register(id, { multiplier = row.multiplier })
+      else
+        typeChart:patch(id, { multiplier = row.multiplier })
+      end
+    end
+
+    -- Moves: an engine move of the same underscore-stripped name is the
+    -- same move -- alias to it so vanilla effects (sleep, paralysis,
+    -- Hyper Beam recharge) stay authoritative. Everything else registers;
+    -- ported effects land in a later phase, so new status moves are
+    -- placeholders until then (REPORT.txt lists them).
+    local engineMoveByNorm = {}
+    for id in moves:each() do
+      engineMoveByNorm[id:gsub("_", "")] = id
+    end
+    local moveId, newMoves = {}, 0
+    for _, mv in ipairs(genMoves.moves) do
+      local engineId = engineMoveByNorm[mv.id:gsub("_", "")]
+      if engineId then
+        moveId[mv.id] = engineId
+      else
+        mv.type = typeId(mv.type)
+        moves:register(mv.id, mv)
+        moveId[mv.id] = mv.id
+        newMoves = newMoves + 1
+      end
+    end
+    local function aliasMoves(list)
+      local out = {}
+      for _, id in ipairs(list) do out[#out + 1] = moveId[id] or id end
+      return out
+    end
+
+    -- Species: two passes so evolution targets resolve to final ids no
+    -- matter which side of the vanilla/new split they land on. Nidoran's
+    -- PBS gender suffixes (mA/fE) defeat name normalization, so they
+    -- carry explicit candidates.
+    local SPECIES_ALIASES = {
+      NIDORANmA = { "NIDORAN_M", "NIDORANM" },
+      NIDORANfE = { "NIDORAN_F", "NIDORANF" },
+    }
+    local engineSpeciesByNorm = {}
+    for id in pokemonReg:each() do
+      engineSpeciesByNorm[id:gsub("_", ""):upper()] = id
+    end
+    local speciesId = {}
+    for _, sp in ipairs(genSpecies.species) do
+      local found = engineSpeciesByNorm[sp.id:gsub("_", ""):upper()]
+      for _, candidate in ipairs(SPECIES_ALIASES[sp.id] or {}) do
+        if found then break end
+        if pokemonReg:get(candidate) ~= nil then found = candidate end
+      end
+      speciesId[sp.id] = found or sp.id
+    end
+    local patched, registered = 0, 0
+    for _, sp in ipairs(genSpecies.species) do
+      for i, t in ipairs(sp.types) do sp.types[i] = typeId(t) end
+      local evos = {}
+      for _, evo in ipairs(sp.evolutions) do
+        evos[#evos + 1] = { method = evo.method, level = evo.level,
+                            species = speciesId[evo.species] }
+      end
+      local finalId = speciesId[sp.id]
+      if finalId ~= sp.id then
+        -- vanilla species: Genesis balance in place, vanilla art kept
+        pokemonReg:patch(finalId, {
+          types = sp.types,
+          baseStats = sp.baseStats,
+          catchRate = sp.catchRate,
+          baseExp = sp.baseExp,
+          growthRate = sp.growthRate,
+          level1Moves = aliasMoves(sp.level1Moves),
+          learnset = (function()
+            local rows = {}
+            for _, row in ipairs(sp.learnset) do
+              rows[#rows + 1] = { level = row.level,
+                                  move = moveId[row.move] or row.move }
+            end
+            return rows
+          end)(),
+          evolutions = evos,
+        })
+        patched = patched + 1
+      else
+        sp.level1Moves = aliasMoves(sp.level1Moves)
+        for _, row in ipairs(sp.learnset) do
+          row.move = moveId[row.move] or row.move
+        end
+        sp.evolutions = evos
+        sp.spriteFront = mod.path .. "/" .. sp.spriteFront
+        sp.spriteBack = mod.path .. "/" .. sp.spriteBack
+        pokemonReg:register(sp.id, sp)
+        registered = registered + 1
+      end
+    end
+    mod.log:info("genesis roster: %d new types, %d chart rows, %d new "
+      .. "moves, %d species patched, %d species registered",
+      #genTypes.types, #genTypes.matchups, newMoves, patched, registered)
   end
 
   -- -------------------------------------------------------------------

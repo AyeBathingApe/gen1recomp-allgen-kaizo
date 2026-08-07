@@ -52,5 +52,22 @@ local chains = run.loader.hooks.chains
 T.check(chains["trainer.party"] ~= nil, "trainer.party hook registered")
 T.check(chains["battle.enemy_action"] ~= nil, "battle.enemy_action hook registered")
 
+-- Stated effect #5: the Genesis roster. When the generated gen/ data pack
+-- is present (tools/pbs_convert.py output; gitignored, so absent in bare
+-- checkouts), the merged dataset carries the new types, new moves, and
+-- the expanded dex; without it the mod degrades to classic kaizo, which
+-- the loads-clean check above already covers.
+local hasGen = io.open("mods/gen1_kaizo/gen/species.lua", "r")
+if hasGen then
+  hasGen:close()
+  T.check(Data.type_chart.types.DARK ~= nil, "DARK type registered")
+  T.check(Data.moves.DARKPULSE ~= nil, "new move DARKPULSE registered")
+  T.check(Data.pokemon.TOGEPI ~= nil, "new species TOGEPI registered")
+  T.check(Data.pokemon.TOGEPI.baseStats.special ~= nil,
+    "SpA/SpD folded into Gen 1 special")
+else
+  print("note: gen/ data pack absent; Genesis checks skipped")
+end
+
 run.release()
 T.finish("gen1_kaizo")

@@ -3,6 +3,31 @@
 All notable changes to this mod are documented here. Format follows
 [Keep a Changelog](https://keepachangelog.com/), versions follow semver.
 
+## Unreleased
+
+### Added
+
+- Genesis roster: the mod becomes Gen 1 Kaizo Genesis. A generated
+  RBGenesis data pack (gen/, produced by tools/pbs_convert.py from
+  Pokemon Essentials PBS data) registers the modern type chart (DARK,
+  STEEL, FAIRY, SHADOW plus 61 updated matchup rows), 759 moves, and an
+  expanded dex of 800+ species with SpA/SpD folded into the Gen 1
+  special stat. Vanilla species and moves keep their engine ids: moves
+  alias by name and keep vanilla battle effects; vanilla species are
+  patched in place with Genesis stats, types, and learnsets while
+  keeping vanilla art. Without the data pack the mod degrades cleanly
+  to classic kaizo.
+- tools/pbs_convert.py: PBS-to-registry converter (slicing, sprite
+  probing/copying, special-fold strategies) and tools/check_gen.lua:
+  output validation against the engine's real registry schemas.
+
+### Known gaps (next phases)
+
+- New moves carry placeholder effects (plain damage); status/secondary
+  effects land with the effect-mapping phase.
+- New species are registered but not yet woven into encounter pools or
+  trainer themes; item/happiness/trade-item evolutions deferred.
+
 ## 0.1.0 - 2026-08-05
 
 ### Added

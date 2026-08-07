@@ -1,2 +1,4 @@
-tests/
-tools/
+# exact relative paths (modkit matches these literally)
+tests/test_kaizo.lua
+tools/pbs_convert.py
+tools/check_gen.lua
