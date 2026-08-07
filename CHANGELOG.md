@@ -3,6 +3,14 @@
 All notable changes to this mod are documented here. Format follows
 [Keep a Changelog](https://keepachangelog.com/), versions follow semver.
 
+## 0.4.1 - 2026-08-06
+
+### Changed
+
+- README rewritten for the Genesis feature set: the ported roster (dex,
+  types, moves, evolutions), starter generations, legendary dens, release
+  install instructions, and data-pack regeneration steps.
+
 ## 0.4.0 - 2026-08-06
 
 ### Added
