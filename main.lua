@@ -1181,10 +1181,13 @@ return function(mod)
   -- -------------------------------------------------------------------
   -- 4. Wild encounters: variety keeps pace with difficulty. An area
   --    record carries `grass` and `water` zones of {rate, slots}; every
-  --    slot gets a small static level bump, and each zone's rare tail
-  --    slots are replaced with fresh species from the tier pool matching
-  --    the zone's strength, so the player can build a team that answers
-  --    the buffed trainers. Encounter rates are left untouched.
+  --    slot gets a small static level bump, each zone's rare tail slots
+  --    are replaced with fresh species from the tier pool matching the
+  --    zone's strength, and every DUPLICATE slot after a species' first
+  --    becomes a fresh pick too -- vanilla tables repeat two or three
+  --    species across the whole table, so this yields ten distinct
+  --    species per zone while the most common slots keep the route's
+  --    vanilla identity. Encounter rates are left untouched.
   -- -------------------------------------------------------------------
   local encounters = mod.content.encounters
   if not encounters then
@@ -1193,7 +1196,7 @@ return function(mod)
     return
   end
 
-  local areas, freshened, dens = 0, 0, 0
+  local areas, freshened, varied, dens = 0, 0, 0, 0
   for id, area in encounters:each() do
     local patchArea = {}
     local touched = false
@@ -1246,6 +1249,33 @@ return function(mod)
               slotIndex = slotIndex + 1
             end
           end
+
+          -- Dedupe pass: a species keeps its FIRST (most common) slot;
+          -- every repeat becomes a fresh pick at the repeat slot's own
+          -- level, hashed per map with its own salt so neighboring
+          -- routes diverge. Slot odds are positional, so the route's
+          -- headline encounters stay exactly as common as vanilla.
+          local seen = {}
+          local dstart = hashId("mix" .. tostring(id) .. zoneName) % #pool
+          local doffset = 0
+          for i, slot in ipairs(newSlots) do
+            local sp = slot.species
+            if sp and seen[sp] then
+              while doffset < #pool do
+                local pick = pool[(dstart + doffset) % #pool + 1]
+                doffset = doffset + 1
+                if not present[pick] and inRegistry(pick) then
+                  newSlots[i] = { level = slot.level, species = pick }
+                  present[pick] = true
+                  seen[pick] = true
+                  varied = varied + 1
+                  break
+                end
+              end
+            elseif sp then
+              seen[sp] = true
+            end
+          end
         end
 
         -- Late grass zones hide one legendary den in the rarest slot: a
@@ -1275,5 +1305,6 @@ return function(mod)
     end
   end
   mod.log:info("kaizo: refreshed %d encounter areas (%d rare slots now carry "
-    .. "new species, %d legendary dens placed)", areas, freshened, dens)
+    .. "new species, %d duplicate slots diversified, %d legendary dens "
+    .. "placed)", areas, freshened, varied, dens)
 end

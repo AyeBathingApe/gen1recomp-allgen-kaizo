@@ -3,6 +3,20 @@
 All notable changes to this mod are documented here. Format follows
 [Keep a Changelog](https://keepachangelog.com/), versions follow semver.
 
+## 0.7.3 - 2026-08-08
+
+### Changed
+
+- Early-route monotony fixed: every encounter zone now offers **ten
+  distinct species**. Vanilla tables repeat two or three species across
+  the whole table (Route 1 is Pidgey/Rattata in all ten slots); now a
+  species keeps only its FIRST -- most common -- slot, and every repeat
+  becomes a fresh, level-appropriate pick from the zone's strength band,
+  mixing all generations. Slot odds are positional, so the route's
+  headline encounters stay exactly as common as vanilla, levels are
+  preserved per slot, and picks hash per map so neighboring routes
+  diverge. Rare-tail swaps and legendary dens are unchanged.
+
 ## 0.7.2 - 2026-08-08
 
 ### Changed

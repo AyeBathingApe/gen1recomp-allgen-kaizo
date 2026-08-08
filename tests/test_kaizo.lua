@@ -21,6 +21,17 @@ Data.pokemon.BULBASAUR = {
   catchRate = 255, baseExp = 64, growthRate = "MEDIUM_SLOW",
   level1Moves = { "FIX_TACKLE" }, learnset = {}, evolutions = {},
 }
+-- Seed a vanilla-style repetitive route (Route 1: two species across all
+-- ten slots) to assert the dedupe pass diversifies it.
+Data.encounters.KAIZO_DUPE_ROUTE = {
+  grass = { rate = 25, slots = {
+    { level = 3, species = "FIXMON_A" }, { level = 3, species = "FIXMON_C" },
+    { level = 3, species = "FIXMON_A" }, { level = 2, species = "FIXMON_A" },
+    { level = 2, species = "FIXMON_C" }, { level = 3, species = "FIXMON_A" },
+    { level = 3, species = "FIXMON_A" }, { level = 4, species = "FIXMON_C" },
+    { level = 4, species = "FIXMON_A" }, { level = 5, species = "FIXMON_C" },
+  } },
+}
 local run = T.sdk.loadMod("mods/gen1_kaizo", { data = Data })
 T.eq(#run.errors, 0, "loads clean")
 
@@ -105,6 +116,22 @@ if hasGen then
   -- The generation menu only offers trios whose species all registered.
   T.check(Data.pokemon.CYNDAQUIL ~= nil and Data.pokemon.TOTODILE ~= nil
     and Data.pokemon.CHIKORITA ~= nil, "Johto starter trio registered")
+
+  -- Wild variety: the seeded two-species route now offers ten distinct
+  -- species, first slots keep the vanilla headliners, levels preserved.
+  local dupe = Data.encounters.KAIZO_DUPE_ROUTE.grass.slots
+  local distinct = {}
+  for _, slot in ipairs(dupe) do distinct[slot.species] = true end
+  local n = 0
+  for _ in pairs(distinct) do n = n + 1 end
+  T.eq(n, 10, "repetitive route diversified to 10 distinct species")
+  T.eq(dupe[1].species, "FIXMON_A", "most common slot keeps vanilla identity")
+  T.eq(dupe[2].species, "FIXMON_C", "second slot keeps vanilla identity")
+  T.eq(dupe[4].level, 4, "diversified slot keeps its own level")
+  for i, slot in ipairs(dupe) do
+    T.check(Data.pokemon[slot.species] ~= nil,
+      "dupe-route slot " .. i .. " species registered")
+  end
 
   -- Mega evolution: forms registered as standalone species, the stone
   -- item exists, the party submenu hook is armed, and no mega leaked
