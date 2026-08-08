@@ -105,6 +105,23 @@ if hasGen then
   -- The generation menu only offers trios whose species all registered.
   T.check(Data.pokemon.CYNDAQUIL ~= nil and Data.pokemon.TOTODILE ~= nil
     and Data.pokemon.CHIKORITA ~= nil, "Johto starter trio registered")
+
+  -- Mega evolution: forms registered as standalone species, the stone
+  -- item exists, the party submenu hook is armed, and no mega leaked
+  -- into a wild slot (they are stone/trainer-only).
+  T.check(Data.pokemon.MEGAGENGAR ~= nil, "mega species registered")
+  T.check(Data.pokemon.MEGACHARIZARDX ~= nil and Data.pokemon.MEGACHARIZARDY ~= nil,
+    "dual mega forms registered")
+  T.check(Data.items.MEGA_STONE ~= nil, "MEGA_STONE item registered")
+  T.check(chains["ui.party.submenu"] ~= nil, "party submenu hook registered")
+  for _, zone in ipairs({ route.grass, route.water }) do
+    if zone then
+      for _, slot in ipairs(zone.slots) do
+        T.check(slot.species:find("^MEGA") == nil,
+          "no mega in wild slot (" .. slot.species .. ")")
+      end
+    end
+  end
 else
   print("note: gen/ data pack absent; Genesis checks skipped")
 end

@@ -239,6 +239,31 @@ def parse_pokemon(path):
     return species
 
 
+def parse_mega_forms(path):
+    """pokemonforms.txt entries carrying a MegaStone: [SPECIES,form]."""
+    megas = []
+    if not os.path.exists(path):
+        return megas
+    for header, f in parse_sections(path):
+        m = re.match(r"^([A-Za-z0-9_]+)\s*,\s*(\d+)$", header)
+        if not m or "MegaStone" not in f:
+            continue
+        stats = None
+        if f.get("BaseStats"):
+            stats = [int(s) for s in f["BaseStats"].split(",")]
+        megas.append({
+            "base": m.group(1).upper(),
+            "form": int(m.group(2)),
+            "formName": f.get("FormName", ""),
+            "stats": stats,
+            "types": [t for t in (f.get("Type1"), f.get("Type2")) if t],
+            "pokedex": f.get("Pokedex", ""),
+            "heightM": float(f.get("Height", 0) or 0),
+            "weightKg": float(f.get("Weight", 0) or 0),
+        })
+    return megas
+
+
 # --------------------------------------------------------------- conversion
 
 
@@ -389,6 +414,89 @@ def fold_special(spa, spd, mode):
     if mode == "spatk":
         return spa
     return int(round((spa + spd) / 2.0))
+
+
+def mega_display_name(base_name, suffix):
+    # Gen 1 name boxes fit 10 glyphs; X/Y megas reserve the tail letter
+    up = (base_name or "").upper()
+    if suffix:
+        return ("M-" + up[:6] + "-" + suffix)[:10]
+    return ("M-" + up)[:10]
+
+
+def build_mega_output(megas, species_recs, species_raw, opts, report,
+                      dex_texts):
+    """Mega forms as standalone species, plus the index and sprite jobs.
+
+    Returns (mega_recs, mega_index, sprite_jobs); sprite_jobs are
+    (src_front, src_back_or_None, dex) rows for the copy step -- form art
+    lives at NNN_F.png, and the base back pic stands in when the form has
+    no back of its own (most don't).
+    """
+    by_id = {rec["id"]: rec for rec in species_recs}
+    raw_by_id = {sp["id"]: sp for sp in species_raw}
+    next_dex = max(rec["dex"] for rec in species_recs) + 1
+    mega_recs, mega_index, sprite_jobs = [], [], []
+    for mg in sorted(megas, key=lambda m: (raw_by_id.get(m["base"], {})
+                                           .get("dex", 9999), m["form"])):
+        base = by_id.get(mg["base"])
+        raw = raw_by_id.get(mg["base"])
+        if not (base and raw):
+            report.append("mega %s form %d: base species not in output, "
+                          "skipped" % (mg["base"], mg["form"]))
+            continue
+        front = os.path.join(opts.battlers or "",
+                             "%03d_%d.png" % (raw["dex"], mg["form"]))
+        if not (opts.battlers and os.path.exists(front)):
+            report.append("mega %s form %d: no battler art, skipped"
+                          % (mg["base"], mg["form"]))
+            continue
+        back = os.path.join(opts.battlers,
+                            "%03d_%db.png" % (raw["dex"], mg["form"]))
+        if not os.path.exists(back):
+            back = os.path.join(opts.battlers, "%03db.png" % raw["dex"])
+            back = back if os.path.exists(back) else None
+        suffix = ""
+        m = re.search(r"\s([XY])$", mg["formName"] or "")
+        if m:
+            suffix = m.group(1)
+        stats = mg["stats"] or raw["stats"]
+        hp, atk, dfn, spd, spa, spd2 = (stats + [0] * 6)[:6]
+        rec = OrderedDict()
+        rec["id"] = "MEGA" + mg["base"] + suffix
+        rec["name"] = mega_display_name(raw["name"] or mg["base"], suffix)
+        rec["dex"] = next_dex
+        rec["types"] = mg["types"] or list(base["types"])
+        rec["baseStats"] = OrderedDict([
+            ("hp", hp), ("attack", atk), ("defense", dfn), ("speed", spd),
+            ("special", fold_special(spa, spd2, opts.special_fold))])
+        rec["catchRate"] = 3
+        rec["baseExp"] = base["baseExp"]
+        rec["growthRate"] = base["growthRate"]
+        rec["level1Moves"] = list(base["level1Moves"])
+        rec["learnset"] = [OrderedDict(row) for row in base["learnset"]]
+        rec["evolutions"] = []
+        rec["spriteFront"] = "gen/battlers/%03d.png" % next_dex
+        rec["spriteBack"] = "gen/battlers/%03db.png" % next_dex
+        rec["frontSize"] = 7
+        rec["trueColor"] = True
+        rec["dexEntry"] = dex_entry({
+            "id": rec["id"], "kind": raw["kind"],
+            "heightM": mg["heightM"] or raw["heightM"],
+            "weightKg": mg["weightKg"] or raw["weightKg"],
+            "pokedex": mg["pokedex"] or raw["pokedex"],
+        }, dex_texts)
+        mega_recs.append(rec)
+        mega_index.append(OrderedDict([
+            ("species", rec["id"]), ("base", mg["base"]),
+            ("label", "MEGA" + (suffix and " " + suffix or "")),
+        ]))
+        sprite_jobs.append((front, back, next_dex))
+        next_dex += 1
+    report.append("megas: %d forms ported as stone evolutions, dex %d+"
+                  % (len(mega_recs),
+                     mega_recs[0]["dex"] if mega_recs else 0))
+    return mega_recs, mega_index, sprite_jobs
 
 
 def has_battlers(dex, battlers):
@@ -604,6 +712,10 @@ def main():
     dex_texts = OrderedDict()
     species_recs = build_species_output(species, move_ids, real_type_ids,
                                         opts, report, dex_texts)
+    megas = parse_mega_forms(os.path.join(opts.pbs, "pokemonforms.txt"))
+    mega_recs, mega_index, mega_sprites = build_mega_output(
+        megas, species_recs, species, opts, report, dex_texts)
+    species_recs.extend(mega_recs)
     report.append("species: %d converted (special fold: %s)"
                   % (len(species_recs), opts.special_fold))
 
@@ -622,7 +734,8 @@ def main():
               OrderedDict([("moves", move_recs), ("meta", move_meta)]))
     write_lua(os.path.join(opts.out, "species.lua"),
               "pokemon records; SpA/SpD folded into Gen 1 special",
-              OrderedDict([("species", species_recs)]))
+              OrderedDict([("species", species_recs),
+                           ("megas", mega_index)]))
     write_lua(os.path.join(opts.out, "text.lua"),
               "dex flavor text, wrapped for the entry page",
               OrderedDict([("text", dex_texts)]))
@@ -631,13 +744,24 @@ def main():
         dst = os.path.join(opts.out, "battlers")
         os.makedirs(dst, exist_ok=True)
         copied = 0
+        mega_dexes = {job[2] for job in mega_sprites}
         for rec in species_recs:
+            if rec["dex"] in mega_dexes:
+                continue
             for suffix, target in (("%03d.png" % rec["dex"], FRONT_TARGET_PX),
                                    ("%03db.png" % rec["dex"], BACK_TARGET_PX)):
                 src = os.path.join(opts.battlers, suffix)
                 if os.path.exists(src):
                     fit_sprite(src, os.path.join(dst, suffix), target)
                     copied += 1
+        for front, back, dex in mega_sprites:
+            fit_sprite(front, os.path.join(dst, "%03d.png" % dex),
+                       FRONT_TARGET_PX)
+            copied += 1
+            if back:
+                fit_sprite(back, os.path.join(dst, "%03db.png" % dex),
+                           BACK_TARGET_PX)
+                copied += 1
         report.append("sprites: fitted %d battler pics to %s "
                       "(front <=%dpx, back <=%dpx)"
                       % (copied, dst, FRONT_TARGET_PX, BACK_TARGET_PX))

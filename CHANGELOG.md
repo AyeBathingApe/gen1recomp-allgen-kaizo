@@ -3,6 +3,32 @@
 All notable changes to this mod are documented here. Format follows
 [Keep a Changelog](https://keepachangelog.com/), versions follow semver.
 
+## 0.7.0 - 2026-08-08
+
+### Added
+
+- Mega evolution, Gen 1 style: 43 mega forms from RBGenesis
+  (pokemonforms.txt) register as standalone species with their mega
+  stats, types, art, and dex entries (dex 866+). They never appear in
+  wild encounters, legendary dens, or regular trainer benches.
+- The MEGA STONE: a one-per-save item found after defeating Giovanni at
+  Silph Co. (his "You ruined our plans!" speech hands it over). With the
+  stone in the bag, a mon with a mega form gains a MEGA option in the
+  party submenu; species with two megas (Charizard, Mewtwo's stand-ins
+  X/Y) ask which form first. Using it consumes the stone and runs the
+  engine's forced stone-evolution sequence -- permanent, dex-marked, and
+  learnset-aware. Backing out of the X/Y menu keeps the stone.
+- Surprise megas on late bosses: Sabrina, Lorelei, Agatha, Lance, the
+  champion rival, and gym-fight Giovanni each field exactly one mega --
+  preferring a mon of theirs that naturally has one (Agatha's Gengar,
+  Lance's Gyarados), falling back to a deterministic pick for the slot
+  beside the ace.
+
+### Notes
+
+- Mega Mewtwo X/Y, Mega Tyranitar, and Mega Gallade are skipped: the fan
+  pack ships no battler art for them.
+
 ## 0.6.0 - 2026-08-08
 
 ### Changed

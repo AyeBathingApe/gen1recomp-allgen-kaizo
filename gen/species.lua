@@ -66221,5 +66221,3599 @@ return {
         text = "_GenDexSIRFETCHDText",
       },
     },
+    {
+      id = "MEGAVENUSAUR",
+      name = "M-VENUSAUR",
+      dex = 866,
+      types = { "GRASS", "POISON" },
+      baseStats = {
+        hp = 80,
+        attack = 100,
+        defense = 123,
+        speed = 80,
+        special = 121,
+      },
+      catchRate = 3,
+      baseExp = 236,
+      growthRate = "MEDIUM_SLOW",
+      level1Moves = { "PETALBLIZZARD", "PETALBLIZZARD", "PETALDANCE", "TACKLE", "GROWL", "VINEWHIP", "GROWTH" },
+      learnset = {
+        {
+          level = 9,
+          move = "LEECHSEED",
+        },
+        {
+          level = 12,
+          move = "RAZORLEAF",
+        },
+        {
+          level = 15,
+          move = "POISONPOWDER",
+        },
+        {
+          level = 15,
+          move = "SLEEPPOWDER",
+        },
+        {
+          level = 20,
+          move = "SEEDBOMB",
+        },
+        {
+          level = 25,
+          move = "TAKEDOWN",
+        },
+        {
+          level = 30,
+          move = "SWEETSCENT",
+        },
+        {
+          level = 37,
+          move = "SYNTHESIS",
+        },
+        {
+          level = 44,
+          move = "WORRYSEED",
+        },
+        {
+          level = 51,
+          move = "DOUBLEEDGE",
+        },
+        {
+          level = 58,
+          move = "SOLARBEAM",
+        },
+      },
+      evolutions = {},
+      spriteFront = "gen/battlers/866.png",
+      spriteBack = "gen/battlers/866b.png",
+      frontSize = 7,
+      trueColor = true,
+      dexEntry = {
+        kind = "SEED",
+        heightFt = 7,
+        heightIn = 10,
+        weight = 3428,
+        text = "_GenDexMEGAVENUSAURText",
+      },
+    },
+    {
+      id = "MEGACHARIZARDX",
+      name = "M-CHARIZ-X",
+      dex = 867,
+      types = { "FIRE", "DRAGON" },
+      baseStats = {
+        hp = 78,
+        attack = 130,
+        defense = 111,
+        speed = 100,
+        special = 108,
+      },
+      catchRate = 3,
+      baseExp = 240,
+      growthRate = "MEDIUM_SLOW",
+      level1Moves = { "DRAGONDANCE", "AIRSLASH", "AIRSLASH", "DRAGONCLAW", "HEATWAVE", "SCRATCH", "GROWL", "EMBER", "SMOKESCREEN" },
+      learnset = {
+        {
+          level = 12,
+          move = "DRAGONBREATH",
+        },
+        {
+          level = 19,
+          move = "FIREFANG",
+        },
+        {
+          level = 24,
+          move = "SLASH",
+        },
+        {
+          level = 30,
+          move = "FLAMETHROWER",
+        },
+        {
+          level = 39,
+          move = "SCARYFACE",
+        },
+        {
+          level = 46,
+          move = "FIRESPIN",
+        },
+        {
+          level = 54,
+          move = "INFERNO",
+        },
+        {
+          level = 62,
+          move = "FLAREBLITZ",
+        },
+      },
+      evolutions = {},
+      spriteFront = "gen/battlers/867.png",
+      spriteBack = "gen/battlers/867b.png",
+      frontSize = 7,
+      trueColor = true,
+      dexEntry = {
+        kind = "FLAME",
+        heightFt = 5,
+        heightIn = 7,
+        weight = 2436,
+        text = "_GenDexMEGACHARIZARDXText",
+      },
+    },
+    {
+      id = "MEGACHARIZARDY",
+      name = "M-CHARIZ-Y",
+      dex = 868,
+      types = { "FIRE", "FLYING" },
+      baseStats = {
+        hp = 78,
+        attack = 104,
+        defense = 78,
+        speed = 100,
+        special = 137,
+      },
+      catchRate = 3,
+      baseExp = 240,
+      growthRate = "MEDIUM_SLOW",
+      level1Moves = { "DRAGONDANCE", "AIRSLASH", "AIRSLASH", "DRAGONCLAW", "HEATWAVE", "SCRATCH", "GROWL", "EMBER", "SMOKESCREEN" },
+      learnset = {
+        {
+          level = 12,
+          move = "DRAGONBREATH",
+        },
+        {
+          level = 19,
+          move = "FIREFANG",
+        },
+        {
+          level = 24,
+          move = "SLASH",
+        },
+        {
+          level = 30,
+          move = "FLAMETHROWER",
+        },
+        {
+          level = 39,
+          move = "SCARYFACE",
+        },
+        {
+          level = 46,
+          move = "FIRESPIN",
+        },
+        {
+          level = 54,
+          move = "INFERNO",
+        },
+        {
+          level = 62,
+          move = "FLAREBLITZ",
+        },
+      },
+      evolutions = {},
+      spriteFront = "gen/battlers/868.png",
+      spriteBack = "gen/battlers/868b.png",
+      frontSize = 7,
+      trueColor = true,
+      dexEntry = {
+        kind = "FLAME",
+        heightFt = 5,
+        heightIn = 7,
+        weight = 2216,
+        text = "_GenDexMEGACHARIZARDYText",
+      },
+    },
+    {
+      id = "MEGABLASTOISE",
+      name = "M-BLASTOIS",
+      dex = 869,
+      types = { "WATER" },
+      baseStats = {
+        hp = 79,
+        attack = 103,
+        defense = 120,
+        speed = 78,
+        special = 125,
+      },
+      catchRate = 3,
+      baseExp = 239,
+      growthRate = "MEDIUM_SLOW",
+      level1Moves = { "FLASHCANNON", "MUDDYWATER", "FLASHCANNON", "TACKLE", "TAILWHIP", "WATERGUN", "WITHDRAW" },
+      learnset = {
+        {
+          level = 9,
+          move = "RAPIDSPIN",
+        },
+        {
+          level = 12,
+          move = "BITE",
+        },
+        {
+          level = 15,
+          move = "WATERPULSE",
+        },
+        {
+          level = 20,
+          move = "PROTECT",
+        },
+        {
+          level = 25,
+          move = "RAINDANCE",
+        },
+        {
+          level = 30,
+          move = "AQUATAIL",
+        },
+        {
+          level = 35,
+          move = "SHELLSMASH",
+        },
+        {
+          level = 42,
+          move = "IRONDEFENSE",
+        },
+        {
+          level = 49,
+          move = "HYDROPUMP",
+        },
+        {
+          level = 56,
+          move = "SKULLBASH",
+        },
+      },
+      evolutions = {},
+      spriteFront = "gen/battlers/869.png",
+      spriteBack = "gen/battlers/869b.png",
+      frontSize = 7,
+      trueColor = true,
+      dexEntry = {
+        kind = "SHELLFISH",
+        heightFt = 5,
+        heightIn = 3,
+        weight = 2229,
+        text = "_GenDexMEGABLASTOISEText",
+      },
+    },
+    {
+      id = "MEGABEEDRILL",
+      name = "M-BEEDRILL",
+      dex = 870,
+      types = { "BUG", "POISON" },
+      baseStats = {
+        hp = 65,
+        attack = 150,
+        defense = 40,
+        speed = 145,
+        special = 48,
+      },
+      catchRate = 3,
+      baseExp = 159,
+      growthRate = "MEDIUM_FAST",
+      level1Moves = { "TWINEEDLE", "TWINEEDLE", "FURYATTACK" },
+      learnset = {
+        {
+          level = 11,
+          move = "FURYATTACK",
+        },
+        {
+          level = 14,
+          move = "RAGE",
+        },
+        {
+          level = 17,
+          move = "PURSUIT",
+        },
+        {
+          level = 20,
+          move = "FOCUSENERGY",
+        },
+        {
+          level = 23,
+          move = "VENOSHOCK",
+        },
+        {
+          level = 26,
+          move = "ASSURANCE",
+        },
+        {
+          level = 29,
+          move = "TOXICSPIKES",
+        },
+        {
+          level = 32,
+          move = "PINMISSILE",
+        },
+        {
+          level = 35,
+          move = "POISONJAB",
+        },
+        {
+          level = 38,
+          move = "AGILITY",
+        },
+        {
+          level = 41,
+          move = "ENDEAVOR",
+        },
+        {
+          level = 44,
+          move = "FELLSTINGER",
+        },
+      },
+      evolutions = {},
+      spriteFront = "gen/battlers/870.png",
+      spriteBack = "gen/battlers/870b.png",
+      frontSize = 7,
+      trueColor = true,
+      dexEntry = {
+        kind = "POISON BEE",
+        heightFt = 4,
+        heightIn = 7,
+        weight = 893,
+        text = "_GenDexMEGABEEDRILLText",
+      },
+    },
+    {
+      id = "MEGAPIDGEOT",
+      name = "M-PIDGEOT",
+      dex = 871,
+      types = { "NORMAL", "FLYING" },
+      baseStats = {
+        hp = 83,
+        attack = 80,
+        defense = 80,
+        speed = 121,
+        special = 108,
+      },
+      catchRate = 3,
+      baseExp = 216,
+      growthRate = "MEDIUM_SLOW",
+      level1Moves = { "HURRICANE", "TACKLE", "SANDATTACK", "GUST", "QUICKATTACK" },
+      learnset = {
+        {
+          level = 5,
+          move = "SANDATTACK",
+        },
+        {
+          level = 9,
+          move = "GUST",
+        },
+        {
+          level = 13,
+          move = "QUICKATTACK",
+        },
+        {
+          level = 17,
+          move = "WHIRLWIND",
+        },
+        {
+          level = 22,
+          move = "TWISTER",
+        },
+        {
+          level = 27,
+          move = "FEATHERDANCE",
+        },
+        {
+          level = 32,
+          move = "AGILITY",
+        },
+        {
+          level = 38,
+          move = "WINGATTACK",
+        },
+        {
+          level = 44,
+          move = "ROOST",
+        },
+        {
+          level = 50,
+          move = "TAILWIND",
+        },
+        {
+          level = 56,
+          move = "MIRRORMOVE",
+        },
+        {
+          level = 62,
+          move = "AIRSLASH",
+        },
+        {
+          level = 68,
+          move = "HURRICANE",
+        },
+      },
+      evolutions = {},
+      spriteFront = "gen/battlers/871.png",
+      spriteBack = "gen/battlers/871b.png",
+      frontSize = 7,
+      trueColor = true,
+      dexEntry = {
+        kind = "BIRD",
+        heightFt = 7,
+        heightIn = 3,
+        weight = 1113,
+        text = "_GenDexMEGAPIDGEOTText",
+      },
+    },
+    {
+      id = "MEGAALAKAZAM",
+      name = "M-ALAKAZAM",
+      dex = 872,
+      types = { "PSYCHIC" },
+      baseStats = {
+        hp = 55,
+        attack = 50,
+        defense = 65,
+        speed = 150,
+        special = 140,
+      },
+      catchRate = 3,
+      baseExp = 225,
+      growthRate = "MEDIUM_SLOW",
+      level1Moves = { "CONFUSION", "KINESIS", "DISABLE", "TELEPORT" },
+      learnset = {
+        {
+          level = 5,
+          move = "PSYBEAM",
+        },
+        {
+          level = 10,
+          move = "REFLECT",
+        },
+        {
+          level = 15,
+          move = "ALLYSWITCH",
+        },
+        {
+          level = 20,
+          move = "PSYCHOCUT",
+        },
+        {
+          level = 25,
+          move = "RECOVER",
+        },
+        {
+          level = 30,
+          move = "PSYSHOCK",
+        },
+        {
+          level = 35,
+          move = "PSYCHIC",
+        },
+        {
+          level = 40,
+          move = "ROLEPLAY",
+        },
+        {
+          level = 45,
+          move = "FUTURESIGHT",
+        },
+        {
+          level = 50,
+          move = "CALMMIND",
+        },
+      },
+      evolutions = {},
+      spriteFront = "gen/battlers/872.png",
+      spriteBack = "gen/battlers/872b.png",
+      frontSize = 7,
+      trueColor = true,
+      dexEntry = {
+        kind = "PSI",
+        heightFt = 3,
+        heightIn = 11,
+        weight = 1058,
+        text = "_GenDexMEGAALAKAZAMText",
+      },
+    },
+    {
+      id = "MEGASLOWBRO",
+      name = "M-SLOWBRO",
+      dex = 873,
+      types = { "WATER", "PSYCHIC" },
+      baseStats = {
+        hp = 95,
+        attack = 75,
+        defense = 180,
+        speed = 30,
+        special = 105,
+      },
+      catchRate = 3,
+      baseExp = 172,
+      growthRate = "MEDIUM_FAST",
+      level1Moves = { "WITHDRAW", "TACKLE", "CURSE", "GROWL", "WATERGUN" },
+      learnset = {
+        {
+          level = 9,
+          move = "YAWN",
+        },
+        {
+          level = 12,
+          move = "CONFUSION",
+        },
+        {
+          level = 15,
+          move = "DISABLE",
+        },
+        {
+          level = 18,
+          move = "WATERPULSE",
+        },
+        {
+          level = 21,
+          move = "HEADBUTT",
+        },
+        {
+          level = 24,
+          move = "ZENHEADBUTT",
+        },
+        {
+          level = 27,
+          move = "AMNESIA",
+        },
+        {
+          level = 30,
+          move = "SURF",
+        },
+        {
+          level = 33,
+          move = "SLACKOFF",
+        },
+        {
+          level = 36,
+          move = "PSYCHIC",
+        },
+        {
+          level = 41,
+          move = "PSYCHUP",
+        },
+        {
+          level = 46,
+          move = "RAINDANCE",
+        },
+        {
+          level = 51,
+          move = "HEALPULSE",
+        },
+      },
+      evolutions = {},
+      spriteFront = "gen/battlers/873.png",
+      spriteBack = "gen/battlers/873b.png",
+      frontSize = 7,
+      trueColor = true,
+      dexEntry = {
+        kind = "HERMIT CRAB",
+        heightFt = 6,
+        heightIn = 7,
+        weight = 2646,
+        text = "_GenDexMEGASLOWBROText",
+      },
+    },
+    {
+      id = "MEGAGENGAR",
+      name = "M-GENGAR",
+      dex = 874,
+      types = { "GHOST", "POISON" },
+      baseStats = {
+        hp = 60,
+        attack = 65,
+        defense = 80,
+        speed = 130,
+        special = 132,
+      },
+      catchRate = 3,
+      baseExp = 225,
+      growthRate = "MEDIUM_SLOW",
+      level1Moves = { "SHADOWPUNCH", "PERISHSONG", "REFLECTTYPE", "LICK", "CONFUSERAY", "HYPNOSIS", "MEANLOOK" },
+      learnset = {
+        {
+          level = 12,
+          move = "PAYBACK",
+        },
+        {
+          level = 16,
+          move = "SPITE",
+        },
+        {
+          level = 20,
+          move = "CURSE",
+        },
+        {
+          level = 24,
+          move = "HEX",
+        },
+        {
+          level = 30,
+          move = "NIGHTSHADE",
+        },
+        {
+          level = 36,
+          move = "SUCKERPUNCH",
+        },
+        {
+          level = 42,
+          move = "DARKPULSE",
+        },
+        {
+          level = 48,
+          move = "SHADOWBALL",
+        },
+        {
+          level = 54,
+          move = "DESTINYBOND",
+        },
+        {
+          level = 60,
+          move = "DREAMEATER",
+        },
+      },
+      evolutions = {},
+      spriteFront = "gen/battlers/874.png",
+      spriteBack = "gen/battlers/874b.png",
+      frontSize = 7,
+      trueColor = true,
+      dexEntry = {
+        kind = "SHADOW",
+        heightFt = 4,
+        heightIn = 7,
+        weight = 893,
+        text = "_GenDexMEGAGENGARText",
+      },
+    },
+    {
+      id = "MEGAKANGASKHAN",
+      name = "M-KANGASKH",
+      dex = 875,
+      types = { "NORMAL" },
+      baseStats = {
+        hp = 105,
+        attack = 125,
+        defense = 100,
+        speed = 100,
+        special = 80,
+      },
+      catchRate = 3,
+      baseExp = 172,
+      growthRate = "MEDIUM_FAST",
+      level1Moves = { "POUND", "TAILWHIP" },
+      learnset = {
+        {
+          level = 4,
+          move = "GROWL",
+        },
+        {
+          level = 8,
+          move = "FAKEOUT",
+        },
+        {
+          level = 12,
+          move = "BITE",
+        },
+        {
+          level = 16,
+          move = "STOMP",
+        },
+        {
+          level = 20,
+          move = "FOCUSENERGY",
+        },
+        {
+          level = 24,
+          move = "HEADBUTT",
+        },
+        {
+          level = 28,
+          move = "SUCKERPUNCH",
+        },
+        {
+          level = 32,
+          move = "DOUBLEHIT",
+        },
+        {
+          level = 36,
+          move = "CRUNCH",
+        },
+        {
+          level = 40,
+          move = "ENDURE",
+        },
+        {
+          level = 44,
+          move = "REVERSAL",
+        },
+        {
+          level = 48,
+          move = "OUTRAGE",
+        },
+        {
+          level = 52,
+          move = "LASTRESORT",
+        },
+      },
+      evolutions = {},
+      spriteFront = "gen/battlers/875.png",
+      spriteBack = "gen/battlers/875b.png",
+      frontSize = 7,
+      trueColor = true,
+      dexEntry = {
+        kind = "PARENT",
+        heightFt = 7,
+        heightIn = 3,
+        weight = 2205,
+        text = "_GenDexMEGAKANGASKHANText",
+      },
+    },
+    {
+      id = "MEGAPINSIR",
+      name = "M-PINSIR",
+      dex = 876,
+      types = { "BUG", "FLYING" },
+      baseStats = {
+        hp = 65,
+        attack = 155,
+        defense = 120,
+        speed = 105,
+        special = 78,
+      },
+      catchRate = 3,
+      baseExp = 175,
+      growthRate = "SLOW",
+      level1Moves = { "VICEGRIP", "HARDEN" },
+      learnset = {
+        {
+          level = 4,
+          move = "FOCUSENERGY",
+        },
+        {
+          level = 8,
+          move = "BIND",
+        },
+        {
+          level = 12,
+          move = "SEISMICTOSS",
+        },
+        {
+          level = 16,
+          move = "BUGBITE",
+        },
+        {
+          level = 20,
+          move = "STORMTHROW",
+        },
+        {
+          level = 24,
+          move = "DOUBLEHIT",
+        },
+        {
+          level = 28,
+          move = "VITALTHROW",
+        },
+        {
+          level = 32,
+          move = "XSCISSOR",
+        },
+        {
+          level = 36,
+          move = "STRENGTH",
+        },
+        {
+          level = 40,
+          move = "SWORDSDANCE",
+        },
+        {
+          level = 44,
+          move = "SUBMISSION",
+        },
+        {
+          level = 48,
+          move = "GUILLOTINE",
+        },
+        {
+          level = 52,
+          move = "SUPERPOWER",
+        },
+      },
+      evolutions = {},
+      spriteFront = "gen/battlers/876.png",
+      spriteBack = "gen/battlers/876b.png",
+      frontSize = 7,
+      trueColor = true,
+      dexEntry = {
+        kind = "STAG BEETLE",
+        heightFt = 5,
+        heightIn = 7,
+        weight = 1301,
+        text = "_GenDexMEGAPINSIRText",
+      },
+    },
+    {
+      id = "MEGAGYARADOS",
+      name = "M-GYARADOS",
+      dex = 877,
+      types = { "WATER", "DARK" },
+      baseStats = {
+        hp = 95,
+        attack = 155,
+        defense = 109,
+        speed = 81,
+        special = 100,
+      },
+      catchRate = 3,
+      baseExp = 189,
+      growthRate = "SLOW",
+      level1Moves = { "BITE", "BITE", "FLAIL", "SPLASH", "TACKLE", "LEER", "TWISTER" },
+      learnset = {
+        {
+          level = 4,
+          move = "WHIRLPOOL",
+        },
+        {
+          level = 8,
+          move = "ICEFANG",
+        },
+        {
+          level = 12,
+          move = "BRINE",
+        },
+        {
+          level = 16,
+          move = "SCARYFACE",
+        },
+        {
+          level = 21,
+          move = "WATERFALL",
+        },
+        {
+          level = 24,
+          move = "CRUNCH",
+        },
+        {
+          level = 28,
+          move = "RAINDANCE",
+        },
+        {
+          level = 32,
+          move = "AQUATAIL",
+        },
+        {
+          level = 36,
+          move = "DRAGONDANCE",
+        },
+        {
+          level = 40,
+          move = "HYDROPUMP",
+        },
+        {
+          level = 44,
+          move = "HURRICANE",
+        },
+        {
+          level = 48,
+          move = "THRASH",
+        },
+        {
+          level = 52,
+          move = "HYPERBEAM",
+        },
+      },
+      evolutions = {},
+      spriteFront = "gen/battlers/877.png",
+      spriteBack = "gen/battlers/877b.png",
+      frontSize = 7,
+      trueColor = true,
+      dexEntry = {
+        kind = "ATROCIOUS",
+        heightFt = 21,
+        heightIn = 4,
+        weight = 6724,
+        text = "_GenDexMEGAGYARADOSText",
+      },
+    },
+    {
+      id = "MEGAAERODACTYL",
+      name = "M-AERODACT",
+      dex = 878,
+      types = { "ROCK", "FLYING" },
+      baseStats = {
+        hp = 80,
+        attack = 135,
+        defense = 85,
+        speed = 150,
+        special = 82,
+      },
+      catchRate = 3,
+      baseExp = 180,
+      growthRate = "SLOW",
+      level1Moves = { "BITE", "ANCIENTPOWER" },
+      learnset = {
+        {
+          level = 5,
+          move = "SUPERSONIC",
+        },
+        {
+          level = 10,
+          move = "WINGATTACK",
+        },
+        {
+          level = 15,
+          move = "SCARYFACE",
+        },
+        {
+          level = 20,
+          move = "ROCKSLIDE",
+        },
+        {
+          level = 25,
+          move = "ROAR",
+        },
+        {
+          level = 30,
+          move = "CRUNCH",
+        },
+        {
+          level = 35,
+          move = "IRONHEAD",
+        },
+        {
+          level = 40,
+          move = "TAKEDOWN",
+        },
+        {
+          level = 45,
+          move = "STONEEDGE",
+        },
+        {
+          level = 50,
+          move = "AGILITY",
+        },
+        {
+          level = 55,
+          move = "HYPERBEAM",
+        },
+        {
+          level = 60,
+          move = "GIGAIMPACT",
+        },
+      },
+      evolutions = {},
+      spriteFront = "gen/battlers/878.png",
+      spriteBack = "gen/battlers/878b.png",
+      frontSize = 7,
+      trueColor = true,
+      dexEntry = {
+        kind = "FOSSIL",
+        heightFt = 6,
+        heightIn = 11,
+        weight = 1742,
+        text = "_GenDexMEGAAERODACTYLText",
+      },
+    },
+    {
+      id = "MEGAAMPHAROS",
+      name = "M-AMPHAROS",
+      dex = 879,
+      types = { "ELECTRIC", "DRAGON" },
+      baseStats = {
+        hp = 90,
+        attack = 95,
+        defense = 105,
+        speed = 45,
+        special = 138,
+      },
+      catchRate = 3,
+      baseExp = 230,
+      growthRate = "MEDIUM_SLOW",
+      level1Moves = { "THUNDERPUNCH", "THUNDERPUNCH", "ZAPCANNON", "MAGNETICFLUX", "IONDELUGE", "DRAGONPULSE", "FIREPUNCH", "TACKLE", "GROWL", "THUNDERWAVE", "THUNDERSHOCK" },
+      learnset = {
+        {
+          level = 4,
+          move = "THUNDERWAVE",
+        },
+        {
+          level = 8,
+          move = "THUNDERSHOCK",
+        },
+        {
+          level = 11,
+          move = "COTTONSPORE",
+        },
+        {
+          level = 16,
+          move = "CHARGE",
+        },
+        {
+          level = 20,
+          move = "TAKEDOWN",
+        },
+        {
+          level = 25,
+          move = "ELECTROBALL",
+        },
+        {
+          level = 29,
+          move = "CONFUSERAY",
+        },
+        {
+          level = 35,
+          move = "POWERGEM",
+        },
+        {
+          level = 40,
+          move = "DISCHARGE",
+        },
+        {
+          level = 46,
+          move = "COTTONGUARD",
+        },
+        {
+          level = 51,
+          move = "SIGNALBEAM",
+        },
+        {
+          level = 57,
+          move = "LIGHTSCREEN",
+        },
+        {
+          level = 62,
+          move = "THUNDER",
+        },
+        {
+          level = 65,
+          move = "DRAGONPULSE",
+        },
+      },
+      evolutions = {},
+      spriteFront = "gen/battlers/879.png",
+      spriteBack = "gen/battlers/879b.png",
+      frontSize = 7,
+      trueColor = true,
+      dexEntry = {
+        kind = "LIGHT",
+        heightFt = 4,
+        heightIn = 7,
+        weight = 1356,
+        text = "_GenDexMEGAAMPHAROSText",
+      },
+    },
+    {
+      id = "MEGASTEELIX",
+      name = "M-STEELIX",
+      dex = 880,
+      types = { "STEEL", "GROUND" },
+      baseStats = {
+        hp = 75,
+        attack = 125,
+        defense = 230,
+        speed = 30,
+        special = 75,
+      },
+      catchRate = 3,
+      baseExp = 179,
+      growthRate = "MEDIUM_FAST",
+      level1Moves = { "CRUNCH", "THUNDERFANG", "ICEFANG", "FIREFANG", "ROCKPOLISH", "TACKLE", "HARDEN", "BIND", "ROCKTHROW" },
+      learnset = {
+        {
+          level = 4,
+          move = "SMACKDOWN",
+        },
+        {
+          level = 8,
+          move = "AUTOTOMIZE",
+        },
+        {
+          level = 12,
+          move = "DRAGONBREATH",
+        },
+        {
+          level = 16,
+          move = "CURSE",
+        },
+        {
+          level = 20,
+          move = "ROCKSLIDE",
+        },
+        {
+          level = 24,
+          move = "SCREECH",
+        },
+        {
+          level = 28,
+          move = "SANDTOMB",
+        },
+        {
+          level = 32,
+          move = "STEALTHROCK",
+        },
+        {
+          level = 36,
+          move = "SLAM",
+        },
+        {
+          level = 40,
+          move = "SANDSTORM",
+        },
+        {
+          level = 44,
+          move = "DIG",
+        },
+        {
+          level = 48,
+          move = "IRONTAIL",
+        },
+        {
+          level = 52,
+          move = "STONEEDGE",
+        },
+        {
+          level = 56,
+          move = "DOUBLEEDGE",
+        },
+        {
+          level = 60,
+          move = "MAGNETRISE",
+        },
+      },
+      evolutions = {},
+      spriteFront = "gen/battlers/880.png",
+      spriteBack = "gen/battlers/880b.png",
+      frontSize = 7,
+      trueColor = true,
+      dexEntry = {
+        kind = "IRON SNAKE",
+        heightFt = 34,
+        heightIn = 5,
+        weight = 16314,
+        text = "_GenDexMEGASTEELIXText",
+      },
+    },
+    {
+      id = "MEGASCIZOR",
+      name = "M-SCIZOR",
+      dex = 881,
+      types = { "BUG", "STEEL" },
+      baseStats = {
+        hp = 70,
+        attack = 150,
+        defense = 140,
+        speed = 65,
+        special = 88,
+      },
+      catchRate = 3,
+      baseExp = 175,
+      growthRate = "MEDIUM_FAST",
+      level1Moves = { "BULLETPUNCH", "BULLETPUNCH", "WINGATTACK", "AGILITY", "AIRSLASH", "QUICKATTACK", "LEER", "FURYCUTTER", "FALSESWIPE" },
+      learnset = {
+        {
+          level = 12,
+          move = "METALCLAW",
+        },
+        {
+          level = 16,
+          move = "DOUBLETEAM",
+        },
+        {
+          level = 20,
+          move = "DOUBLEHIT",
+        },
+        {
+          level = 24,
+          move = "SLASH",
+        },
+        {
+          level = 28,
+          move = "FOCUSENERGY",
+        },
+        {
+          level = 32,
+          move = "IRONDEFENSE",
+        },
+        {
+          level = 36,
+          move = "IRONHEAD",
+        },
+        {
+          level = 40,
+          move = "XSCISSOR",
+        },
+        {
+          level = 44,
+          move = "LASERFOCUS",
+        },
+        {
+          level = 48,
+          move = "SWORDSDANCE",
+        },
+      },
+      evolutions = {},
+      spriteFront = "gen/battlers/881.png",
+      spriteBack = "gen/battlers/881b.png",
+      frontSize = 7,
+      trueColor = true,
+      dexEntry = {
+        kind = "PINCER",
+        heightFt = 6,
+        heightIn = 7,
+        weight = 2756,
+        text = "_GenDexMEGASCIZORText",
+      },
+    },
+    {
+      id = "MEGAHERACROSS",
+      name = "M-HERACROS",
+      dex = 882,
+      types = { "BUG", "FIGHTING" },
+      baseStats = {
+        hp = 80,
+        attack = 185,
+        defense = 115,
+        speed = 75,
+        special = 72,
+      },
+      catchRate = 3,
+      baseExp = 175,
+      growthRate = "SLOW",
+      level1Moves = { "TACKLE", "LEER" },
+      learnset = {
+        {
+          level = 5,
+          move = "FURYATTACK",
+        },
+        {
+          level = 10,
+          move = "ENDURE",
+        },
+        {
+          level = 15,
+          move = "AERIALACE",
+        },
+        {
+          level = 20,
+          move = "HORNATTACK",
+        },
+        {
+          level = 25,
+          move = "COUNTER",
+        },
+        {
+          level = 30,
+          move = "BRICKBREAK",
+        },
+        {
+          level = 35,
+          move = "PINMISSILE",
+        },
+        {
+          level = 40,
+          move = "THROATCHOP",
+        },
+        {
+          level = 45,
+          move = "THRASH",
+        },
+        {
+          level = 50,
+          move = "SWORDSDANCE",
+        },
+        {
+          level = 55,
+          move = "MEGAHORN",
+        },
+        {
+          level = 60,
+          move = "CLOSECOMBAT",
+        },
+      },
+      evolutions = {},
+      spriteFront = "gen/battlers/882.png",
+      spriteBack = "gen/battlers/882b.png",
+      frontSize = 7,
+      trueColor = true,
+      dexEntry = {
+        kind = "SINGLE HORN",
+        heightFt = 5,
+        heightIn = 7,
+        weight = 1378,
+        text = "_GenDexMEGAHERACROSSText",
+      },
+    },
+    {
+      id = "MEGAHOUNDOOM",
+      name = "M-HOUNDOOM",
+      dex = 883,
+      types = { "DARK", "FIRE" },
+      baseStats = {
+        hp = 75,
+        attack = 90,
+        defense = 90,
+        speed = 115,
+        special = 115,
+      },
+      catchRate = 3,
+      baseExp = 175,
+      growthRate = "SLOW",
+      level1Moves = { "INFERNO", "NASTYPLOT", "THUNDERFANG", "LEER", "EMBER", "HOWL", "SMOG" },
+      learnset = {
+        {
+          level = 4,
+          move = "HOWL",
+        },
+        {
+          level = 8,
+          move = "SMOG",
+        },
+        {
+          level = 13,
+          move = "ROAR",
+        },
+        {
+          level = 16,
+          move = "BITE",
+        },
+        {
+          level = 20,
+          move = "ODORSLEUTH",
+        },
+        {
+          level = 26,
+          move = "BEATUP",
+        },
+        {
+          level = 30,
+          move = "FIREFANG",
+        },
+        {
+          level = 35,
+          move = "FEINTATTACK",
+        },
+        {
+          level = 41,
+          move = "EMBARGO",
+        },
+        {
+          level = 45,
+          move = "FOULPLAY",
+        },
+        {
+          level = 50,
+          move = "FLAMETHROWER",
+        },
+        {
+          level = 56,
+          move = "CRUNCH",
+        },
+        {
+          level = 60,
+          move = "NASTYPLOT",
+        },
+        {
+          level = 65,
+          move = "INFERNO",
+        },
+      },
+      evolutions = {},
+      spriteFront = "gen/battlers/883.png",
+      spriteBack = "gen/battlers/883b.png",
+      frontSize = 7,
+      trueColor = true,
+      dexEntry = {
+        kind = "DARK",
+        heightFt = 6,
+        heightIn = 3,
+        weight = 1091,
+        text = "_GenDexMEGAHOUNDOOMText",
+      },
+    },
+    {
+      id = "MEGASCEPTILE",
+      name = "M-SCEPTILE",
+      dex = 884,
+      types = { "GRASS", "DRAGON" },
+      baseStats = {
+        hp = 70,
+        attack = 110,
+        defense = 75,
+        speed = 145,
+        special = 115,
+      },
+      catchRate = 3,
+      baseExp = 239,
+      growthRate = "MEDIUM_SLOW",
+      level1Moves = { "DUALCHOP", "DUALCHOP", "FURYCUTTER", "FALSESWIPE", "XSCISSOR", "ENERGYBALL", "POUND", "LEER", "LEAFAGE", "QUICKATTACK" },
+      learnset = {
+        {
+          level = 5,
+          move = "MEGADRAIN",
+        },
+        {
+          level = 12,
+          move = "DETECT",
+        },
+        {
+          level = 15,
+          move = "QUICKGUARD",
+        },
+        {
+          level = 20,
+          move = "ASSURANCE",
+        },
+        {
+          level = 25,
+          move = "GIGADRAIN",
+        },
+        {
+          level = 30,
+          move = "SLAM",
+        },
+        {
+          level = 35,
+          move = "DOUBLETEAM",
+        },
+        {
+          level = 42,
+          move = "LEAFBLADE",
+        },
+        {
+          level = 49,
+          move = "SCREECH",
+        },
+        {
+          level = 56,
+          move = "ENDEAVOR",
+        },
+        {
+          level = 63,
+          move = "LEAFSTORM",
+        },
+      },
+      evolutions = {},
+      spriteFront = "gen/battlers/884.png",
+      spriteBack = "gen/battlers/884b.png",
+      frontSize = 7,
+      trueColor = true,
+      dexEntry = {
+        kind = "FOREST",
+        heightFt = 6,
+        heightIn = 3,
+        weight = 1217,
+        text = "_GenDexMEGASCEPTILEText",
+      },
+    },
+    {
+      id = "MEGABLAZIKEN",
+      name = "M-BLAZIKEN",
+      dex = 885,
+      types = { "FIRE", "FIGHTING" },
+      baseStats = {
+        hp = 80,
+        attack = 160,
+        defense = 80,
+        speed = 100,
+        special = 105,
+      },
+      catchRate = 3,
+      baseExp = 239,
+      growthRate = "MEDIUM_SLOW",
+      level1Moves = { "DOUBLEKICK", "FIREPUNCH", "BRAVEBIRD", "FLAMETHROWER", "FEATHERDANCE", "SCRATCH", "GROWL", "EMBER", "QUICKATTACK" },
+      learnset = {
+        {
+          level = 9,
+          move = "FLAMECHARGE",
+        },
+        {
+          level = 12,
+          move = "DETECT",
+        },
+        {
+          level = 15,
+          move = "SANDATTACK",
+        },
+        {
+          level = 20,
+          move = "AERIALACE",
+        },
+        {
+          level = 25,
+          move = "SLASH",
+        },
+        {
+          level = 30,
+          move = "BOUNCE",
+        },
+        {
+          level = 35,
+          move = "FOCUSENERGY",
+        },
+        {
+          level = 42,
+          move = "BLAZEKICK",
+        },
+        {
+          level = 49,
+          move = "BULKUP",
+        },
+        {
+          level = 56,
+          move = "REVERSAL",
+        },
+        {
+          level = 63,
+          move = "FLAREBLITZ",
+        },
+      },
+      evolutions = {},
+      spriteFront = "gen/battlers/885.png",
+      spriteBack = "gen/battlers/885b.png",
+      frontSize = 7,
+      trueColor = true,
+      dexEntry = {
+        kind = "BLAZE",
+        heightFt = 6,
+        heightIn = 3,
+        weight = 1146,
+        text = "_GenDexMEGABLAZIKENText",
+      },
+    },
+    {
+      id = "MEGASWAMPERT",
+      name = "M-SWAMPERT",
+      dex = 886,
+      types = { "WATER", "GROUND" },
+      baseStats = {
+        hp = 100,
+        attack = 150,
+        defense = 110,
+        speed = 70,
+        special = 102,
+      },
+      catchRate = 3,
+      baseExp = 241,
+      growthRate = "MEDIUM_SLOW",
+      level1Moves = { "MUDSHOT", "HAMMERARM", "EARTHQUAKE", "SURF", "TACKLE", "GROWL", "WATERGUN", "ROCKSMASH" },
+      learnset = {
+        {
+          level = 9,
+          move = "ROCKTHROW",
+        },
+        {
+          level = 12,
+          move = "PROTECT",
+        },
+        {
+          level = 15,
+          move = "SUPERSONIC",
+        },
+        {
+          level = 20,
+          move = "WATERPULSE",
+        },
+        {
+          level = 25,
+          move = "ROCKSLIDE",
+        },
+        {
+          level = 30,
+          move = "TAKEDOWN",
+        },
+        {
+          level = 35,
+          move = "AMNESIA",
+        },
+        {
+          level = 42,
+          move = "MUDDYWATER",
+        },
+        {
+          level = 49,
+          move = "SCREECH",
+        },
+        {
+          level = 56,
+          move = "ENDEAVOR",
+        },
+        {
+          level = 63,
+          move = "HYDROPUMP",
+        },
+      },
+      evolutions = {},
+      spriteFront = "gen/battlers/886.png",
+      spriteBack = "gen/battlers/886b.png",
+      frontSize = 7,
+      trueColor = true,
+      dexEntry = {
+        kind = "MUD FISH",
+        heightFt = 6,
+        heightIn = 3,
+        weight = 2249,
+        text = "_GenDexMEGASWAMPERTText",
+      },
+    },
+    {
+      id = "MEGAGARDEVOIR",
+      name = "M-GARDEVOI",
+      dex = 887,
+      types = { "PSYCHIC", "FAIRY" },
+      baseStats = {
+        hp = 68,
+        attack = 85,
+        defense = 65,
+        speed = 100,
+        special = 150,
+      },
+      catchRate = 3,
+      baseExp = 233,
+      growthRate = "SLOW",
+      level1Moves = { "DAZZLINGGLEAM", "DAZZLINGGLEAM", "MOONBLAST", "MISTYTERRAIN", "HEALINGWISH", "CHARM", "GROWL", "DISARMINGVOICE", "DOUBLETEAM", "CONFUSION" },
+      learnset = {
+        {
+          level = 9,
+          move = "HYPNOSIS",
+        },
+        {
+          level = 12,
+          move = "DRAININGKISS",
+        },
+        {
+          level = 15,
+          move = "TELEPORT",
+        },
+        {
+          level = 18,
+          move = "PSYBEAM",
+        },
+        {
+          level = 23,
+          move = "LIFEDEW",
+        },
+        {
+          level = 28,
+          move = "WISH",
+        },
+        {
+          level = 35,
+          move = "CALMMIND",
+        },
+        {
+          level = 42,
+          move = "PSYCHIC",
+        },
+        {
+          level = 49,
+          move = "HEALPULSE",
+        },
+        {
+          level = 56,
+          move = "DREAMEATER",
+        },
+        {
+          level = 63,
+          move = "FUTURESIGHT",
+        },
+      },
+      evolutions = {},
+      spriteFront = "gen/battlers/887.png",
+      spriteBack = "gen/battlers/887b.png",
+      frontSize = 7,
+      trueColor = true,
+      dexEntry = {
+        kind = "EMBRACE",
+        heightFt = 5,
+        heightIn = 3,
+        weight = 1067,
+        text = "_GenDexMEGAGARDEVOIRText",
+      },
+    },
+    {
+      id = "MEGASABLEYE",
+      name = "M-SABLEYE",
+      dex = 888,
+      types = { "DARK", "GHOST" },
+      baseStats = {
+        hp = 50,
+        attack = 85,
+        defense = 125,
+        speed = 20,
+        special = 100,
+      },
+      catchRate = 3,
+      baseExp = 133,
+      growthRate = "MEDIUM_SLOW",
+      level1Moves = { "LEER", "SCRATCH" },
+      learnset = {
+        {
+          level = 3,
+          move = "ASTONISH",
+        },
+        {
+          level = 6,
+          move = "CONFUSERAY",
+        },
+        {
+          level = 9,
+          move = "SHADOWSNEAK",
+        },
+        {
+          level = 12,
+          move = "FAKEOUT",
+        },
+        {
+          level = 15,
+          move = "DISABLE",
+        },
+        {
+          level = 18,
+          move = "DETECT",
+        },
+        {
+          level = 21,
+          move = "NIGHTSHADE",
+        },
+        {
+          level = 24,
+          move = "FURYSWIPES",
+        },
+        {
+          level = 27,
+          move = "KNOCKOFF",
+        },
+        {
+          level = 30,
+          move = "QUASH",
+        },
+        {
+          level = 33,
+          move = "SHADOWCLAW",
+        },
+        {
+          level = 36,
+          move = "MEANLOOK",
+        },
+        {
+          level = 39,
+          move = "POWERGEM",
+        },
+        {
+          level = 42,
+          move = "ZENHEADBUTT",
+        },
+        {
+          level = 45,
+          move = "SHADOWBALL",
+        },
+        {
+          level = 48,
+          move = "FOULPLAY",
+        },
+      },
+      evolutions = {},
+      spriteFront = "gen/battlers/888.png",
+      spriteBack = "gen/battlers/888b.png",
+      frontSize = 7,
+      trueColor = true,
+      dexEntry = {
+        kind = "DARKNESS",
+        heightFt = 1,
+        heightIn = 8,
+        weight = 3549,
+        text = "_GenDexMEGASABLEYEText",
+      },
+    },
+    {
+      id = "MEGAMAWILE",
+      name = "M-MAWILE",
+      dex = 889,
+      types = { "STEEL", "FAIRY" },
+      baseStats = {
+        hp = 50,
+        attack = 105,
+        defense = 125,
+        speed = 50,
+        special = 75,
+      },
+      catchRate = 3,
+      baseExp = 133,
+      growthRate = "FAST",
+      level1Moves = { "ASTONISH", "GROWL" },
+      learnset = {
+        {
+          level = 4,
+          move = "FAIRYWIND",
+        },
+        {
+          level = 8,
+          move = "BATONPASS",
+        },
+        {
+          level = 12,
+          move = "BITE",
+        },
+        {
+          level = 16,
+          move = "STOCKPILE",
+        },
+        {
+          level = 16,
+          move = "SWALLOW",
+        },
+        {
+          level = 16,
+          move = "SPITUP",
+        },
+        {
+          level = 20,
+          move = "SUCKERPUNCH",
+        },
+        {
+          level = 24,
+          move = "IRONDEFENSE",
+        },
+        {
+          level = 28,
+          move = "CRUNCH",
+        },
+        {
+          level = 32,
+          move = "SWEETSCENT",
+        },
+        {
+          level = 36,
+          move = "IRONHEAD",
+        },
+        {
+          level = 40,
+          move = "TAUNT",
+        },
+        {
+          level = 44,
+          move = "FAKETEARS",
+        },
+        {
+          level = 48,
+          move = "PLAYROUGH",
+        },
+      },
+      evolutions = {},
+      spriteFront = "gen/battlers/889.png",
+      spriteBack = "gen/battlers/889b.png",
+      frontSize = 7,
+      trueColor = true,
+      dexEntry = {
+        kind = "DECEIVER",
+        heightFt = 3,
+        heightIn = 3,
+        weight = 518,
+        text = "_GenDexMEGAMAWILEText",
+      },
+    },
+    {
+      id = "MEGAAGGRON",
+      name = "M-AGGRON",
+      dex = 890,
+      types = { "STEEL" },
+      baseStats = {
+        hp = 70,
+        attack = 140,
+        defense = 230,
+        speed = 50,
+        special = 70,
+      },
+      catchRate = 3,
+      baseExp = 239,
+      growthRate = "SLOW",
+      level1Moves = { "TACKLE", "HARDEN", "METALCLAW", "ROCKTOMB" },
+      learnset = {
+        {
+          level = 12,
+          move = "ROAR",
+        },
+        {
+          level = 16,
+          move = "HEADBUTT",
+        },
+        {
+          level = 20,
+          move = "PROTECT",
+        },
+        {
+          level = 24,
+          move = "ROCKSLIDE",
+        },
+        {
+          level = 28,
+          move = "IRONHEAD",
+        },
+        {
+          level = 35,
+          move = "METALSOUND",
+        },
+        {
+          level = 40,
+          move = "TAKEDOWN",
+        },
+        {
+          level = 48,
+          move = "AUTOTOMIZE",
+        },
+        {
+          level = 56,
+          move = "IRONTAIL",
+        },
+        {
+          level = 64,
+          move = "IRONDEFENSE",
+        },
+        {
+          level = 72,
+          move = "HEAVYSLAM",
+        },
+        {
+          level = 80,
+          move = "DOUBLEEDGE",
+        },
+        {
+          level = 88,
+          move = "METALBURST",
+        },
+      },
+      evolutions = {},
+      spriteFront = "gen/battlers/890.png",
+      spriteBack = "gen/battlers/890b.png",
+      frontSize = 7,
+      trueColor = true,
+      dexEntry = {
+        kind = "IRON ARMOR",
+        heightFt = 7,
+        heightIn = 3,
+        weight = 8708,
+        text = "_GenDexMEGAAGGRONText",
+      },
+    },
+    {
+      id = "MEGAMEDICHAM",
+      name = "M-MEDICHAM",
+      dex = 891,
+      types = { "FIGHTING", "PSYCHIC" },
+      baseStats = {
+        hp = 60,
+        attack = 100,
+        defense = 85,
+        speed = 100,
+        special = 82,
+      },
+      catchRate = 3,
+      baseExp = 144,
+      growthRate = "MEDIUM_FAST",
+      level1Moves = { "ZENHEADBUTT", "FIREPUNCH", "THUNDERPUNCH", "ICEPUNCH", "BIDE", "MEDITATE", "CONFUSION", "DETECT" },
+      learnset = {
+        {
+          level = 4,
+          move = "MEDITATE",
+        },
+        {
+          level = 7,
+          move = "CONFUSION",
+        },
+        {
+          level = 9,
+          move = "DETECT",
+        },
+        {
+          level = 12,
+          move = "ENDURE",
+        },
+        {
+          level = 15,
+          move = "FEINT",
+        },
+        {
+          level = 17,
+          move = "FORCEPALM",
+        },
+        {
+          level = 20,
+          move = "HIDDENPOWER",
+        },
+        {
+          level = 23,
+          move = "CALMMIND",
+        },
+        {
+          level = 25,
+          move = "MINDREADER",
+        },
+        {
+          level = 28,
+          move = "HIGHJUMPKICK",
+        },
+        {
+          level = 31,
+          move = "PSYCHUP",
+        },
+        {
+          level = 33,
+          move = "ACUPRESSURE",
+        },
+        {
+          level = 36,
+          move = "POWERTRICK",
+        },
+        {
+          level = 42,
+          move = "REVERSAL",
+        },
+        {
+          level = 47,
+          move = "RECOVER",
+        },
+        {
+          level = 53,
+          move = "COUNTER",
+        },
+      },
+      evolutions = {},
+      spriteFront = "gen/battlers/891.png",
+      spriteBack = "gen/battlers/891b.png",
+      frontSize = 7,
+      trueColor = true,
+      dexEntry = {
+        kind = "MEDITATE",
+        heightFt = 4,
+        heightIn = 3,
+        weight = 694,
+        text = "_GenDexMEGAMEDICHAMText",
+      },
+    },
+    {
+      id = "MEGAMANECTRIC",
+      name = "M-MANECTRI",
+      dex = 892,
+      types = { "ELECTRIC" },
+      baseStats = {
+        hp = 70,
+        attack = 75,
+        defense = 80,
+        speed = 135,
+        special = 108,
+      },
+      catchRate = 3,
+      baseExp = 166,
+      growthRate = "SLOW",
+      level1Moves = { "FIREFANG", "TACKLE", "THUNDERWAVE", "LEER", "HOWL" },
+      learnset = {
+        {
+          level = 12,
+          move = "QUICKATTACK",
+        },
+        {
+          level = 16,
+          move = "SHOCKWAVE",
+        },
+        {
+          level = 20,
+          move = "BITE",
+        },
+        {
+          level = 24,
+          move = "THUNDERFANG",
+        },
+        {
+          level = 30,
+          move = "ROAR",
+        },
+        {
+          level = 36,
+          move = "DISCHARGE",
+        },
+        {
+          level = 42,
+          move = "CHARGE",
+        },
+        {
+          level = 48,
+          move = "WILDCHARGE",
+        },
+        {
+          level = 54,
+          move = "THUNDER",
+        },
+        {
+          level = 60,
+          move = "ELECTRICTERRAIN",
+        },
+      },
+      evolutions = {},
+      spriteFront = "gen/battlers/892.png",
+      spriteBack = "gen/battlers/892b.png",
+      frontSize = 7,
+      trueColor = true,
+      dexEntry = {
+        kind = "DISCHARGE",
+        heightFt = 5,
+        heightIn = 11,
+        weight = 970,
+        text = "_GenDexMEGAMANECTRICText",
+      },
+    },
+    {
+      id = "MEGASHARPEDO",
+      name = "M-SHARPEDO",
+      dex = 893,
+      types = { "WATER", "DARK" },
+      baseStats = {
+        hp = 70,
+        attack = 140,
+        defense = 70,
+        speed = 105,
+        special = 88,
+      },
+      catchRate = 3,
+      baseExp = 161,
+      growthRate = "SLOW",
+      level1Moves = { "SLASH", "SLASH", "NIGHTSLASH", "AQUAJET", "LEER", "POISONFANG", "FOCUSENERGY" },
+      learnset = {
+        {
+          level = 12,
+          move = "SCARYFACE",
+        },
+        {
+          level = 16,
+          move = "BITE",
+        },
+        {
+          level = 20,
+          move = "ICEFANG",
+        },
+        {
+          level = 24,
+          move = "SCREECH",
+        },
+        {
+          level = 28,
+          move = "SWAGGER",
+        },
+        {
+          level = 34,
+          move = "CRUNCH",
+        },
+        {
+          level = 40,
+          move = "AGILITY",
+        },
+        {
+          level = 46,
+          move = "LIQUIDATION",
+        },
+        {
+          level = 52,
+          move = "TAKEDOWN",
+        },
+      },
+      evolutions = {},
+      spriteFront = "gen/battlers/893.png",
+      spriteBack = "gen/battlers/893b.png",
+      frontSize = 7,
+      trueColor = true,
+      dexEntry = {
+        kind = "BRUTAL",
+        heightFt = 8,
+        heightIn = 2,
+        weight = 2873,
+        text = "_GenDexMEGASHARPEDOText",
+      },
+    },
+    {
+      id = "MEGACAMERUPT",
+      name = "M-CAMERUPT",
+      dex = 894,
+      types = { "FIRE", "GROUND" },
+      baseStats = {
+        hp = 70,
+        attack = 120,
+        defense = 100,
+        speed = 20,
+        special = 125,
+      },
+      catchRate = 3,
+      baseExp = 161,
+      growthRate = "MEDIUM_FAST",
+      level1Moves = { "ROCKSLIDE", "ROCKSLIDE", "FISSURE", "ERUPTION", "GROWL", "TACKLE", "EMBER", "FOCUSENERGY" },
+      learnset = {
+        {
+          level = 8,
+          move = "EMBER",
+        },
+        {
+          level = 8,
+          move = "FOCUSENERGY",
+        },
+        {
+          level = 12,
+          move = "MAGNITUDE",
+        },
+        {
+          level = 15,
+          move = "FLAMEBURST",
+        },
+        {
+          level = 19,
+          move = "AMNESIA",
+        },
+        {
+          level = 22,
+          move = "LAVAPLUME",
+        },
+        {
+          level = 26,
+          move = "EARTHPOWER",
+        },
+        {
+          level = 29,
+          move = "CURSE",
+        },
+        {
+          level = 31,
+          move = "TAKEDOWN",
+        },
+        {
+          level = 39,
+          move = "YAWN",
+        },
+        {
+          level = 46,
+          move = "EARTHQUAKE",
+        },
+        {
+          level = 52,
+          move = "ERUPTION",
+        },
+        {
+          level = 59,
+          move = "FISSURE",
+        },
+      },
+      evolutions = {},
+      spriteFront = "gen/battlers/894.png",
+      spriteBack = "gen/battlers/894b.png",
+      frontSize = 7,
+      trueColor = true,
+      dexEntry = {
+        kind = "ERUPTION",
+        heightFt = 8,
+        heightIn = 2,
+        weight = 7066,
+        text = "_GenDexMEGACAMERUPTText",
+      },
+    },
+    {
+      id = "MEGAALTARIA",
+      name = "M-ALTARIA",
+      dex = 895,
+      types = { "DRAGON", "FAIRY" },
+      baseStats = {
+        hp = 75,
+        attack = 110,
+        defense = 110,
+        speed = 80,
+        special = 108,
+      },
+      catchRate = 3,
+      baseExp = 172,
+      growthRate = "SLIGHTLY_FAST",
+      level1Moves = { "DRAGONPULSE", "DRAGONPULSE", "PLUCK", "PECK", "GROWL", "DISARMINGVOICE" },
+      learnset = {
+        {
+          level = 12,
+          move = "FURYATTACK",
+        },
+        {
+          level = 16,
+          move = "ROUND",
+        },
+        {
+          level = 20,
+          move = "DRAGONBREATH",
+        },
+        {
+          level = 24,
+          move = "SAFEGUARD",
+        },
+        {
+          level = 28,
+          move = "SING",
+        },
+        {
+          level = 32,
+          move = "COTTONGUARD",
+        },
+        {
+          level = 38,
+          move = "TAKEDOWN",
+        },
+        {
+          level = 44,
+          move = "MOONBLAST",
+        },
+        {
+          level = 50,
+          move = "PERISHSONG",
+        },
+        {
+          level = 56,
+          move = "SKYATTACK",
+        },
+        {
+          level = 81,
+          move = "MIST",
+        },
+      },
+      evolutions = {},
+      spriteFront = "gen/battlers/895.png",
+      spriteBack = "gen/battlers/895b.png",
+      frontSize = 7,
+      trueColor = true,
+      dexEntry = {
+        kind = "HUMMING",
+        heightFt = 4,
+        heightIn = 11,
+        weight = 454,
+        text = "_GenDexMEGAALTARIAText",
+      },
+    },
+    {
+      id = "MEGABANETTE",
+      name = "M-BANETTE",
+      dex = 896,
+      types = { "GHOST" },
+      baseStats = {
+        hp = 64,
+        attack = 165,
+        defense = 75,
+        speed = 75,
+        special = 88,
+      },
+      catchRate = 3,
+      baseExp = 159,
+      growthRate = "FAST",
+      level1Moves = { "PHANTOMFORCE", "KNOCKOFF", "SCREECH", "NIGHTSHADE", "SPITE" },
+      learnset = {
+        {
+          level = 4,
+          move = "SCREECH",
+        },
+        {
+          level = 7,
+          move = "NIGHTSHADE",
+        },
+        {
+          level = 10,
+          move = "SPITE",
+        },
+        {
+          level = 13,
+          move = "SHADOWSNEAK",
+        },
+        {
+          level = 16,
+          move = "WILLOWISP",
+        },
+        {
+          level = 19,
+          move = "FEINTATTACK",
+        },
+        {
+          level = 22,
+          move = "HEX",
+        },
+        {
+          level = 26,
+          move = "CURSE",
+        },
+        {
+          level = 30,
+          move = "SHADOWBALL",
+        },
+        {
+          level = 34,
+          move = "EMBARGO",
+        },
+        {
+          level = 40,
+          move = "SUCKERPUNCH",
+        },
+        {
+          level = 46,
+          move = "SNATCH",
+        },
+        {
+          level = 52,
+          move = "GRUDGE",
+        },
+        {
+          level = 58,
+          move = "TRICK",
+        },
+        {
+          level = 64,
+          move = "PHANTOMFORCE",
+        },
+      },
+      evolutions = {},
+      spriteFront = "gen/battlers/896.png",
+      spriteBack = "gen/battlers/896b.png",
+      frontSize = 7,
+      trueColor = true,
+      dexEntry = {
+        kind = "MARIONETTE",
+        heightFt = 3,
+        heightIn = 11,
+        weight = 287,
+        text = "_GenDexMEGABANETTEText",
+      },
+    },
+    {
+      id = "MEGAABSOL",
+      name = "M-ABSOL",
+      dex = 897,
+      types = { "DARK" },
+      baseStats = {
+        hp = 65,
+        attack = 150,
+        defense = 60,
+        speed = 115,
+        special = 88,
+      },
+      catchRate = 3,
+      baseExp = 163,
+      growthRate = "MEDIUM_SLOW",
+      level1Moves = { "QUICKATTACK", "LEER" },
+      learnset = {
+        {
+          level = 5,
+          move = "DOUBLETEAM",
+        },
+        {
+          level = 10,
+          move = "KNOCKOFF",
+        },
+        {
+          level = 15,
+          move = "DETECT",
+        },
+        {
+          level = 20,
+          move = "TAUNT",
+        },
+        {
+          level = 25,
+          move = "SLASH",
+        },
+        {
+          level = 30,
+          move = "NIGHTSLASH",
+        },
+        {
+          level = 35,
+          move = "FOCUSENERGY",
+        },
+        {
+          level = 40,
+          move = "SUCKERPUNCH",
+        },
+        {
+          level = 45,
+          move = "SWORDSDANCE",
+        },
+        {
+          level = 50,
+          move = "FUTURESIGHT",
+        },
+        {
+          level = 55,
+          move = "PERISHSONG",
+        },
+      },
+      evolutions = {},
+      spriteFront = "gen/battlers/897.png",
+      spriteBack = "gen/battlers/897b.png",
+      frontSize = 7,
+      trueColor = true,
+      dexEntry = {
+        kind = "DISASTER",
+        heightFt = 3,
+        heightIn = 11,
+        weight = 1080,
+        text = "_GenDexMEGAABSOLText",
+      },
+    },
+    {
+      id = "MEGAGLALIE",
+      name = "M-GLALIE",
+      dex = 898,
+      types = { "ICE" },
+      baseStats = {
+        hp = 80,
+        attack = 120,
+        defense = 80,
+        speed = 100,
+        special = 100,
+      },
+      catchRate = 3,
+      baseExp = 168,
+      growthRate = "MEDIUM_FAST",
+      level1Moves = { "FREEZEDRY", "FREEZEDRY", "SHEERCOLD", "POWDERSNOW", "ASTONISH", "LEER", "DOUBLETEAM" },
+      learnset = {
+        {
+          level = 15,
+          move = "ICESHARD",
+        },
+        {
+          level = 20,
+          move = "PROTECT",
+        },
+        {
+          level = 25,
+          move = "ICYWIND",
+        },
+        {
+          level = 30,
+          move = "FROSTBREATH",
+        },
+        {
+          level = 35,
+          move = "BITE",
+        },
+        {
+          level = 40,
+          move = "ICEFANG",
+        },
+        {
+          level = 47,
+          move = "HAIL",
+        },
+        {
+          level = 54,
+          move = "HEADBUTT",
+        },
+        {
+          level = 61,
+          move = "CRUNCH",
+        },
+        {
+          level = 68,
+          move = "BLIZZARD",
+        },
+      },
+      evolutions = {},
+      spriteFront = "gen/battlers/898.png",
+      spriteBack = "gen/battlers/898b.png",
+      frontSize = 7,
+      trueColor = true,
+      dexEntry = {
+        kind = "FACE",
+        heightFt = 6,
+        heightIn = 11,
+        weight = 7721,
+        text = "_GenDexMEGAGLALIEText",
+      },
+    },
+    {
+      id = "MEGASALAMENCE",
+      name = "M-SALAMENC",
+      dex = 899,
+      types = { "DRAGON", "FLYING" },
+      baseStats = {
+        hp = 95,
+        attack = 145,
+        defense = 130,
+        speed = 120,
+        special = 105,
+      },
+      catchRate = 3,
+      baseExp = 255,
+      growthRate = "SLOW",
+      level1Moves = { "FLY", "FLY", "PROTECT", "DRAGONTAIL", "EMBER", "LEER", "BITE", "DRAGONBREATH" },
+      learnset = {
+        {
+          level = 15,
+          move = "HEADBUTT",
+        },
+        {
+          level = 20,
+          move = "SCARYFACE",
+        },
+        {
+          level = 25,
+          move = "CRUNCH",
+        },
+        {
+          level = 33,
+          move = "DRAGONCLAW",
+        },
+        {
+          level = 39,
+          move = "ZENHEADBUTT",
+        },
+        {
+          level = 46,
+          move = "FOCUSENERGY",
+        },
+        {
+          level = 55,
+          move = "FLAMETHROWER",
+        },
+        {
+          level = 64,
+          move = "OUTRAGE",
+        },
+        {
+          level = 73,
+          move = "DOUBLEEDGE",
+        },
+      },
+      evolutions = {},
+      spriteFront = "gen/battlers/899.png",
+      spriteBack = "gen/battlers/899b.png",
+      frontSize = 7,
+      trueColor = true,
+      dexEntry = {
+        kind = "DRAGON",
+        heightFt = 5,
+        heightIn = 11,
+        weight = 2482,
+        text = "_GenDexMEGASALAMENCEText",
+      },
+    },
+    {
+      id = "MEGAMETAGROSS",
+      name = "M-METAGROS",
+      dex = 900,
+      types = { "STEEL", "PSYCHIC" },
+      baseStats = {
+        hp = 95,
+        attack = 145,
+        defense = 130,
+        speed = 120,
+        special = 105,
+      },
+      catchRate = 3,
+      baseExp = 255,
+      growthRate = "SLOW",
+      level1Moves = { "HAMMERARM", "HAMMERARM", "CONFUSION", "METALCLAW", "BULLETPUNCH", "TACKLE" },
+      learnset = {
+        {
+          level = 6,
+          move = "ZENHEADBUTT",
+        },
+        {
+          level = 12,
+          move = "MAGNETRISE",
+        },
+        {
+          level = 18,
+          move = "FLASHCANNON",
+        },
+        {
+          level = 26,
+          move = "TAKEDOWN",
+        },
+        {
+          level = 34,
+          move = "PSYCHIC",
+        },
+        {
+          level = 42,
+          move = "SCARYFACE",
+        },
+        {
+          level = 52,
+          move = "METEORMASH",
+        },
+        {
+          level = 62,
+          move = "IRONDEFENSE",
+        },
+        {
+          level = 72,
+          move = "AGILITY",
+        },
+        {
+          level = 82,
+          move = "HYPERBEAM",
+        },
+      },
+      evolutions = {},
+      spriteFront = "gen/battlers/900.png",
+      spriteBack = "gen/battlers/900b.png",
+      frontSize = 7,
+      trueColor = true,
+      dexEntry = {
+        kind = "IRON LEG",
+        heightFt = 8,
+        heightIn = 2,
+        weight = 20787,
+        text = "_GenDexMEGAMETAGROSSText",
+      },
+    },
+    {
+      id = "MEGALATIAS",
+      name = "M-LATIAS",
+      dex = 901,
+      types = { "DRAGON", "PSYCHIC" },
+      baseStats = {
+        hp = 80,
+        attack = 100,
+        defense = 120,
+        speed = 110,
+        special = 145,
+      },
+      catchRate = 3,
+      baseExp = 255,
+      growthRate = "SLOW",
+      level1Moves = { "STOREDPOWER", "CHARM" },
+      learnset = {
+        {
+          level = 5,
+          move = "HELPINGHAND",
+        },
+        {
+          level = 10,
+          move = "RECOVER",
+        },
+        {
+          level = 15,
+          move = "CONFUSION",
+        },
+        {
+          level = 20,
+          move = "TAILWIND",
+        },
+        {
+          level = 25,
+          move = "DRAGONBREATH",
+        },
+        {
+          level = 30,
+          move = "WISH",
+        },
+        {
+          level = 35,
+          move = "MISTBALL",
+        },
+        {
+          level = 40,
+          move = "ZENHEADBUTT",
+        },
+        {
+          level = 45,
+          move = "DRAGONPULSE",
+        },
+        {
+          level = 50,
+          move = "HEALPULSE",
+        },
+        {
+          level = 55,
+          move = "REFLECTTYPE",
+        },
+        {
+          level = 60,
+          move = "PSYCHIC",
+        },
+        {
+          level = 65,
+          move = "GUARDSPLIT",
+        },
+        {
+          level = 70,
+          move = "HEALINGWISH",
+        },
+        {
+          level = 75,
+          move = "PSYCHOSHIFT",
+        },
+      },
+      evolutions = {},
+      spriteFront = "gen/battlers/901.png",
+      spriteBack = "gen/battlers/901b.png",
+      frontSize = 7,
+      trueColor = true,
+      dexEntry = {
+        kind = "EON",
+        heightFt = 5,
+        heightIn = 11,
+        weight = 1146,
+        text = "_GenDexMEGALATIASText",
+      },
+    },
+    {
+      id = "MEGALATIOS",
+      name = "M-LATIOS",
+      dex = 902,
+      types = { "DRAGON", "PSYCHIC" },
+      baseStats = {
+        hp = 80,
+        attack = 130,
+        defense = 100,
+        speed = 110,
+        special = 140,
+      },
+      catchRate = 3,
+      baseExp = 255,
+      growthRate = "SLOW",
+      level1Moves = { "STOREDPOWER", "DRAGONDANCE" },
+      learnset = {
+        {
+          level = 5,
+          move = "HELPINGHAND",
+        },
+        {
+          level = 10,
+          move = "RECOVER",
+        },
+        {
+          level = 15,
+          move = "CONFUSION",
+        },
+        {
+          level = 20,
+          move = "TAILWIND",
+        },
+        {
+          level = 25,
+          move = "DRAGONBREATH",
+        },
+        {
+          level = 30,
+          move = "ALLYSWITCH",
+        },
+        {
+          level = 35,
+          move = "LUSTERPURGE",
+        },
+        {
+          level = 40,
+          move = "ZENHEADBUTT",
+        },
+        {
+          level = 45,
+          move = "DRAGONPULSE",
+        },
+        {
+          level = 50,
+          move = "HEALPULSE",
+        },
+        {
+          level = 55,
+          move = "SIMPLEBEAM",
+        },
+        {
+          level = 60,
+          move = "PSYCHIC",
+        },
+        {
+          level = 65,
+          move = "POWERSPLIT",
+        },
+        {
+          level = 70,
+          move = "MEMENTO",
+        },
+        {
+          level = 75,
+          move = "PSYCHOSHIFT",
+        },
+      },
+      evolutions = {},
+      spriteFront = "gen/battlers/902.png",
+      spriteBack = "gen/battlers/902b.png",
+      frontSize = 7,
+      trueColor = true,
+      dexEntry = {
+        kind = "EON",
+        heightFt = 7,
+        heightIn = 7,
+        weight = 1543,
+        text = "_GenDexMEGALATIOSText",
+      },
+    },
+    {
+      id = "MEGALOPUNNY",
+      name = "M-LOPUNNY",
+      dex = 903,
+      types = { "NORMAL", "FIGHTING" },
+      baseStats = {
+        hp = 65,
+        attack = 136,
+        defense = 94,
+        speed = 135,
+        special = 75,
+      },
+      catchRate = 3,
+      baseExp = 168,
+      growthRate = "MEDIUM_FAST",
+      level1Moves = { "MIRRORCOAT", "MAGICCOAT", "SPLASH", "POUND", "DEFENSECURL", "BABYDOLLEYES" },
+      learnset = {
+        {
+          level = 12,
+          move = "AFTERYOU",
+        },
+        {
+          level = 16,
+          move = "QUICKATTACK",
+        },
+        {
+          level = 20,
+          move = "DOUBLEKICK",
+        },
+        {
+          level = 24,
+          move = "CHARM",
+        },
+        {
+          level = 28,
+          move = "BATONPASS",
+        },
+        {
+          level = 32,
+          move = "HEADBUTT",
+        },
+        {
+          level = 36,
+          move = "AGILITY",
+        },
+        {
+          level = 40,
+          move = "ENTRAINMENT",
+        },
+        {
+          level = 44,
+          move = "FLATTER",
+        },
+        {
+          level = 48,
+          move = "BOUNCE",
+        },
+        {
+          level = 52,
+          move = "HEALINGWISH",
+        },
+        {
+          level = 56,
+          move = "HIGHJUMPKICK",
+        },
+      },
+      evolutions = {},
+      spriteFront = "gen/battlers/903.png",
+      spriteBack = "gen/battlers/903b.png",
+      frontSize = 7,
+      trueColor = true,
+      dexEntry = {
+        kind = "RABBIT",
+        heightFt = 4,
+        heightIn = 3,
+        weight = 624,
+        text = "_GenDexMEGALOPUNNYText",
+      },
+    },
+    {
+      id = "MEGAGARCHOMP",
+      name = "M-GARCHOMP",
+      dex = 904,
+      types = { "DRAGON", "GROUND" },
+      baseStats = {
+        hp = 108,
+        attack = 170,
+        defense = 115,
+        speed = 92,
+        special = 108,
+      },
+      catchRate = 3,
+      baseExp = 255,
+      growthRate = "SLOW",
+      level1Moves = { "CRUNCH", "CRUNCH", "DUALCHOP", "SANDTOMB", "TACKLE", "SANDATTACK", "DRAGONBREATH" },
+      learnset = {
+        {
+          level = 18,
+          move = "BULLDOZE",
+        },
+        {
+          level = 27,
+          move = "BITE",
+        },
+        {
+          level = 34,
+          move = "SLASH",
+        },
+        {
+          level = 42,
+          move = "DRAGONCLAW",
+        },
+        {
+          level = 52,
+          move = "DIG",
+        },
+        {
+          level = 62,
+          move = "SANDSTORM",
+        },
+        {
+          level = 72,
+          move = "TAKEDOWN",
+        },
+        {
+          level = 82,
+          move = "DRAGONRUSH",
+        },
+      },
+      evolutions = {},
+      spriteFront = "gen/battlers/904.png",
+      spriteBack = "gen/battlers/904b.png",
+      frontSize = 7,
+      trueColor = true,
+      dexEntry = {
+        kind = "MACH",
+        heightFt = 6,
+        heightIn = 3,
+        weight = 2094,
+        text = "_GenDexMEGAGARCHOMPText",
+      },
+    },
+    {
+      id = "MEGALUCARIO",
+      name = "M-LUCARIO",
+      dex = 905,
+      types = { "FIGHTING", "STEEL" },
+      baseStats = {
+        hp = 70,
+        attack = 145,
+        defense = 88,
+        speed = 112,
+        special = 105,
+      },
+      catchRate = 3,
+      baseExp = 184,
+      growthRate = "MEDIUM_SLOW",
+      level1Moves = { "AURASPHERE", "AURASPHERE", "LIFEDEW", "WORKUP", "ROCKSMASH", "NASTYPLOT", "SCREECH", "FORCEPALM", "HELPINGHAND", "COPYCAT", "FINALGAMBIT", "REVERSAL", "QUICKATTACK", "DETECT", "FEINT", "METALCLAW" },
+      learnset = {
+        {
+          level = 12,
+          move = "COUNTER",
+        },
+        {
+          level = 16,
+          move = "LASERFOCUS",
+        },
+        {
+          level = 20,
+          move = "POWERUPPUNCH",
+        },
+        {
+          level = 24,
+          move = "CALMMIND",
+        },
+        {
+          level = 28,
+          move = "METALSOUND",
+        },
+        {
+          level = 32,
+          move = "QUICKGUARD",
+        },
+        {
+          level = 36,
+          move = "BONERUSH",
+        },
+        {
+          level = 40,
+          move = "SWORDSDANCE",
+        },
+        {
+          level = 44,
+          move = "HEALPULSE",
+        },
+        {
+          level = 48,
+          move = "METEORMASH",
+        },
+        {
+          level = 52,
+          move = "DRAGONPULSE",
+        },
+        {
+          level = 56,
+          move = "EXTREMESPEED",
+        },
+        {
+          level = 60,
+          move = "CLOSECOMBAT",
+        },
+      },
+      evolutions = {},
+      spriteFront = "gen/battlers/905.png",
+      spriteBack = "gen/battlers/905b.png",
+      frontSize = 7,
+      trueColor = true,
+      dexEntry = {
+        kind = "AURA",
+        heightFt = 4,
+        heightIn = 3,
+        weight = 1268,
+        text = "_GenDexMEGALUCARIOText",
+      },
+    },
+    {
+      id = "MEGAABOMASNOW",
+      name = "M-ABOMASNO",
+      dex = 906,
+      types = { "GRASS", "ICE" },
+      baseStats = {
+        hp = 90,
+        attack = 132,
+        defense = 105,
+        speed = 30,
+        special = 118,
+      },
+      catchRate = 3,
+      baseExp = 173,
+      growthRate = "SLOW",
+      level1Moves = { "ICEPUNCH", "ICEPUNCH", "AURORAVEIL", "POWDERSNOW", "LEER", "LEAFAGE", "MIST" },
+      learnset = {
+        {
+          level = 15,
+          move = "ICESHARD",
+        },
+        {
+          level = 20,
+          move = "RAZORLEAF",
+        },
+        {
+          level = 25,
+          move = "ICYWIND",
+        },
+        {
+          level = 30,
+          move = "SWAGGER",
+        },
+        {
+          level = 35,
+          move = "INGRAIN",
+        },
+        {
+          level = 43,
+          move = "WOODHAMMER",
+        },
+        {
+          level = 49,
+          move = "BLIZZARD",
+        },
+        {
+          level = 56,
+          move = "SHEERCOLD",
+        },
+      },
+      evolutions = {},
+      spriteFront = "gen/battlers/906.png",
+      spriteBack = "gen/battlers/906b.png",
+      frontSize = 7,
+      trueColor = true,
+      dexEntry = {
+        kind = "FROST TREE",
+        heightFt = 8,
+        heightIn = 10,
+        weight = 4079,
+        text = "_GenDexMEGAABOMASNOWText",
+      },
+    },
+    {
+      id = "MEGAAUDINO",
+      name = "M-AUDINO",
+      dex = 907,
+      types = { "NORMAL", "FAIRY" },
+      baseStats = {
+        hp = 103,
+        attack = 60,
+        defense = 126,
+        speed = 50,
+        special = 103,
+      },
+      catchRate = 3,
+      baseExp = 255,
+      growthRate = "FAST",
+      level1Moves = { "POUND", "PLAYNICE" },
+      learnset = {
+        {
+          level = 4,
+          move = "DISARMINGVOICE",
+        },
+        {
+          level = 9,
+          move = "BABYDOLLEYES",
+        },
+        {
+          level = 12,
+          move = "HELPINGHAND",
+        },
+        {
+          level = 16,
+          move = "GROWL",
+        },
+        {
+          level = 20,
+          move = "ZENHEADBUTT",
+        },
+        {
+          level = 24,
+          move = "LIFEDEW",
+        },
+        {
+          level = 28,
+          move = "AFTERYOU",
+        },
+        {
+          level = 32,
+          move = "TAKEDOWN",
+        },
+        {
+          level = 36,
+          move = "SIMPLEBEAM",
+        },
+        {
+          level = 40,
+          move = "HYPERVOICE",
+        },
+        {
+          level = 44,
+          move = "HEALPULSE",
+        },
+        {
+          level = 48,
+          move = "DOUBLEEDGE",
+        },
+        {
+          level = 52,
+          move = "ENTRAINMENT",
+        },
+        {
+          level = 56,
+          move = "MISTYTERRAIN",
+        },
+        {
+          level = 60,
+          move = "LASTRESORT",
+        },
+      },
+      evolutions = {},
+      spriteFront = "gen/battlers/907.png",
+      spriteBack = "gen/battlers/907b.png",
+      frontSize = 7,
+      trueColor = true,
+      dexEntry = {
+        kind = "HEARING",
+        heightFt = 4,
+        heightIn = 11,
+        weight = 705,
+        text = "_GenDexMEGAAUDINOText",
+      },
+    },
+    {
+      id = "MEGADIANCIE",
+      name = "M-DIANCIE",
+      dex = 908,
+      types = { "ROCK", "FAIRY" },
+      baseStats = {
+        hp = 50,
+        attack = 160,
+        defense = 110,
+        speed = 110,
+        special = 135,
+      },
+      catchRate = 3,
+      baseExp = 255,
+      growthRate = "SLOW",
+      level1Moves = { "TACKLE", "HARDEN" },
+      learnset = {
+        {
+          level = 7,
+          move = "GUARDSPLIT",
+        },
+        {
+          level = 14,
+          move = "SMACKDOWN",
+        },
+        {
+          level = 21,
+          move = "FLAIL",
+        },
+        {
+          level = 28,
+          move = "ANCIENTPOWER",
+        },
+        {
+          level = 35,
+          move = "ROCKPOLISH",
+        },
+        {
+          level = 42,
+          move = "LIGHTSCREEN",
+        },
+        {
+          level = 49,
+          move = "ROCKSLIDE",
+        },
+        {
+          level = 56,
+          move = "SKILLSWAP",
+        },
+        {
+          level = 63,
+          move = "POWERGEM",
+        },
+        {
+          level = 70,
+          move = "STEALTHROCK",
+        },
+        {
+          level = 77,
+          move = "MOONBLAST",
+        },
+        {
+          level = 84,
+          move = "STONEEDGE",
+        },
+        {
+          level = 91,
+          move = "DIAMONDSTORM",
+        },
+      },
+      evolutions = {},
+      spriteFront = "gen/battlers/908.png",
+      spriteBack = "gen/battlers/908b.png",
+      frontSize = 7,
+      trueColor = true,
+      dexEntry = {
+        kind = "JEWEL",
+        heightFt = 3,
+        heightIn = 7,
+        weight = 613,
+        text = "_GenDexMEGADIANCIEText",
+      },
+    },
+  },
+  megas = {
+    {
+      species = "MEGAVENUSAUR",
+      base = "VENUSAUR",
+      label = "MEGA",
+    },
+    {
+      species = "MEGACHARIZARDX",
+      base = "CHARIZARD",
+      label = "MEGA X",
+    },
+    {
+      species = "MEGACHARIZARDY",
+      base = "CHARIZARD",
+      label = "MEGA Y",
+    },
+    {
+      species = "MEGABLASTOISE",
+      base = "BLASTOISE",
+      label = "MEGA",
+    },
+    {
+      species = "MEGABEEDRILL",
+      base = "BEEDRILL",
+      label = "MEGA",
+    },
+    {
+      species = "MEGAPIDGEOT",
+      base = "PIDGEOT",
+      label = "MEGA",
+    },
+    {
+      species = "MEGAALAKAZAM",
+      base = "ALAKAZAM",
+      label = "MEGA",
+    },
+    {
+      species = "MEGASLOWBRO",
+      base = "SLOWBRO",
+      label = "MEGA",
+    },
+    {
+      species = "MEGAGENGAR",
+      base = "GENGAR",
+      label = "MEGA",
+    },
+    {
+      species = "MEGAKANGASKHAN",
+      base = "KANGASKHAN",
+      label = "MEGA",
+    },
+    {
+      species = "MEGAPINSIR",
+      base = "PINSIR",
+      label = "MEGA",
+    },
+    {
+      species = "MEGAGYARADOS",
+      base = "GYARADOS",
+      label = "MEGA",
+    },
+    {
+      species = "MEGAAERODACTYL",
+      base = "AERODACTYL",
+      label = "MEGA",
+    },
+    {
+      species = "MEGAAMPHAROS",
+      base = "AMPHAROS",
+      label = "MEGA",
+    },
+    {
+      species = "MEGASTEELIX",
+      base = "STEELIX",
+      label = "MEGA",
+    },
+    {
+      species = "MEGASCIZOR",
+      base = "SCIZOR",
+      label = "MEGA",
+    },
+    {
+      species = "MEGAHERACROSS",
+      base = "HERACROSS",
+      label = "MEGA",
+    },
+    {
+      species = "MEGAHOUNDOOM",
+      base = "HOUNDOOM",
+      label = "MEGA",
+    },
+    {
+      species = "MEGASCEPTILE",
+      base = "SCEPTILE",
+      label = "MEGA",
+    },
+    {
+      species = "MEGABLAZIKEN",
+      base = "BLAZIKEN",
+      label = "MEGA",
+    },
+    {
+      species = "MEGASWAMPERT",
+      base = "SWAMPERT",
+      label = "MEGA",
+    },
+    {
+      species = "MEGAGARDEVOIR",
+      base = "GARDEVOIR",
+      label = "MEGA",
+    },
+    {
+      species = "MEGASABLEYE",
+      base = "SABLEYE",
+      label = "MEGA",
+    },
+    {
+      species = "MEGAMAWILE",
+      base = "MAWILE",
+      label = "MEGA",
+    },
+    {
+      species = "MEGAAGGRON",
+      base = "AGGRON",
+      label = "MEGA",
+    },
+    {
+      species = "MEGAMEDICHAM",
+      base = "MEDICHAM",
+      label = "MEGA",
+    },
+    {
+      species = "MEGAMANECTRIC",
+      base = "MANECTRIC",
+      label = "MEGA",
+    },
+    {
+      species = "MEGASHARPEDO",
+      base = "SHARPEDO",
+      label = "MEGA",
+    },
+    {
+      species = "MEGACAMERUPT",
+      base = "CAMERUPT",
+      label = "MEGA",
+    },
+    {
+      species = "MEGAALTARIA",
+      base = "ALTARIA",
+      label = "MEGA",
+    },
+    {
+      species = "MEGABANETTE",
+      base = "BANETTE",
+      label = "MEGA",
+    },
+    {
+      species = "MEGAABSOL",
+      base = "ABSOL",
+      label = "MEGA",
+    },
+    {
+      species = "MEGAGLALIE",
+      base = "GLALIE",
+      label = "MEGA",
+    },
+    {
+      species = "MEGASALAMENCE",
+      base = "SALAMENCE",
+      label = "MEGA",
+    },
+    {
+      species = "MEGAMETAGROSS",
+      base = "METAGROSS",
+      label = "MEGA",
+    },
+    {
+      species = "MEGALATIAS",
+      base = "LATIAS",
+      label = "MEGA",
+    },
+    {
+      species = "MEGALATIOS",
+      base = "LATIOS",
+      label = "MEGA",
+    },
+    {
+      species = "MEGALOPUNNY",
+      base = "LOPUNNY",
+      label = "MEGA",
+    },
+    {
+      species = "MEGAGARCHOMP",
+      base = "GARCHOMP",
+      label = "MEGA",
+    },
+    {
+      species = "MEGALUCARIO",
+      base = "LUCARIO",
+      label = "MEGA",
+    },
+    {
+      species = "MEGAABOMASNOW",
+      base = "ABOMASNOW",
+      label = "MEGA",
+    },
+    {
+      species = "MEGAAUDINO",
+      base = "AUDINO",
+      label = "MEGA",
+    },
+    {
+      species = "MEGADIANCIE",
+      base = "DIANCIE",
+      label = "MEGA",
+    },
   },
 }

@@ -192,6 +192,14 @@ local BALL_SPECIES = {
   BULBASAUR = "grass", CHARMANDER = "fire", SQUIRTLE = "water",
 }
 
+-- Late-game trainers who spring one mega-evolved Pokemon on the player:
+-- true = every roster of the class, "last" = only the class's final
+-- party (Giovanni's gym fight, never his story encounters).
+local MEGA_TRAINERS = {
+  OPP_LORELEI = true, OPP_AGATHA = true, OPP_LANCE = true,
+  OPP_SABRINA = true, OPP_RIVAL3 = true, OPP_GIOVANNI = "last",
+}
+
 -- Wild-encounter variety pools, picked by the zone's strongest slot level
 -- so what you can catch keeps pace with what you are fighting. Land and
 -- water zones draw from separate pools; a species already native to the
@@ -299,6 +307,11 @@ return function(mod)
   local genesisWaterTiers = { {}, {} }
   local genesisByType = {}
   local genesisLegends = {}
+  -- Mega forms: base species id -> list of { species, label }; filled
+  -- from the converter's megas index so the stone flow and the trainer
+  -- surprise pass know the mapping without guessing from id spellings.
+  local megaByBase = {}
+  local megaSet = {}
 
   -- -------------------------------------------------------------------
   -- 0. Genesis roster: the generated RBGenesis port (tools/pbs_convert.py
@@ -495,6 +508,12 @@ return function(mod)
     end
 
     local patched, registered, maxDex = 0, 0, 151
+    for _, mg in ipairs(genSpecies.megas or {}) do
+      megaSet[mg.species] = true
+      local forms = megaByBase[mg.base] or {}
+      megaByBase[mg.base] = forms
+      forms[#forms + 1] = { species = mg.species, label = mg.label }
+    end
     for _, sp in ipairs(genSpecies.species) do
       if type(sp.dex) == "number" and sp.dex > maxDex then maxDex = sp.dex end
       for i, t in ipairs(sp.types) do sp.types[i] = typeId(t) end
@@ -544,14 +563,17 @@ return function(mod)
         pokemonReg:register(sp.id, sp)
         registered = registered + 1
 
-        -- File the newcomer: legendaries and mythicals (standalone with
-        -- a legendary catch rate, or standalone and plainly overpowered)
-        -- go to the den pool; everyone else joins the wild tiers and the
-        -- by-type bench index. Strength bands use the folded stat total.
+        -- File the newcomer: megas stay out of every pool (stone-only),
+        -- legendaries and mythicals (standalone with a legendary catch
+        -- rate, or standalone and plainly overpowered) go to the den
+        -- pool; everyone else joins the wild tiers and the by-type bench
+        -- index. Strength bands use the folded stat total.
         local s = sp.baseStats
         local bst = s.hp + s.attack + s.defense + s.speed + s.special
         local standalone = #sp.evolutions == 0 and not evoTargetOf[sp.id]
-        if standalone
+        if megaSet[sp.id] then
+          -- reachable only through the MEGA STONE or a marked trainer
+        elseif standalone
            and (sp.catchRate <= 5 or (bst >= 490 and sp.catchRate <= 45)) then
           genesisLegends[#genesisLegends + 1] = sp.id
         else
@@ -603,10 +625,21 @@ return function(mod)
     end
     mod.log:info("genesis roster: %d new types, %d chart rows, %d new "
       .. "moves (%d with inferred effects), %d species patched, "
-      .. "%d species registered (%d legendaries reserved for dens), "
-      .. "dex widened to %d",
+      .. "%d species registered (%d legendaries reserved for dens, "
+      .. "%d mega forms stone-gated), dex widened to %d",
       #genTypes.types, #genTypes.matchups, newMoves, inferred,
-      patched, registered, #genesisLegends, maxDex)
+      patched, registered, #genesisLegends, #(genSpecies.megas or {}),
+      maxDex)
+
+    -- The MEGA STONE: granted once after the Silph Co. Giovanni fight,
+    -- consumed from the party menu's MEGA option (section 6). Bag USE
+    -- refuses vanilla-style; the party menu is the real seam.
+    if items and items:get("MEGA_STONE") == nil and next(megaSet) then
+      items:register("MEGA_STONE", {
+        id = "MEGA_STONE", name = "MEGA STONE", price = 0,
+        tossable = false,
+      })
+    end
   end
 
   -- -------------------------------------------------------------------
@@ -753,6 +786,54 @@ return function(mod)
   mod.hooks:wrap("trainer.party", function(nextParty, oppClass, partyIndex, party)
     local out = nextParty(oppClass, partyIndex, party) or party
     if type(out) ~= "table" then return out end
+    -- Surprise megas: a handful of marked late-game trainers field one
+    -- mega-evolved Pokemon. Prefer upgrading a mon that HAS a mega form
+    -- (Agatha's Gengar, Lance's Gyarados); otherwise hash-pick one for
+    -- the bench slot next to the ace. Giovanni only megas his gym fight
+    -- (his class's last roster), never the story encounters.
+    local megaRule = MEGA_TRAINERS[oppClass]
+    if megaRule and next(megaByBase) and #out >= 2 then
+      local eligible = megaRule == true
+      if megaRule == "last" then
+        local ok, def = pcall(function()
+          return mod.content.trainers:get(oppClass)
+        end)
+        eligible = ok and def and #def.parties == partyIndex
+      end
+      if eligible then
+        local swapped = false
+        for i = #out, 1, -1 do
+          local slot = out[i]
+          local forms = type(slot) == "table" and megaByBase[slot.species]
+          if forms and #forms > 0 then
+            local pick = forms[hashId(oppClass .. slot.species) % #forms + 1]
+            if inRegistry(pick.species) then
+              local copy = copyMember(slot)
+              copy.species = pick.species
+              copy.moves = nil
+              out[i] = copy
+              swapped = true
+              break
+            end
+          end
+        end
+        if not swapped then
+          -- no natural candidate: hand the second-strongest slot a mega
+          local pool = {}
+          for _, forms in pairs(megaByBase) do
+            for _, form in ipairs(forms) do pool[#pool + 1] = form.species end
+          end
+          table.sort(pool)
+          local pick = pool[hashId("mega" .. oppClass .. partyIndex) % #pool + 1]
+          if inRegistry(pick) then
+            local copy = copyMember(out[#out - 1])
+            copy.species = pick
+            copy.moves = nil
+            out[#out - 1] = copy
+          end
+        end
+      end
+    end
     local rewritten, any = {}, false
     for i, slot in ipairs(out) do
       local set = type(slot) == "table" and slot.moves == nil
@@ -946,7 +1027,40 @@ return function(mod)
   }
 
   mod.hooks:wrap("script.command", function(nextCmd, ctx, name, args)
-    if type(args) ~= "table" or not starterPending(ctx) then
+    if type(args) ~= "table" then
+      return nextCmd(ctx, name, args)
+    end
+    -- The MEGA STONE gift rides Giovanni's Silph Co. aftermath speech:
+    -- the "You ruined our plans!" line is the one scripted beat every
+    -- player sees exactly once, right after the fight.
+    if name == "show_text"
+       and args[1] == "_SilphCo11FGiovanniYouRuinedOurPlansText"
+       and next(megaByBase) and ctx.save and type(ctx.save.flags) == "table"
+       and not ctx.save.flags.KAIZO_GOT_MEGA_STONE then
+      local jump = nextCmd(ctx, name, args)
+      local ok, err = pcall(function()
+        local inv = ctx.save.inventory
+        if (inv.MEGA_STONE or 0) == 0 then
+          inv.MEGA_STONE = 1
+          if ctx.save.bagOrder then
+            table.insert(ctx.save.bagOrder, "MEGA_STONE")
+          end
+        end
+        ctx.save.flags.KAIZO_GOT_MEGA_STONE = true
+        local who = ctx.save.player and ctx.save.player.name or "PLAYER"
+        ctx.game.stack:push(mod.ui.TextBox.new(ctx.game,
+          who .. " found a\nMEGA STONE!\fIt hums with\nhidden power…\f"
+          .. "Choose a POKéMON\nfrom the menu to\vunleash it!",
+          function() ctx.runner:resume() end))
+      end)
+      if ok then
+        ctx.runner:yield()
+      else
+        mod.log:warn("mega stone gift failed (%s)", tostring(err))
+      end
+      return jump
+    end
+    if not starterPending(ctx) then
       return nextCmd(ctx, name, args)
     end
     if name == "push_screen" and args[1] == "DexEntryMenu"
@@ -998,6 +1112,70 @@ return function(mod)
     return nextCmd(ctx, name, args)
   end)
   mod.log:info("kaizo: starter generation menu armed (script.command)")
+
+  -- -------------------------------------------------------------------
+  -- 3c. Mega evolution. The MEGA STONE (one per save, from Giovanni's
+  --    Silph Co. defeat above) unlocks a MEGA option in the overworld
+  --    party submenu for any mon with a ported mega form; picking it --
+  --    choosing X or Y first when both exist -- consumes the stone and
+  --    runs the engine's own forced stone-evolution screen, so the
+  --    change is permanent, dex-marked, and learnset-aware.
+  -- -------------------------------------------------------------------
+  local function consumeMegaStone(save)
+    local inv = save.inventory
+    inv.MEGA_STONE = (inv.MEGA_STONE or 1) - 1
+    if inv.MEGA_STONE <= 0 then
+      inv.MEGA_STONE = nil
+      local order = save.bagOrder
+      if order then
+        for i, id in ipairs(order) do
+          if id == "MEGA_STONE" then table.remove(order, i) break end
+        end
+      end
+    end
+  end
+
+  local function megaEvolve(game, mon, species)
+    -- push first: if the screen id is missing the pcall above keeps the
+    -- stone in the bag
+    mod.ui.push(game, "EvolutionState", mon, species, nil, "ITEM")
+    consumeMegaStone(game.save)
+  end
+
+  mod.hooks:wrap("ui.party.submenu", function(nextItems, game, items, mon, sctx)
+    local out = nextItems(game, items, mon, sctx) or items
+    if type(out) ~= "table" or (sctx and sctx.battle) then return out end
+    local save = game and game.save
+    if not (save and save.inventory
+            and (save.inventory.MEGA_STONE or 0) > 0) then
+      return out
+    end
+    local forms = mon and megaByBase[mon.species]
+    if not forms or #forms == 0 then return out end
+    table.insert(out, 1, { label = "MEGA", onSelect = function(m, g)
+      local ok, err = pcall(function()
+        if #forms == 1 then
+          megaEvolve(g, m, forms[1].species)
+          return
+        end
+        local choices = {}
+        for i, form in ipairs(forms) do
+          choices[i] = { label = form.label, onSelect = function()
+            megaEvolve(g, m, form.species)
+          end }
+        end
+        -- B backs out without spending the stone
+        g.stack:push(mod.ui.Menu.new(g, choices,
+          { cancelable = true, tx = 1, ty = 0, tw = 8 }))
+      end)
+      if not ok then
+        mod.log:warn("mega evolution failed (%s); the stone was not "
+          .. "consumed", tostring(err))
+      end
+    end })
+    return out
+  end)
+  mod.log:info("kaizo: mega stone armed (ui.party.submenu)")
 
 
   -- -------------------------------------------------------------------
