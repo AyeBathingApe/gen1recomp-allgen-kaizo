@@ -1,5 +1,5 @@
--- Gen 1 Kaizo Genesis: trainers hit harder, fight smarter, and the wild
--- keeps pace -- on a dramatically expanded roster. The generated
+-- Gen1 Recomp Allgen Kaizo: trainers hit harder, fight smarter, and the
+-- wild keeps pace -- on a dramatically expanded roster. The generated
 -- RBGenesis port (gen/, from tools/pbs_convert.py) registers the modern
 -- type chart, every portable move, and the full 900+ species dex;
 -- vanilla species are rebalanced in place. In Oak's lab the player picks

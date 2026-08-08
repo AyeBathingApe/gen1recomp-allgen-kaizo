@@ -1,7 +1,7 @@
 {
   "id": "gen1_kaizo",
-  "name": "Gen 1 Kaizo Genesis",
-  "version": "0.7.0",
+  "name": "Gen1 Recomp Allgen Kaizo",
+  "version": "0.7.1",
   "api": 2,
   "entry": "main.lua",
   "profile": "overhaul",
@@ -12,5 +12,5 @@
   "optional_dependencies": [],
   "conflicts": [],
   "github": "AyeBathingApe/gen1recomp-kaizo",
-  "description": "Kaizo-style difficulty on a dramatically expanded roster: the full RBGenesis dex (900+ species, modern types and type chart, every portable move) joins trainers running themed parties of six with a surprise ace at +3 levels, competitive movesets, and a competitive AI that exploits weaknesses; wild encounter pools widen to keep the player competitive."
+  "description": "Every generation inside Gen 1: 900+ species on the modern type chart, region-select starters, legendary dens, mega evolution via Giovanni's Mega Stone, themed six-mon trainer parties with competitive movesets and AI, and wild pools that keep pace -- kaizo difficulty, deterministic and fully uninstallable."
 }

@@ -3,6 +3,16 @@
 All notable changes to this mod are documented here. Format follows
 [Keep a Changelog](https://keepachangelog.com/), versions follow semver.
 
+## 0.7.1 - 2026-08-08
+
+### Changed
+
+- Project renamed to **Gen1 Recomp Allgen Kaizo**. README rewritten:
+  fuller synopsis, all features in bullet form, a competitive Battle
+  Tower on the roadmap, and a development section crediting the Pokemon
+  RBGenesis fangame (data and art) and the Gen1Recomp project (engine
+  and mod system). mod.card refreshed to match the current feature set.
+
 ## 0.7.0 - 2026-08-08
 
 ### Added
