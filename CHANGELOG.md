@@ -3,6 +3,20 @@
 All notable changes to this mod are documented here. Format follows
 [Keep a Changelog](https://keepachangelog.com/), versions follow semver.
 
+## 0.8.0 - 2026-08-08
+
+### Added
+
+- An **ALLGEN KAIZO** entry in the in-game OPTIONS screen with the mod's
+  first option: **BATTLE: STATIC / SCALING**. Static (the default) keeps
+  trainer levels exactly as authored (+3 kaizo bump). Scaling makes every
+  trainer roster track the player's strongest Pokémon: each slot maps by
+  rank into the 90%-110% band -- the trainer's weakest at 90% of your
+  best, their ace at 110% -- recomputed live at battle start. The choice
+  persists in the options file (not per save) and also renders in the mod
+  manager's per-mod options screen. The Oak's-lab rival fight stays
+  vanilla in both modes.
+
 ## 0.7.3 - 2026-08-08
 
 ### Changed

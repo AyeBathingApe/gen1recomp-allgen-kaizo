@@ -74,6 +74,13 @@ local chains = run.loader.hooks.chains
 T.check(chains["trainer.party"] ~= nil, "trainer.party hook registered")
 T.check(chains["battle.enemy_action"] ~= nil, "battle.enemy_action hook registered")
 T.check(chains["script.command"] ~= nil, "script.command hook registered (starter gens)")
+-- Options: the schema auto-renders in the mod manager, the in-game row
+-- rides ui.options.rows, and the default keeps battles static (so every
+-- level assertion above holds).
+T.check(chains["ui.options.rows"] ~= nil, "ui.options.rows hook registered")
+local schema = run.loader.optionSchemas and run.loader.optionSchemas.gen1_kaizo
+T.check(type(schema) == "table" and schema[1] and schema[1].key == "battle",
+  "battle option schema defined with mod.options")
 
 -- Stated effect #5: the Genesis roster. When the generated gen/ data pack
 -- is present (tools/pbs_convert.py output; gitignored, so absent in bare

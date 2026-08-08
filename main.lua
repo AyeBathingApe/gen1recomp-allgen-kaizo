@@ -298,6 +298,29 @@ return function(mod)
     return sp ~= nil and pokemonReg ~= nil and pokemonReg:get(sp) ~= nil
   end
 
+  -- Player-facing options: the schema auto-renders in the mod manager,
+  -- and section 7 mirrors it as an ALLGEN KAIZO row in the in-game
+  -- OPTIONS screen. "battle" = static (levels as authored) or scaling
+  -- (trainer teams track the player's strongest mon within +/-10%).
+  if mod.options and mod.options.define then
+    mod.options:define({
+      { key = "battle", type = "choice", label = "BATTLE",
+        default = "static",
+        choices = { { "STATIC", "static" }, { "SCALING", "scaling" } } },
+    })
+  end
+  local function battleMode()
+    local v = mod.options and mod.options:get("battle")
+    return v == "scaling" and "scaling" or "static"
+  end
+
+  -- The live Game object, needed to read the player's party at battle
+  -- time; game.ready is the sanctioned way to obtain it.
+  local gameRef
+  mod.events:on("game.ready", function(ev)
+    if type(ev) == "table" and ev.game then gameRef = ev.game end
+  end)
+
   -- Genesis species pools, filled while the roster registers: land/water
   -- wild tiers parallel to LAND_TIERS/WATER_TIERS, a by-type index for
   -- class-themed trainer benches, and the legendary/mythical set kept
@@ -834,6 +857,40 @@ return function(mod)
         end
       end
     end
+    -- SCALING battle option: the roster's levels track the player's
+    -- strongest mon, each slot mapped by rank into the +/-10% band
+    -- (weakest -> 90%, ace -> 110%). The lab rival stays vanilla, and
+    -- static mode leaves the authored levels alone.
+    if battleMode() == "scaling" and gameRef
+       and not (oppClass == "OPP_RIVAL1" and (partyIndex or 1) <= 3) then
+      local playerMax = 0
+      local pparty = gameRef.save and gameRef.save.party
+      for _, mon in ipairs(type(pparty) == "table" and pparty or {}) do
+        local lv = tonumber(mon.level) or 0
+        if lv > playerMax then playerMax = lv end
+      end
+      if playerMax >= 2 then
+        local teamMin, teamMax = math.huge, 0
+        for _, slot in ipairs(out) do
+          local lv = tonumber(slot.level) or 0
+          if lv > 0 and lv < teamMin then teamMin = lv end
+          if lv > teamMax then teamMax = lv end
+        end
+        if teamMax > 0 then
+          local scaled = {}
+          for i, slot in ipairs(out) do
+            local copy = copyMember(slot)
+            local lv = tonumber(slot.level) or teamMin
+            local rel = teamMax > teamMin
+              and (lv - teamMin) / (teamMax - teamMin) or 1
+            copy.level = math.max(2, math.min(LEVEL_CAP,
+              math.floor(playerMax * (0.9 + 0.2 * rel) + 0.5)))
+            scaled[i] = copy
+          end
+          out = scaled
+        end
+      end
+    end
     local rewritten, any = {}, false
     for i, slot in ipairs(out) do
       local set = type(slot) == "table" and slot.moves == nil
@@ -1176,6 +1233,43 @@ return function(mod)
     return out
   end)
   mod.log:info("kaizo: mega stone armed (ui.party.submenu)")
+
+  -- -------------------------------------------------------------------
+  -- 3d. Options screen: an ALLGEN KAIZO row in the in-game OPTIONS menu
+  --    mirrors the mod-manager option. step writes both the on-disk
+  --    options table and the loader's live view (so battleMode sees the
+  --    flip immediately); returning true makes the engine persist.
+  -- -------------------------------------------------------------------
+  mod.hooks:wrap("ui.options.rows", function(nextRows, game, rows)
+    local out = nextRows(game, rows) or rows
+    if type(out) ~= "table" then return out end
+    out[#out + 1] = {
+      id = "kaizo_battle",
+      label = "ALLGEN KAIZO",
+      value = function()
+        return battleMode() == "scaling" and "BATTLE:SCALING"
+          or "BATTLE:STATIC"
+      end,
+      step = function(g)
+        local nxt = battleMode() == "scaling" and "static" or "scaling"
+        local opts = g and g.save and g.save.options
+        if opts then
+          opts.modOptions = opts.modOptions or {}
+          opts.modOptions.gen1_kaizo = opts.modOptions.gen1_kaizo or {}
+          opts.modOptions.gen1_kaizo.battle = nxt
+        end
+        local loader = g and g.mods
+        if loader then
+          loader.modOptions = loader.modOptions or {}
+          loader.modOptions.gen1_kaizo = loader.modOptions.gen1_kaizo or {}
+          loader.modOptions.gen1_kaizo.battle = nxt
+        end
+        return opts ~= nil
+      end,
+    }
+    return out
+  end)
+  mod.log:info("kaizo: options row armed (ui.options.rows)")
 
 
   -- -------------------------------------------------------------------
