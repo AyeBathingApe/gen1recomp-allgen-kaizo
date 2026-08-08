@@ -1,7 +1,7 @@
 {
   "id": "gen1_kaizo",
   "name": "Gen1 Recomp Allgen Kaizo",
-  "version": "0.7.1",
+  "version": "0.7.2",
   "api": 2,
   "entry": "main.lua",
   "profile": "overhaul",
@@ -11,6 +11,6 @@
   "dependencies": [],
   "optional_dependencies": [],
   "conflicts": [],
-  "github": "AyeBathingApe/gen1recomp-kaizo",
+  "github": "AyeBathingApe/gen1recomp-allgen-kaizo",
   "description": "Every generation inside Gen 1: 900+ species on the modern type chart, region-select starters, legendary dens, mega evolution via Giovanni's Mega Stone, themed six-mon trainer parties with competitive movesets and AI, and wild pools that keep pace -- kaizo difficulty, deterministic and fully uninstallable."
 }

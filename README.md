@@ -13,7 +13,7 @@ love .
 
 ## Install (players)
 
-1. Grab `gen1_kaizo-<version>.zip` from the [latest release](https://github.com/AyeBathingApe/gen1recomp-kaizo/releases/latest) (or copy this folder) into the game's `mods/` directory as `gen1_kaizo`.
+1. Grab `gen1-recomp-allgen-kaizo-<version>.zip` from the [latest release](https://github.com/AyeBathingApe/gen1recomp-allgen-kaizo/releases/latest) (or copy this folder) into the game's `mods/` directory as `gen1_kaizo`.
 2. Launch the game and press **F10** (or Options → mod manager) to confirm it is enabled.
 3. Disabling the mod in the manager restores vanilla exactly. The manifest's `github` field lets the launcher offer updates automatically.
 

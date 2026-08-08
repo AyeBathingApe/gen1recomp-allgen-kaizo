@@ -130,6 +130,7 @@ jobs:
         env:
           VERSION: ${{ steps.ver.outputs.version }}
           MOD_ID: "gen1_kaizo"
+          ZIP_NAME: "gen1-recomp-allgen-kaizo"
         run: |
           set -euo pipefail
           staging="$RUNNER_TEMP/pkg"
@@ -153,7 +154,7 @@ jobs:
               fh.write("\n")
           PY
 
-          zip_path="$out/${MOD_ID}-${VERSION}.zip"
+          zip_path="$out/${ZIP_NAME}-${VERSION}.zip"
           (cd "$staging" && zip -qr "$zip_path" .)
           unzip -l "$zip_path"
 
@@ -168,7 +169,7 @@ jobs:
           print(f"manifest.json is at the archive root and reports {version}")
           PY
 
-          (cd "$out" && sha256sum "${MOD_ID}"-*.zip > sha256sums.txt)
+          (cd "$out" && sha256sum "${ZIP_NAME}"-*.zip > sha256sums.txt)
           cat "$out/sha256sums.txt"
 
       - name: Publish GitHub Release
@@ -177,6 +178,7 @@ jobs:
           VERSION: ${{ steps.ver.outputs.version }}
           TAG: ${{ steps.ver.outputs.tag }}
           MOD_ID: "gen1_kaizo"
+          ZIP_NAME: "gen1-recomp-allgen-kaizo"
         run: |
           set -euo pipefail
 
@@ -192,9 +194,9 @@ jobs:
 
           gh release create "$TAG" \
             --target "$GITHUB_SHA" \
-            --title "$VERSION" \
+            --title "Gen1 Recomp Allgen Kaizo $VERSION" \
             --notes "$notes" \
-            "dist/${MOD_ID}-${VERSION}.zip" \
+            "dist/${ZIP_NAME}-${VERSION}.zip" \
             "dist/sha256sums.txt"
 
           echo "Published release $TAG"

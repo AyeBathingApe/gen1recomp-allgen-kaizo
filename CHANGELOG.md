@@ -3,6 +3,17 @@
 All notable changes to this mod are documented here. Format follows
 [Keep a Changelog](https://keepachangelog.com/), versions follow semver.
 
+## 0.7.2 - 2026-08-08
+
+### Changed
+
+- Public naming finished: the GitHub repo is now
+  `AyeBathingApe/gen1recomp-allgen-kaizo` (old links redirect), releases
+  are titled "Gen1 Recomp Allgen Kaizo X.Y.Z", and the download is
+  `gen1-recomp-allgen-kaizo-<version>.zip`. The mod id stays `gen1_kaizo`
+  so installs, saves, and launcher auto-updates keep working (the updater
+  falls back to the release's zip when the id-named asset is absent).
+
 ## 0.7.1 - 2026-08-08
 
 ### Changed
