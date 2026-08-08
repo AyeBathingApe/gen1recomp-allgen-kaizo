@@ -32,6 +32,12 @@ Data.encounters.KAIZO_DUPE_ROUTE = {
     { level = 4, species = "FIXMON_A" }, { level = 5, species = "FIXMON_C" },
   } },
 }
+-- Seed a water-type machine item: registered water species must be
+-- granted it in tmhm (the classic-TM top-up path).
+Data.items.TM_KAIZO_TEST = {
+  id = "TM_KAIZO_TEST", name = "TM TEST", price = 0,
+  machine = { kind = "TM", move = "WATERGUN", number = 98 },
+}
 local run = T.sdk.loadMod("mods/gen1_kaizo", { data = Data })
 T.eq(#run.errors, 0, "loads clean")
 
@@ -96,6 +102,16 @@ if hasGen then
   T.check(Data.pokemon.TOGEPI ~= nil, "new species TOGEPI registered")
   T.check(Data.pokemon.TOGEPI.baseStats.special ~= nil,
     "SpA/SpD folded into Gen 1 special")
+  -- TM safety: the engine's teach loop iterates speciesDef.tmhm
+  -- unguarded, so every registered species must carry the list, and
+  -- same-type machines are granted (the Oshawott/BUBBLEBEAM crash).
+  T.check(type(Data.pokemon.OSHAWOTT.tmhm) == "table",
+    "registered species carry a tmhm list")
+  local grantedWater = false
+  for _, mv in ipairs(Data.pokemon.OSHAWOTT.tmhm) do
+    if mv == "WATERGUN" then grantedWater = true end
+  end
+  T.check(grantedWater, "same-type machine granted to new species")
   -- Dex flavor prose routes through the text registry (a raw string in
   -- dexEntry.text renders as "Data unknown." on the entry page).
   T.check(type(Data.pokemon.TOGEPI.dexEntry.text) == "string"

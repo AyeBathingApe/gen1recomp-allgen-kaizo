@@ -266,6 +266,35 @@ def parse_pokemon(path):
     return species
 
 
+def parse_tms(path):
+    """tm.txt: [MOVE] sections over bare species lists -> species: [moves].
+
+    The engine teaches a machine only when the move sits in the species'
+    tmhm list, and ItemEffects iterates that list UNGUARDED -- a species
+    without one crashes the TM flow, so every emitted record needs it.
+    Form entries (SANDSHREW_1) are skipped; base species carry the list.
+    """
+    compat = {}
+    if not os.path.exists(path):
+        return compat
+    move = None
+    for raw in read_text(path).splitlines():
+        line = raw.strip()
+        if not line or line.startswith("#"):
+            continue
+        m = re.match(r"^\[(.+)\]$", line)
+        if m:
+            move = m.group(1).strip().upper()
+            continue
+        if not move:
+            continue
+        for name in line.split(","):
+            name = name.strip().upper()
+            if name and not re.search(r"_\d+$", name):
+                compat.setdefault(name, []).append(move)
+    return compat
+
+
 def parse_mega_forms(path):
     """pokemonforms.txt entries carrying a MegaStone: [SPECIES,form]."""
     megas = []
@@ -503,6 +532,7 @@ def build_mega_output(megas, species_recs, species_raw, opts, report,
         rec["level1Moves"] = list(base["level1Moves"])
         rec["learnset"] = [OrderedDict(row) for row in base["learnset"]]
         rec["evolutions"] = []
+        rec["tmhm"] = list(base["tmhm"])
         rec["spriteFront"] = "gen/battlers/%03d.png" % next_dex
         rec["spriteBack"] = "gen/battlers/%03db.png" % next_dex
         rec["frontSize"] = 7
@@ -533,7 +563,7 @@ def has_battlers(dex, battlers):
 
 
 def build_species_output(species, move_ids, real_type_ids, opts, report,
-                         dex_texts):
+                         dex_texts, tm_compat):
     # pass 1: the kept set, so evolution refs only point at emitted records.
     # dex <= VANILLA_DEX_MAX always stays (patches the engine record, no art
     # needed); new species need both battler pics or the engine would crash
@@ -645,6 +675,8 @@ def build_species_output(species, move_ids, real_type_ids, opts, report,
         rec["learnset"] = [OrderedDict([("level", lvl), ("move", mv)])
                            for lvl, mv in learn]
         rec["evolutions"] = evos
+        rec["tmhm"] = [mv for mv in tm_compat.get(sp["id"], [])
+                       if mv in move_ids]
         rec.update(sprite_fields(sp["dex"], opts.battlers, report))
         rec["icon"] = icon_for(sp["shape"], rec["types"])
         rec["dexEntry"] = dex_entry(sp, dex_texts)
@@ -741,8 +773,10 @@ def main():
     move_recs, move_meta = build_move_output(moves, real_type_ids, report)
     move_ids = {m["id"] for m in move_recs}
     dex_texts = OrderedDict()
+    tm_compat = parse_tms(os.path.join(opts.pbs, "tm.txt"))
+    report.append("tm compat: %d species rows from tm.txt" % len(tm_compat))
     species_recs = build_species_output(species, move_ids, real_type_ids,
-                                        opts, report, dex_texts)
+                                        opts, report, dex_texts, tm_compat)
     megas = parse_mega_forms(os.path.join(opts.pbs, "pokemonforms.txt"))
     mega_recs, mega_index, mega_sprites = build_mega_output(
         megas, species_recs, species, opts, report, dex_texts)

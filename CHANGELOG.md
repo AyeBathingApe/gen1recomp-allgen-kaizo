@@ -3,6 +3,20 @@
 All notable changes to this mod are documented here. Format follows
 [Keep a Changelog](https://keepachangelog.com/), versions follow semver.
 
+## 0.8.2 - 2026-08-08
+
+### Fixed
+
+- **Crash using any TM on a new species** (reported: Oshawott +
+  BUBBLEBEAM/TM11): the engine's teach flow iterates the species'
+  `tmhm` compatibility list without a guard, and ported species didn't
+  carry one. Every registered species (megas included) now ships a real
+  list, built from RBGenesis's tm.txt compatibility data (296 moves) --
+  and since modern data dropped the classic Gen 1 TM moves entirely
+  (BUBBLEBEAM, MEGA PUNCH, ...), the engine's own machine items are
+  mixed in by Gen 1's generous rule: same-type or Normal machines are
+  teachable. Oshawott learns TM11 now instead of crashing the game.
+
 ## 0.8.1 - 2026-08-08
 
 ### Fixed

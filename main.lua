@@ -531,6 +531,20 @@ return function(mod)
     end
 
     local patched, registered, maxDex = 0, 0, 151
+    -- The engine's machine items (TM/HM): used to top up tmhm lists,
+    -- since modern tm.txt lacks the classic Gen 1 TM moves entirely
+    -- (BUBBLEBEAM, MEGA PUNCH, ...). Same-type or NORMAL machines are
+    -- granted, mirroring Gen 1's generous compatibility.
+    local machineMoves = {}
+    if items then
+      for _, def in items:each() do
+        local mv = type(def) == "table" and def.machine and def.machine.move
+        local rec = mv and moves:get(mv)
+        if rec then
+          machineMoves[#machineMoves + 1] = { id = mv, type = rec.type }
+        end
+      end
+    end
     for _, mg in ipairs(genSpecies.megas or {}) do
       megaSet[mg.species] = true
       local forms = megaByBase[mg.base] or {}
@@ -580,6 +594,28 @@ return function(mod)
         for _, row in ipairs(sp.learnset) do
           row.move = moveId[row.move] or row.move
         end
+        -- tmhm must exist and hold only real move ids: the engine's TM
+        -- teach loop iterates it unguarded (using any TM on a species
+        -- without the list crashes -- the Oshawott/BUBBLEBEAM report).
+        -- Modern compat data then gets the classic machines mixed in:
+        -- same-type or NORMAL, Gen 1's generous rule.
+        local tmhm, inTmhm = {}, {}
+        for _, id in ipairs(sp.tmhm or {}) do
+          local final = moveId[id] or id
+          if moves:get(final) and not inTmhm[final] then
+            inTmhm[final] = true
+            tmhm[#tmhm + 1] = final
+          end
+        end
+        for _, machine in ipairs(machineMoves) do
+          if not inTmhm[machine.id]
+             and (machine.type == "NORMAL" or machine.type == sp.types[1]
+                  or machine.type == sp.types[2]) then
+            inTmhm[machine.id] = true
+            tmhm[#tmhm + 1] = machine.id
+          end
+        end
+        sp.tmhm = tmhm
         sp.evolutions = evos
         sp.spriteFront = mod.path .. "/" .. sp.spriteFront
         sp.spriteBack = mod.path .. "/" .. sp.spriteBack
