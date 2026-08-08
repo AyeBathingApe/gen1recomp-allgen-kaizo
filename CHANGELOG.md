@@ -3,6 +3,22 @@
 All notable changes to this mod are documented here. Format follows
 [Keep a Changelog](https://keepachangelog.com/), versions follow semver.
 
+## 0.8.1 - 2026-08-08
+
+### Fixed
+
+- Party menu icons: every ported species now carries the closest Gen 1
+  party icon, picked by Essentials body shape first (serpentine -> SNAKE,
+  finned/tentacled -> WATER, quadruped -> QUADRUPED, winged/insectoid ->
+  BIRD/BUG) and type second (Grass/Fairy/Water/Bug/Flying/Dragon), with
+  the generic monster as the fallback -- no more blank space beside new
+  Pokémon in the party list.
+- Trade evolutions are gone from the data pipeline: any trade method
+  becomes a level-up (plain trades at 37, held-item trades at 42). The
+  RBGenesis data had already re-leveled the classic lines (Kadabra 32,
+  Machoke/Graveler 36, Onix/Scyther/Seadra 38, Haunter via Moon Stone),
+  so every chain completes solo either way.
+
 ## 0.8.0 - 2026-08-08
 
 ### Added

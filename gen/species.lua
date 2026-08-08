@@ -83,6 +83,7 @@ return {
       spriteBack = "gen/battlers/001b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "QUADRUPED",
       dexEntry = {
         kind = "SEED",
         heightFt = 2,
@@ -164,6 +165,7 @@ return {
       spriteBack = "gen/battlers/002b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "QUADRUPED",
       dexEntry = {
         kind = "SEED",
         heightFt = 3,
@@ -239,6 +241,7 @@ return {
       spriteBack = "gen/battlers/003b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "QUADRUPED",
       dexEntry = {
         kind = "SEED",
         heightFt = 6,
@@ -316,6 +319,7 @@ return {
       spriteBack = "gen/battlers/004b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "MON",
       dexEntry = {
         kind = "LIZARD",
         heightFt = 2,
@@ -385,6 +389,7 @@ return {
       spriteBack = "gen/battlers/005b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "MON",
       dexEntry = {
         kind = "FLAME",
         heightFt = 3,
@@ -448,6 +453,7 @@ return {
       spriteBack = "gen/battlers/006b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "BIRD",
       dexEntry = {
         kind = "FLAME",
         heightFt = 5,
@@ -533,6 +539,7 @@ return {
       spriteBack = "gen/battlers/007b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "WATER",
       dexEntry = {
         kind = "TINY TURTLE",
         heightFt = 1,
@@ -610,6 +617,7 @@ return {
       spriteBack = "gen/battlers/008b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "WATER",
       dexEntry = {
         kind = "TURTLE",
         heightFt = 3,
@@ -681,6 +689,7 @@ return {
       spriteBack = "gen/battlers/009b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "WATER",
       dexEntry = {
         kind = "SHELLFISH",
         heightFt = 5,
@@ -722,6 +731,7 @@ return {
       spriteBack = "gen/battlers/010b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "BUG",
       dexEntry = {
         kind = "WORM",
         heightFt = 1,
@@ -763,6 +773,7 @@ return {
       spriteBack = "gen/battlers/011b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "SNAKE",
       dexEntry = {
         kind = "COCOON",
         heightFt = 2,
@@ -846,6 +857,7 @@ return {
       spriteBack = "gen/battlers/012b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "BUG",
       dexEntry = {
         kind = "BUTTERFLY",
         heightFt = 3,
@@ -887,6 +899,7 @@ return {
       spriteBack = "gen/battlers/013b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "BUG",
       dexEntry = {
         kind = "HAIRY BUG",
         heightFt = 1,
@@ -928,6 +941,7 @@ return {
       spriteBack = "gen/battlers/014b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "SNAKE",
       dexEntry = {
         kind = "COCOON",
         heightFt = 2,
@@ -1007,6 +1021,7 @@ return {
       spriteBack = "gen/battlers/015b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "BUG",
       dexEntry = {
         kind = "POISON BEE",
         heightFt = 3,
@@ -1096,6 +1111,7 @@ return {
       spriteBack = "gen/battlers/016b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "BIRD",
       dexEntry = {
         kind = "TINY BIRD",
         heightFt = 1,
@@ -1185,6 +1201,7 @@ return {
       spriteBack = "gen/battlers/017b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "BIRD",
       dexEntry = {
         kind = "BIRD",
         heightFt = 3,
@@ -1268,6 +1285,7 @@ return {
       spriteBack = "gen/battlers/018b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "BIRD",
       dexEntry = {
         kind = "BIRD",
         heightFt = 4,
@@ -1349,6 +1367,7 @@ return {
       spriteBack = "gen/battlers/019b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "QUADRUPED",
       dexEntry = {
         kind = "MOUSE",
         heightFt = 1,
@@ -1424,6 +1443,7 @@ return {
       spriteBack = "gen/battlers/020b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "QUADRUPED",
       dexEntry = {
         kind = "MOUSE",
         heightFt = 2,
@@ -1501,6 +1521,7 @@ return {
       spriteBack = "gen/battlers/021b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "BIRD",
       dexEntry = {
         kind = "TINY BIRD",
         heightFt = 1,
@@ -1576,6 +1597,7 @@ return {
       spriteBack = "gen/battlers/022b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "BIRD",
       dexEntry = {
         kind = "BEAK",
         heightFt = 3,
@@ -1677,6 +1699,7 @@ return {
       spriteBack = "gen/battlers/023b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "SNAKE",
       dexEntry = {
         kind = "SNAKE",
         heightFt = 6,
@@ -1772,6 +1795,7 @@ return {
       spriteBack = "gen/battlers/024b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "SNAKE",
       dexEntry = {
         kind = "COBRA",
         heightFt = 11,
@@ -1853,6 +1877,7 @@ return {
       spriteBack = "gen/battlers/025b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "QUADRUPED",
       dexEntry = {
         kind = "MOUSE",
         heightFt = 1,
@@ -1928,6 +1953,7 @@ return {
       spriteBack = "gen/battlers/026b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "MON",
       dexEntry = {
         kind = "MOUSE",
         heightFt = 2,
@@ -2025,6 +2051,7 @@ return {
       spriteBack = "gen/battlers/027b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "MON",
       dexEntry = {
         kind = "MOUSE",
         heightFt = 2,
@@ -2108,6 +2135,7 @@ return {
       spriteBack = "gen/battlers/028b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "MON",
       dexEntry = {
         kind = "MOUSE",
         heightFt = 3,
@@ -2189,6 +2217,7 @@ return {
       spriteBack = "gen/battlers/029b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "QUADRUPED",
       dexEntry = {
         kind = "POISON PIN",
         heightFt = 1,
@@ -2262,6 +2291,7 @@ return {
       spriteBack = "gen/battlers/030b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "QUADRUPED",
       dexEntry = {
         kind = "POISON PIN",
         heightFt = 2,
@@ -2333,6 +2363,7 @@ return {
       spriteBack = "gen/battlers/031b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "MON",
       dexEntry = {
         kind = "DRILL",
         heightFt = 4,
@@ -2414,6 +2445,7 @@ return {
       spriteBack = "gen/battlers/032b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "QUADRUPED",
       dexEntry = {
         kind = "POISON PIN",
         heightFt = 1,
@@ -2487,6 +2519,7 @@ return {
       spriteBack = "gen/battlers/033b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "QUADRUPED",
       dexEntry = {
         kind = "POISON PIN",
         heightFt = 2,
@@ -2558,6 +2591,7 @@ return {
       spriteBack = "gen/battlers/034b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "MON",
       dexEntry = {
         kind = "DRILL",
         heightFt = 4,
@@ -2643,6 +2677,7 @@ return {
       spriteBack = "gen/battlers/035b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "FAIRY",
       dexEntry = {
         kind = "FAIRY",
         heightFt = 2,
@@ -2722,6 +2757,7 @@ return {
       spriteBack = "gen/battlers/036b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "FAIRY",
       dexEntry = {
         kind = "FAIRY",
         heightFt = 4,
@@ -2815,6 +2851,7 @@ return {
       spriteBack = "gen/battlers/037b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "QUADRUPED",
       dexEntry = {
         kind = "FOX",
         heightFt = 2,
@@ -2906,6 +2943,7 @@ return {
       spriteBack = "gen/battlers/038b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "QUADRUPED",
       dexEntry = {
         kind = "FOX",
         heightFt = 3,
@@ -2995,6 +3033,7 @@ return {
       spriteBack = "gen/battlers/039b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "FAIRY",
       dexEntry = {
         kind = "BALLOON",
         heightFt = 1,
@@ -3078,6 +3117,7 @@ return {
       spriteBack = "gen/battlers/040b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "FAIRY",
       dexEntry = {
         kind = "BALLOON",
         heightFt = 3,
@@ -3159,6 +3199,7 @@ return {
       spriteBack = "gen/battlers/041b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "BIRD",
       dexEntry = {
         kind = "BAT",
         heightFt = 2,
@@ -3232,6 +3273,7 @@ return {
       spriteBack = "gen/battlers/042b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "BIRD",
       dexEntry = {
         kind = "BAT",
         heightFt = 5,
@@ -3317,6 +3359,7 @@ return {
       spriteBack = "gen/battlers/043b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "GRASS",
       dexEntry = {
         kind = "WEED",
         heightFt = 1,
@@ -3399,6 +3442,7 @@ return {
       spriteBack = "gen/battlers/044b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "GRASS",
       dexEntry = {
         kind = "WEED",
         heightFt = 2,
@@ -3470,6 +3514,7 @@ return {
       spriteBack = "gen/battlers/045b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "GRASS",
       dexEntry = {
         kind = "FLOWER",
         heightFt = 3,
@@ -3563,6 +3608,7 @@ return {
       spriteBack = "gen/battlers/046b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "BUG",
       dexEntry = {
         kind = "MUSHROOM",
         heightFt = 1,
@@ -3654,6 +3700,7 @@ return {
       spriteBack = "gen/battlers/047b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "BUG",
       dexEntry = {
         kind = "MUSHROOM",
         heightFt = 3,
@@ -3735,6 +3782,7 @@ return {
       spriteBack = "gen/battlers/048b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "BUG",
       dexEntry = {
         kind = "INSECT",
         heightFt = 3,
@@ -3818,6 +3866,7 @@ return {
       spriteBack = "gen/battlers/049b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "BUG",
       dexEntry = {
         kind = "POISON MOTH",
         heightFt = 4,
@@ -3899,6 +3948,7 @@ return {
       spriteBack = "gen/battlers/050b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "MON",
       dexEntry = {
         kind = "MOLE",
         heightFt = 0,
@@ -3966,6 +4016,7 @@ return {
       spriteBack = "gen/battlers/051b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "MON",
       dexEntry = {
         kind = "MOLE",
         heightFt = 2,
@@ -4047,6 +4098,7 @@ return {
       spriteBack = "gen/battlers/052b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "QUADRUPED",
       dexEntry = {
         kind = "SCRATCH CAT",
         heightFt = 1,
@@ -4114,6 +4166,7 @@ return {
       spriteBack = "gen/battlers/053b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "QUADRUPED",
       dexEntry = {
         kind = "CLASSY CAT",
         heightFt = 3,
@@ -4203,6 +4256,7 @@ return {
       spriteBack = "gen/battlers/054b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "WATER",
       dexEntry = {
         kind = "DUCK",
         heightFt = 2,
@@ -4282,6 +4336,7 @@ return {
       spriteBack = "gen/battlers/055b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "WATER",
       dexEntry = {
         kind = "DUCK",
         heightFt = 5,
@@ -4375,6 +4430,7 @@ return {
       spriteBack = "gen/battlers/056b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "MON",
       dexEntry = {
         kind = "PIG MONKEY",
         heightFt = 1,
@@ -4462,6 +4518,7 @@ return {
       spriteBack = "gen/battlers/057b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "MON",
       dexEntry = {
         kind = "PIG MONKEY",
         heightFt = 3,
@@ -4555,6 +4612,7 @@ return {
       spriteBack = "gen/battlers/058b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "QUADRUPED",
       dexEntry = {
         kind = "PUPPY",
         heightFt = 2,
@@ -4642,6 +4700,7 @@ return {
       spriteBack = "gen/battlers/059b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "QUADRUPED",
       dexEntry = {
         kind = "LEGENDARY",
         heightFt = 6,
@@ -4715,6 +4774,7 @@ return {
       spriteBack = "gen/battlers/060b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "WATER",
       dexEntry = {
         kind = "TADPOLE",
         heightFt = 2,
@@ -4785,6 +4845,7 @@ return {
       spriteBack = "gen/battlers/061b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "WATER",
       dexEntry = {
         kind = "TADPOLE",
         heightFt = 3,
@@ -4848,6 +4909,7 @@ return {
       spriteBack = "gen/battlers/062b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "WATER",
       dexEntry = {
         kind = "TADPOLE",
         heightFt = 4,
@@ -4884,6 +4946,7 @@ return {
       spriteBack = "gen/battlers/063b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "MON",
       dexEntry = {
         kind = "PSI",
         heightFt = 2,
@@ -4961,6 +5024,7 @@ return {
       spriteBack = "gen/battlers/064b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "MON",
       dexEntry = {
         kind = "PSI",
         heightFt = 4,
@@ -5032,6 +5096,7 @@ return {
       spriteBack = "gen/battlers/065b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "MON",
       dexEntry = {
         kind = "PSI",
         heightFt = 4,
@@ -5121,6 +5186,7 @@ return {
       spriteBack = "gen/battlers/066b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "MON",
       dexEntry = {
         kind = "SUPERPOWER",
         heightFt = 2,
@@ -5202,6 +5268,7 @@ return {
       spriteBack = "gen/battlers/067b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "MON",
       dexEntry = {
         kind = "SUPERPOWER",
         heightFt = 4,
@@ -5277,6 +5344,7 @@ return {
       spriteBack = "gen/battlers/068b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "MON",
       dexEntry = {
         kind = "SUPERPOWER",
         heightFt = 5,
@@ -5366,6 +5434,7 @@ return {
       spriteBack = "gen/battlers/069b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "GRASS",
       dexEntry = {
         kind = "FLOWER",
         heightFt = 2,
@@ -5455,6 +5524,7 @@ return {
       spriteBack = "gen/battlers/070b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "GRASS",
       dexEntry = {
         kind = "FLYCATCHER",
         heightFt = 3,
@@ -5542,6 +5612,7 @@ return {
       spriteBack = "gen/battlers/071b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "GRASS",
       dexEntry = {
         kind = "FLYCATCHER",
         heightFt = 5,
@@ -5627,6 +5698,7 @@ return {
       spriteBack = "gen/battlers/072b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "WATER",
       dexEntry = {
         kind = "JELLYFISH",
         heightFt = 2,
@@ -5698,6 +5770,7 @@ return {
       spriteBack = "gen/battlers/073b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "WATER",
       dexEntry = {
         kind = "JELLYFISH",
         heightFt = 5,
@@ -5791,6 +5864,7 @@ return {
       spriteBack = "gen/battlers/074b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "MON",
       dexEntry = {
         kind = "ROCK",
         heightFt = 1,
@@ -5884,6 +5958,7 @@ return {
       spriteBack = "gen/battlers/075b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "MON",
       dexEntry = {
         kind = "ROCK",
         heightFt = 3,
@@ -5975,6 +6050,7 @@ return {
       spriteBack = "gen/battlers/076b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "MON",
       dexEntry = {
         kind = "MEGATON",
         heightFt = 4,
@@ -6056,6 +6132,7 @@ return {
       spriteBack = "gen/battlers/077b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "QUADRUPED",
       dexEntry = {
         kind = "FIRE HORSE",
         heightFt = 3,
@@ -6123,6 +6200,7 @@ return {
       spriteBack = "gen/battlers/078b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "QUADRUPED",
       dexEntry = {
         kind = "FIRE HORSE",
         heightFt = 5,
@@ -6225,6 +6303,7 @@ return {
       spriteBack = "gen/battlers/079b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "QUADRUPED",
       dexEntry = {
         kind = "DOPEY",
         heightFt = 3,
@@ -6308,6 +6387,7 @@ return {
       spriteBack = "gen/battlers/080b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "WATER",
       dexEntry = {
         kind = "HERMIT CRAB",
         heightFt = 5,
@@ -6397,6 +6477,7 @@ return {
       spriteBack = "gen/battlers/081b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "MON",
       dexEntry = {
         kind = "MAGNET",
         heightFt = 1,
@@ -6483,6 +6564,7 @@ return {
       spriteBack = "gen/battlers/082b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "MON",
       dexEntry = {
         kind = "MAGNET",
         heightFt = 3,
@@ -6566,6 +6648,7 @@ return {
       spriteBack = "gen/battlers/083b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "BIRD",
       dexEntry = {
         kind = "WILD DUCK",
         heightFt = 2,
@@ -6659,6 +6742,7 @@ return {
       spriteBack = "gen/battlers/084b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "BIRD",
       dexEntry = {
         kind = "TWIN BIRD",
         heightFt = 4,
@@ -6746,6 +6830,7 @@ return {
       spriteBack = "gen/battlers/085b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "BIRD",
       dexEntry = {
         kind = "TRIPLE BIRD",
         heightFt = 5,
@@ -6847,6 +6932,7 @@ return {
       spriteBack = "gen/battlers/086b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "WATER",
       dexEntry = {
         kind = "SEA LION",
         heightFt = 3,
@@ -6958,6 +7044,7 @@ return {
       spriteBack = "gen/battlers/087b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "WATER",
       dexEntry = {
         kind = "SEA LION",
         heightFt = 5,
@@ -7051,6 +7138,7 @@ return {
       spriteBack = "gen/battlers/088b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "MON",
       dexEntry = {
         kind = "SLUDGE",
         heightFt = 2,
@@ -7138,6 +7226,7 @@ return {
       spriteBack = "gen/battlers/089b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "MON",
       dexEntry = {
         kind = "SLUDGE",
         heightFt = 3,
@@ -7223,6 +7312,7 @@ return {
       spriteBack = "gen/battlers/090b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "WATER",
       dexEntry = {
         kind = "BIVALVE",
         heightFt = 1,
@@ -7302,6 +7392,7 @@ return {
       spriteBack = "gen/battlers/091b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "WATER",
       dexEntry = {
         kind = "BIVALVE",
         heightFt = 4,
@@ -7387,6 +7478,7 @@ return {
       spriteBack = "gen/battlers/092b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "MON",
       dexEntry = {
         kind = "GAS",
         heightFt = 4,
@@ -7464,6 +7556,7 @@ return {
       spriteBack = "gen/battlers/093b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "MON",
       dexEntry = {
         kind = "GAS",
         heightFt = 5,
@@ -7535,6 +7628,7 @@ return {
       spriteBack = "gen/battlers/094b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "MON",
       dexEntry = {
         kind = "SHADOW",
         heightFt = 4,
@@ -7628,6 +7722,7 @@ return {
       spriteBack = "gen/battlers/095b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "SNAKE",
       dexEntry = {
         kind = "ROCK SNAKE",
         heightFt = 28,
@@ -7725,6 +7820,7 @@ return {
       spriteBack = "gen/battlers/096b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "MON",
       dexEntry = {
         kind = "HYPNOSIS",
         heightFt = 3,
@@ -7820,6 +7916,7 @@ return {
       spriteBack = "gen/battlers/097b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "MON",
       dexEntry = {
         kind = "HYPNOSIS",
         heightFt = 5,
@@ -7905,6 +8002,7 @@ return {
       spriteBack = "gen/battlers/098b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "BUG",
       dexEntry = {
         kind = "RIVER CRAB",
         heightFt = 1,
@@ -7976,6 +8074,7 @@ return {
       spriteBack = "gen/battlers/099b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "BUG",
       dexEntry = {
         kind = "PINCER",
         heightFt = 4,
@@ -8073,6 +8172,7 @@ return {
       spriteBack = "gen/battlers/100b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "MON",
       dexEntry = {
         kind = "BALL",
         heightFt = 1,
@@ -8164,6 +8264,7 @@ return {
       spriteBack = "gen/battlers/101b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "MON",
       dexEntry = {
         kind = "BALL",
         heightFt = 3,
@@ -8245,6 +8346,7 @@ return {
       spriteBack = "gen/battlers/102b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "GRASS",
       dexEntry = {
         kind = "EGG",
         heightFt = 1,
@@ -8324,6 +8426,7 @@ return {
       spriteBack = "gen/battlers/103b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "GRASS",
       dexEntry = {
         kind = "COCONUT",
         heightFt = 6,
@@ -8409,6 +8512,7 @@ return {
       spriteBack = "gen/battlers/104b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "MON",
       dexEntry = {
         kind = "LONELY",
         heightFt = 1,
@@ -8480,6 +8584,7 @@ return {
       spriteBack = "gen/battlers/105b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "MON",
       dexEntry = {
         kind = "BONE KEEPER",
         heightFt = 3,
@@ -8555,6 +8660,7 @@ return {
       spriteBack = "gen/battlers/106b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "MON",
       dexEntry = {
         kind = "KICKING",
         heightFt = 4,
@@ -8638,6 +8744,7 @@ return {
       spriteBack = "gen/battlers/107b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "MON",
       dexEntry = {
         kind = "PUNCHING",
         heightFt = 4,
@@ -8715,6 +8822,7 @@ return {
       spriteBack = "gen/battlers/108b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "MON",
       dexEntry = {
         kind = "LICKING",
         heightFt = 3,
@@ -8804,6 +8912,7 @@ return {
       spriteBack = "gen/battlers/109b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "MON",
       dexEntry = {
         kind = "POISON GAS",
         heightFt = 2,
@@ -8879,6 +8988,7 @@ return {
       spriteBack = "gen/battlers/110b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "MON",
       dexEntry = {
         kind = "POISON GAS",
         heightFt = 3,
@@ -8964,6 +9074,7 @@ return {
       spriteBack = "gen/battlers/111b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "QUADRUPED",
       dexEntry = {
         kind = "SPIKES",
         heightFt = 3,
@@ -9041,6 +9152,7 @@ return {
       spriteBack = "gen/battlers/112b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "MON",
       dexEntry = {
         kind = "DRILL",
         heightFt = 6,
@@ -9130,6 +9242,7 @@ return {
       spriteBack = "gen/battlers/113b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "MON",
       dexEntry = {
         kind = "EGG",
         heightFt = 3,
@@ -9223,6 +9336,7 @@ return {
       spriteBack = "gen/battlers/114b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "GRASS",
       dexEntry = {
         kind = "VINE",
         heightFt = 3,
@@ -9306,6 +9420,7 @@ return {
       spriteBack = "gen/battlers/115b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "MON",
       dexEntry = {
         kind = "PARENT",
         heightFt = 7,
@@ -9387,6 +9502,7 @@ return {
       spriteBack = "gen/battlers/116b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "WATER",
       dexEntry = {
         kind = "DRAGON",
         heightFt = 1,
@@ -9460,6 +9576,7 @@ return {
       spriteBack = "gen/battlers/117b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "WATER",
       dexEntry = {
         kind = "DRAGON",
         heightFt = 3,
@@ -9537,6 +9654,7 @@ return {
       spriteBack = "gen/battlers/118b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "WATER",
       dexEntry = {
         kind = "GOLDFISH",
         heightFt = 2,
@@ -9600,6 +9718,7 @@ return {
       spriteBack = "gen/battlers/119b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "WATER",
       dexEntry = {
         kind = "GOLDFISH",
         heightFt = 4,
@@ -9693,6 +9812,7 @@ return {
       spriteBack = "gen/battlers/120b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "WATER",
       dexEntry = {
         kind = "STAR SHAPE",
         heightFt = 2,
@@ -9780,6 +9900,7 @@ return {
       spriteBack = "gen/battlers/121b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "WATER",
       dexEntry = {
         kind = "MYSTERIOUS",
         heightFt = 3,
@@ -9863,6 +9984,7 @@ return {
       spriteBack = "gen/battlers/122b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "FAIRY",
       dexEntry = {
         kind = "BARRIER",
         heightFt = 4,
@@ -9948,6 +10070,7 @@ return {
       spriteBack = "gen/battlers/123b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "BUG",
       dexEntry = {
         kind = "MANTIS",
         heightFt = 4,
@@ -10019,6 +10142,7 @@ return {
       spriteBack = "gen/battlers/124b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "MON",
       dexEntry = {
         kind = "HUMAN SHAPE",
         heightFt = 4,
@@ -10100,6 +10224,7 @@ return {
       spriteBack = "gen/battlers/125b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "MON",
       dexEntry = {
         kind = "ELECTRIC",
         heightFt = 3,
@@ -10181,6 +10306,7 @@ return {
       spriteBack = "gen/battlers/126b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "MON",
       dexEntry = {
         kind = "SPITFIRE",
         heightFt = 4,
@@ -10264,6 +10390,7 @@ return {
       spriteBack = "gen/battlers/127b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "BUG",
       dexEntry = {
         kind = "STAG BEETLE",
         heightFt = 4,
@@ -10343,6 +10470,7 @@ return {
       spriteBack = "gen/battlers/128b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "QUADRUPED",
       dexEntry = {
         kind = "WILD BULL",
         heightFt = 4,
@@ -10388,6 +10516,7 @@ return {
       spriteBack = "gen/battlers/129b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "WATER",
       dexEntry = {
         kind = "FISH",
         heightFt = 2,
@@ -10471,6 +10600,7 @@ return {
       spriteBack = "gen/battlers/130b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "SNAKE",
       dexEntry = {
         kind = "ATROCIOUS",
         heightFt = 21,
@@ -10554,6 +10684,7 @@ return {
       spriteBack = "gen/battlers/131b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "WATER",
       dexEntry = {
         kind = "TRANSPORT",
         heightFt = 8,
@@ -10584,6 +10715,7 @@ return {
       spriteBack = "gen/battlers/132b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "MON",
       dexEntry = {
         kind = "TRANSFORM",
         heightFt = 1,
@@ -10705,6 +10837,7 @@ return {
       spriteBack = "gen/battlers/133b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "QUADRUPED",
       dexEntry = {
         kind = "EVOLUTION",
         heightFt = 1,
@@ -10780,6 +10913,7 @@ return {
       spriteBack = "gen/battlers/134b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "QUADRUPED",
       dexEntry = {
         kind = "BUBBLE JET",
         heightFt = 3,
@@ -10855,6 +10989,7 @@ return {
       spriteBack = "gen/battlers/135b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "QUADRUPED",
       dexEntry = {
         kind = "LIGHTNING",
         heightFt = 2,
@@ -10930,6 +11065,7 @@ return {
       spriteBack = "gen/battlers/136b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "QUADRUPED",
       dexEntry = {
         kind = "FLAME",
         heightFt = 2,
@@ -11015,6 +11151,7 @@ return {
       spriteBack = "gen/battlers/137b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "MON",
       dexEntry = {
         kind = "VIRTUAL",
         heightFt = 2,
@@ -11100,6 +11237,7 @@ return {
       spriteBack = "gen/battlers/138b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "WATER",
       dexEntry = {
         kind = "SPIRAL",
         heightFt = 1,
@@ -11171,6 +11309,7 @@ return {
       spriteBack = "gen/battlers/139b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "WATER",
       dexEntry = {
         kind = "SPIRAL",
         heightFt = 3,
@@ -11256,6 +11395,7 @@ return {
       spriteBack = "gen/battlers/140b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "BUG",
       dexEntry = {
         kind = "SHELLFISH",
         heightFt = 1,
@@ -11331,6 +11471,7 @@ return {
       spriteBack = "gen/battlers/141b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "WATER",
       dexEntry = {
         kind = "SHELLFISH",
         heightFt = 4,
@@ -11410,6 +11551,7 @@ return {
       spriteBack = "gen/battlers/142b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "BIRD",
       dexEntry = {
         kind = "FOSSIL",
         heightFt = 5,
@@ -11497,6 +11639,7 @@ return {
       spriteBack = "gen/battlers/143b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "MON",
       dexEntry = {
         kind = "SLEEPING",
         heightFt = 6,
@@ -11584,6 +11727,7 @@ return {
       spriteBack = "gen/battlers/144b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "BIRD",
       dexEntry = {
         kind = "FREEZE",
         heightFt = 5,
@@ -11671,6 +11815,7 @@ return {
       spriteBack = "gen/battlers/145b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "BIRD",
       dexEntry = {
         kind = "ELECTRIC",
         heightFt = 5,
@@ -11758,6 +11903,7 @@ return {
       spriteBack = "gen/battlers/146b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "BIRD",
       dexEntry = {
         kind = "FLAME",
         heightFt = 6,
@@ -11843,6 +11989,7 @@ return {
       spriteBack = "gen/battlers/147b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "SNAKE",
       dexEntry = {
         kind = "DRAGON",
         heightFt = 5,
@@ -11920,6 +12067,7 @@ return {
       spriteBack = "gen/battlers/148b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "SNAKE",
       dexEntry = {
         kind = "DRAGON",
         heightFt = 13,
@@ -11991,6 +12139,7 @@ return {
       spriteBack = "gen/battlers/149b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "SNAKE",
       dexEntry = {
         kind = "DRAGON",
         heightFt = 7,
@@ -12074,6 +12223,7 @@ return {
       spriteBack = "gen/battlers/150b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "MON",
       dexEntry = {
         kind = "GENETIC",
         heightFt = 6,
@@ -12145,6 +12295,7 @@ return {
       spriteBack = "gen/battlers/151b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "MON",
       dexEntry = {
         kind = "NEW SPECIES",
         heightFt = 1,
@@ -12238,6 +12389,7 @@ return {
       spriteBack = "gen/battlers/152b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "QUADRUPED",
       dexEntry = {
         kind = "LEAF",
         heightFt = 2,
@@ -12335,6 +12487,7 @@ return {
       spriteBack = "gen/battlers/153b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "QUADRUPED",
       dexEntry = {
         kind = "LEAF",
         heightFt = 3,
@@ -12442,6 +12595,7 @@ return {
       spriteBack = "gen/battlers/154b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "QUADRUPED",
       dexEntry = {
         kind = "HERB",
         heightFt = 5,
@@ -12535,6 +12689,7 @@ return {
       spriteBack = "gen/battlers/155b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "MON",
       dexEntry = {
         kind = "FIRE MOUSE",
         heightFt = 1,
@@ -12628,6 +12783,7 @@ return {
       spriteBack = "gen/battlers/156b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "QUADRUPED",
       dexEntry = {
         kind = "VOLCANO",
         heightFt = 2,
@@ -12715,6 +12871,7 @@ return {
       spriteBack = "gen/battlers/157b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "QUADRUPED",
       dexEntry = {
         kind = "VOLCANO",
         heightFt = 5,
@@ -12808,6 +12965,7 @@ return {
       spriteBack = "gen/battlers/158b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "WATER",
       dexEntry = {
         kind = "BIG JAW",
         heightFt = 2,
@@ -12901,6 +13059,7 @@ return {
       spriteBack = "gen/battlers/159b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "WATER",
       dexEntry = {
         kind = "BIG JAW",
         heightFt = 3,
@@ -12988,6 +13147,7 @@ return {
       spriteBack = "gen/battlers/160b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "WATER",
       dexEntry = {
         kind = "BIG JAW",
         heightFt = 7,
@@ -13073,6 +13233,7 @@ return {
       spriteBack = "gen/battlers/161b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "QUADRUPED",
       dexEntry = {
         kind = "SCOUT",
         heightFt = 2,
@@ -13152,6 +13313,7 @@ return {
       spriteBack = "gen/battlers/162b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "QUADRUPED",
       dexEntry = {
         kind = "LONG BODY",
         heightFt = 5,
@@ -13245,6 +13407,7 @@ return {
       spriteBack = "gen/battlers/163b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "BIRD",
       dexEntry = {
         kind = "OWL",
         heightFt = 2,
@@ -13336,6 +13499,7 @@ return {
       spriteBack = "gen/battlers/164b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "BIRD",
       dexEntry = {
         kind = "OWL",
         heightFt = 5,
@@ -13425,6 +13589,7 @@ return {
       spriteBack = "gen/battlers/165b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "BIRD",
       dexEntry = {
         kind = "FIVE STAR",
         heightFt = 3,
@@ -13524,6 +13689,7 @@ return {
       spriteBack = "gen/battlers/166b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "BIRD",
       dexEntry = {
         kind = "FIVE STAR",
         heightFt = 4,
@@ -13621,6 +13787,7 @@ return {
       spriteBack = "gen/battlers/167b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "BUG",
       dexEntry = {
         kind = "STRING SPIT",
         heightFt = 1,
@@ -13712,6 +13879,7 @@ return {
       spriteBack = "gen/battlers/168b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "BUG",
       dexEntry = {
         kind = "LONG LEG",
         heightFt = 3,
@@ -13779,6 +13947,7 @@ return {
       spriteBack = "gen/battlers/169b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "BUG",
       dexEntry = {
         kind = "BAT",
         heightFt = 5,
@@ -13860,6 +14029,7 @@ return {
       spriteBack = "gen/battlers/170b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "WATER",
       dexEntry = {
         kind = "ANGLER",
         heightFt = 1,
@@ -13927,6 +14097,7 @@ return {
       spriteBack = "gen/battlers/171b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "WATER",
       dexEntry = {
         kind = "LIGHT",
         heightFt = 3,
@@ -13984,6 +14155,7 @@ return {
       spriteBack = "gen/battlers/172b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "QUADRUPED",
       dexEntry = {
         kind = "TINY MOUSE",
         heightFt = 1,
@@ -14041,6 +14213,7 @@ return {
       spriteBack = "gen/battlers/173b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "FAIRY",
       dexEntry = {
         kind = "STAR SHAPE",
         heightFt = 1,
@@ -14098,6 +14271,7 @@ return {
       spriteBack = "gen/battlers/174b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "FAIRY",
       dexEntry = {
         kind = "BALLOON",
         heightFt = 1,
@@ -14187,6 +14361,7 @@ return {
       spriteBack = "gen/battlers/175b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "FAIRY",
       dexEntry = {
         kind = "SPIKE BALL",
         heightFt = 1,
@@ -14268,6 +14443,7 @@ return {
       spriteBack = "gen/battlers/176b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "FAIRY",
       dexEntry = {
         kind = "HAPPINESS",
         heightFt = 2,
@@ -14345,6 +14521,7 @@ return {
       spriteBack = "gen/battlers/177b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "BIRD",
       dexEntry = {
         kind = "TINY BIRD",
         heightFt = 0,
@@ -14408,6 +14585,7 @@ return {
       spriteBack = "gen/battlers/178b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "BIRD",
       dexEntry = {
         kind = "MYSTIC",
         heightFt = 4,
@@ -14497,6 +14675,7 @@ return {
       spriteBack = "gen/battlers/179b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "QUADRUPED",
       dexEntry = {
         kind = "WOOL",
         heightFt = 2,
@@ -14586,6 +14765,7 @@ return {
       spriteBack = "gen/battlers/180b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "MON",
       dexEntry = {
         kind = "WOOL",
         heightFt = 2,
@@ -14673,6 +14853,7 @@ return {
       spriteBack = "gen/battlers/181b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "MON",
       dexEntry = {
         kind = "LIGHT",
         heightFt = 4,
@@ -14744,6 +14925,7 @@ return {
       spriteBack = "gen/battlers/182b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "GRASS",
       dexEntry = {
         kind = "FLOWER",
         heightFt = 1,
@@ -14825,6 +15007,7 @@ return {
       spriteBack = "gen/battlers/183b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "WATER",
       dexEntry = {
         kind = "AQUA MOUSE",
         heightFt = 1,
@@ -14900,6 +15083,7 @@ return {
       spriteBack = "gen/battlers/184b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "WATER",
       dexEntry = {
         kind = "AQUA RABBIT",
         heightFt = 2,
@@ -14971,6 +15155,7 @@ return {
       spriteBack = "gen/battlers/185b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "GRASS",
       dexEntry = {
         kind = "IMITATION",
         heightFt = 3,
@@ -15030,6 +15215,7 @@ return {
       spriteBack = "gen/battlers/186b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "WATER",
       dexEntry = {
         kind = "FROG",
         heightFt = 3,
@@ -15139,6 +15325,7 @@ return {
       spriteBack = "gen/battlers/187b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "GRASS",
       dexEntry = {
         kind = "COTTONWEED",
         heightFt = 1,
@@ -15248,6 +15435,7 @@ return {
       spriteBack = "gen/battlers/188b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "GRASS",
       dexEntry = {
         kind = "COTTONWEED",
         heightFt = 2,
@@ -15351,6 +15539,7 @@ return {
       spriteBack = "gen/battlers/189b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "GRASS",
       dexEntry = {
         kind = "COTTONWEED",
         heightFt = 2,
@@ -15436,6 +15625,7 @@ return {
       spriteBack = "gen/battlers/190b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "MON",
       dexEntry = {
         kind = "LONG TAIL",
         heightFt = 2,
@@ -15529,6 +15719,7 @@ return {
       spriteBack = "gen/battlers/191b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "GRASS",
       dexEntry = {
         kind = "SEED",
         heightFt = 1,
@@ -15644,6 +15835,7 @@ return {
       spriteBack = "gen/battlers/192b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "GRASS",
       dexEntry = {
         kind = "SUN",
         heightFt = 2,
@@ -15737,6 +15929,7 @@ return {
       spriteBack = "gen/battlers/193b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "BUG",
       dexEntry = {
         kind = "CLEAR WING",
         heightFt = 3,
@@ -15818,6 +16011,7 @@ return {
       spriteBack = "gen/battlers/194b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "WATER",
       dexEntry = {
         kind = "WATER FISH",
         heightFt = 1,
@@ -15885,6 +16079,7 @@ return {
       spriteBack = "gen/battlers/195b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "WATER",
       dexEntry = {
         kind = "WATER FISH",
         heightFt = 4,
@@ -15960,6 +16155,7 @@ return {
       spriteBack = "gen/battlers/196b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "QUADRUPED",
       dexEntry = {
         kind = "SUN",
         heightFt = 2,
@@ -16035,6 +16231,7 @@ return {
       spriteBack = "gen/battlers/197b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "QUADRUPED",
       dexEntry = {
         kind = "MOONLIGHT",
         heightFt = 3,
@@ -16124,6 +16321,7 @@ return {
       spriteBack = "gen/battlers/198b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "BIRD",
       dexEntry = {
         kind = "DARKNESS",
         heightFt = 1,
@@ -16207,6 +16405,7 @@ return {
       spriteBack = "gen/battlers/199b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "WATER",
       dexEntry = {
         kind = "ROYAL",
         heightFt = 6,
@@ -16292,6 +16491,7 @@ return {
       spriteBack = "gen/battlers/200b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "MON",
       dexEntry = {
         kind = "SCREECH",
         heightFt = 2,
@@ -16371,6 +16571,7 @@ return {
       spriteBack = "gen/battlers/201b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "MON",
       dexEntry = {
         kind = "SYMBOL",
         heightFt = 1,
@@ -16401,6 +16602,7 @@ return {
       spriteBack = "gen/battlers/202b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "MON",
       dexEntry = {
         kind = "PATIENT",
         heightFt = 4,
@@ -16476,6 +16678,7 @@ return {
       spriteBack = "gen/battlers/203b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "QUADRUPED",
       dexEntry = {
         kind = "LONG NECK",
         heightFt = 4,
@@ -16561,6 +16764,7 @@ return {
       spriteBack = "gen/battlers/204b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "BUG",
       dexEntry = {
         kind = "BAGWORM",
         heightFt = 2,
@@ -16652,6 +16856,7 @@ return {
       spriteBack = "gen/battlers/205b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "BUG",
       dexEntry = {
         kind = "BAGWORM",
         heightFt = 3,
@@ -16739,6 +16944,7 @@ return {
       spriteBack = "gen/battlers/206b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "SNAKE",
       dexEntry = {
         kind = "LAND SNAKE",
         heightFt = 4,
@@ -16832,6 +17038,7 @@ return {
       spriteBack = "gen/battlers/207b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "BIRD",
       dexEntry = {
         kind = "FLYSCORPION",
         heightFt = 3,
@@ -16923,6 +17130,7 @@ return {
       spriteBack = "gen/battlers/208b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "SNAKE",
       dexEntry = {
         kind = "IRON SNAKE",
         heightFt = 30,
@@ -16992,6 +17200,7 @@ return {
       spriteBack = "gen/battlers/209b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "FAIRY",
       dexEntry = {
         kind = "FAIRY",
         heightFt = 2,
@@ -17059,6 +17268,7 @@ return {
       spriteBack = "gen/battlers/210b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "FAIRY",
       dexEntry = {
         kind = "FAIRY",
         heightFt = 4,
@@ -17158,6 +17368,7 @@ return {
       spriteBack = "gen/battlers/211b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "WATER",
       dexEntry = {
         kind = "BALLOON",
         heightFt = 1,
@@ -17229,6 +17440,7 @@ return {
       spriteBack = "gen/battlers/212b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "BUG",
       dexEntry = {
         kind = "PINCER",
         heightFt = 5,
@@ -17316,6 +17528,7 @@ return {
       spriteBack = "gen/battlers/213b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "BUG",
       dexEntry = {
         kind = "MOLD",
         heightFt = 2,
@@ -17395,6 +17608,7 @@ return {
       spriteBack = "gen/battlers/214b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "BUG",
       dexEntry = {
         kind = "SINGLE HORN",
         heightFt = 4,
@@ -17472,6 +17686,7 @@ return {
       spriteBack = "gen/battlers/215b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "MON",
       dexEntry = {
         kind = "SHARP CLAW",
         heightFt = 2,
@@ -17549,6 +17764,7 @@ return {
       spriteBack = "gen/battlers/216b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "MON",
       dexEntry = {
         kind = "LITTLE BEAR",
         heightFt = 2,
@@ -17620,6 +17836,7 @@ return {
       spriteBack = "gen/battlers/217b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "MON",
       dexEntry = {
         kind = "HIBERNATOR",
         heightFt = 5,
@@ -17713,6 +17930,7 @@ return {
       spriteBack = "gen/battlers/218b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "SNAKE",
       dexEntry = {
         kind = "LAVA",
         heightFt = 2,
@@ -17812,6 +18030,7 @@ return {
       spriteBack = "gen/battlers/219b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "SNAKE",
       dexEntry = {
         kind = "LAVA",
         heightFt = 2,
@@ -17889,6 +18108,7 @@ return {
       spriteBack = "gen/battlers/220b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "QUADRUPED",
       dexEntry = {
         kind = "PIG",
         heightFt = 1,
@@ -17962,6 +18182,7 @@ return {
       spriteBack = "gen/battlers/221b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "QUADRUPED",
       dexEntry = {
         kind = "SWINE",
         heightFt = 3,
@@ -18037,6 +18258,7 @@ return {
       spriteBack = "gen/battlers/222b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "BUG",
       dexEntry = {
         kind = "CORAL",
         heightFt = 2,
@@ -18118,6 +18340,7 @@ return {
       spriteBack = "gen/battlers/223b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "WATER",
       dexEntry = {
         kind = "JET",
         heightFt = 2,
@@ -18185,6 +18408,7 @@ return {
       spriteBack = "gen/battlers/224b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "WATER",
       dexEntry = {
         kind = "JET",
         heightFt = 2,
@@ -18220,6 +18444,7 @@ return {
       spriteBack = "gen/battlers/225b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "BIRD",
       dexEntry = {
         kind = "DELIVERY",
         heightFt = 2,
@@ -18291,6 +18516,7 @@ return {
       spriteBack = "gen/battlers/226b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "BIRD",
       dexEntry = {
         kind = "KITE",
         heightFt = 6,
@@ -18374,6 +18600,7 @@ return {
       spriteBack = "gen/battlers/227b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "BIRD",
       dexEntry = {
         kind = "ARMOR BIRD",
         heightFt = 5,
@@ -18467,6 +18694,7 @@ return {
       spriteBack = "gen/battlers/228b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "QUADRUPED",
       dexEntry = {
         kind = "DARK",
         heightFt = 2,
@@ -18554,6 +18782,7 @@ return {
       spriteBack = "gen/battlers/229b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "QUADRUPED",
       dexEntry = {
         kind = "DARK",
         heightFt = 4,
@@ -18621,6 +18850,7 @@ return {
       spriteBack = "gen/battlers/230b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "WATER",
       dexEntry = {
         kind = "DRAGON",
         heightFt = 5,
@@ -18694,6 +18924,7 @@ return {
       spriteBack = "gen/battlers/231b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "QUADRUPED",
       dexEntry = {
         kind = "LONG NOSE",
         heightFt = 1,
@@ -18761,6 +18992,7 @@ return {
       spriteBack = "gen/battlers/232b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "QUADRUPED",
       dexEntry = {
         kind = "ARMOR",
         heightFt = 3,
@@ -18842,6 +19074,7 @@ return {
       spriteBack = "gen/battlers/233b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "MON",
       dexEntry = {
         kind = "VIRTUAL",
         heightFt = 2,
@@ -18929,6 +19162,7 @@ return {
       spriteBack = "gen/battlers/234b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "QUADRUPED",
       dexEntry = {
         kind = "BIG HORN",
         heightFt = 4,
@@ -18996,6 +19230,7 @@ return {
       spriteBack = "gen/battlers/235b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "MON",
       dexEntry = {
         kind = "PAINTER",
         heightFt = 3,
@@ -19042,6 +19277,7 @@ return {
       spriteBack = "gen/battlers/236b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "MON",
       dexEntry = {
         kind = "SCUFFLE",
         heightFt = 2,
@@ -19121,6 +19357,7 @@ return {
       spriteBack = "gen/battlers/237b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "MON",
       dexEntry = {
         kind = "HANDSTAND",
         heightFt = 4,
@@ -19206,6 +19443,7 @@ return {
       spriteBack = "gen/battlers/238b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "MON",
       dexEntry = {
         kind = "KISS",
         heightFt = 1,
@@ -19291,6 +19529,7 @@ return {
       spriteBack = "gen/battlers/239b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "MON",
       dexEntry = {
         kind = "ELECTRIC",
         heightFt = 2,
@@ -19376,6 +19615,7 @@ return {
       spriteBack = "gen/battlers/240b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "MON",
       dexEntry = {
         kind = "LIVE COAL",
         heightFt = 2,
@@ -19451,6 +19691,7 @@ return {
       spriteBack = "gen/battlers/241b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "MON",
       dexEntry = {
         kind = "MILK COW",
         heightFt = 3,
@@ -19534,6 +19775,7 @@ return {
       spriteBack = "gen/battlers/242b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "MON",
       dexEntry = {
         kind = "HAPPINESS",
         heightFt = 4,
@@ -19617,6 +19859,7 @@ return {
       spriteBack = "gen/battlers/243b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "QUADRUPED",
       dexEntry = {
         kind = "THUNDER",
         heightFt = 6,
@@ -19700,6 +19943,7 @@ return {
       spriteBack = "gen/battlers/244b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "QUADRUPED",
       dexEntry = {
         kind = "VOLCANO",
         heightFt = 6,
@@ -19783,6 +20027,7 @@ return {
       spriteBack = "gen/battlers/245b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "QUADRUPED",
       dexEntry = {
         kind = "AURORA",
         heightFt = 6,
@@ -19876,6 +20121,7 @@ return {
       spriteBack = "gen/battlers/246b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "MON",
       dexEntry = {
         kind = "ROCK SKIN",
         heightFt = 2,
@@ -19961,6 +20207,7 @@ return {
       spriteBack = "gen/battlers/247b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "SNAKE",
       dexEntry = {
         kind = "HARD SHELL",
         heightFt = 3,
@@ -20044,6 +20291,7 @@ return {
       spriteBack = "gen/battlers/248b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "MON",
       dexEntry = {
         kind = "ARMOR",
         heightFt = 6,
@@ -20111,6 +20359,7 @@ return {
       spriteBack = "gen/battlers/249b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "BIRD",
       dexEntry = {
         kind = "DIVING",
         heightFt = 17,
@@ -20186,6 +20435,7 @@ return {
       spriteBack = "gen/battlers/250b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "BIRD",
       dexEntry = {
         kind = "RAINBOW",
         heightFt = 12,
@@ -20257,6 +20507,7 @@ return {
       spriteBack = "gen/battlers/251b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "GRASS",
       dexEntry = {
         kind = "TIME TRAVEL",
         heightFt = 2,
@@ -20346,6 +20597,7 @@ return {
       spriteBack = "gen/battlers/252b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "GRASS",
       dexEntry = {
         kind = "WOOD GECKO",
         heightFt = 1,
@@ -20427,6 +20679,7 @@ return {
       spriteBack = "gen/battlers/253b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "GRASS",
       dexEntry = {
         kind = "WOOD GECKO",
         heightFt = 2,
@@ -20502,6 +20755,7 @@ return {
       spriteBack = "gen/battlers/254b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "GRASS",
       dexEntry = {
         kind = "FOREST",
         heightFt = 5,
@@ -20591,6 +20845,7 @@ return {
       spriteBack = "gen/battlers/255b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "MON",
       dexEntry = {
         kind = "CHICK",
         heightFt = 1,
@@ -20672,6 +20927,7 @@ return {
       spriteBack = "gen/battlers/256b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "MON",
       dexEntry = {
         kind = "YOUNG FOWL",
         heightFt = 2,
@@ -20747,6 +21003,7 @@ return {
       spriteBack = "gen/battlers/257b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "MON",
       dexEntry = {
         kind = "BLAZE",
         heightFt = 6,
@@ -20836,6 +21093,7 @@ return {
       spriteBack = "gen/battlers/258b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "QUADRUPED",
       dexEntry = {
         kind = "MUD FISH",
         heightFt = 1,
@@ -20917,6 +21175,7 @@ return {
       spriteBack = "gen/battlers/259b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "WATER",
       dexEntry = {
         kind = "MUD FISH",
         heightFt = 2,
@@ -20992,6 +21251,7 @@ return {
       spriteBack = "gen/battlers/260b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "WATER",
       dexEntry = {
         kind = "MUD FISH",
         heightFt = 4,
@@ -21089,6 +21349,7 @@ return {
       spriteBack = "gen/battlers/261b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "QUADRUPED",
       dexEntry = {
         kind = "BITE",
         heightFt = 1,
@@ -21180,6 +21441,7 @@ return {
       spriteBack = "gen/battlers/262b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "QUADRUPED",
       dexEntry = {
         kind = "BITE",
         heightFt = 3,
@@ -21265,6 +21527,7 @@ return {
       spriteBack = "gen/battlers/263b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "QUADRUPED",
       dexEntry = {
         kind = "TINYRACCOON",
         heightFt = 1,
@@ -21336,6 +21599,7 @@ return {
       spriteBack = "gen/battlers/264b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "QUADRUPED",
       dexEntry = {
         kind = "RUSHING",
         heightFt = 1,
@@ -21386,6 +21650,7 @@ return {
       spriteBack = "gen/battlers/265b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "BUG",
       dexEntry = {
         kind = "WORM",
         heightFt = 1,
@@ -21431,6 +21696,7 @@ return {
       spriteBack = "gen/battlers/266b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "BUG",
       dexEntry = {
         kind = "COCOON",
         heightFt = 2,
@@ -21510,6 +21776,7 @@ return {
       spriteBack = "gen/battlers/267b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "BUG",
       dexEntry = {
         kind = "BUTTERFLY",
         heightFt = 3,
@@ -21555,6 +21822,7 @@ return {
       spriteBack = "gen/battlers/268b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "BUG",
       dexEntry = {
         kind = "COCOON",
         heightFt = 2,
@@ -21634,6 +21902,7 @@ return {
       spriteBack = "gen/battlers/269b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "BUG",
       dexEntry = {
         kind = "POISON MOTH",
         heightFt = 3,
@@ -21715,6 +21984,7 @@ return {
       spriteBack = "gen/battlers/270b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "BUG",
       dexEntry = {
         kind = "WATER WEED",
         heightFt = 1,
@@ -21792,6 +22062,7 @@ return {
       spriteBack = "gen/battlers/271b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "WATER",
       dexEntry = {
         kind = "JOLLY",
         heightFt = 3,
@@ -21863,6 +22134,7 @@ return {
       spriteBack = "gen/battlers/272b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "WATER",
       dexEntry = {
         kind = "CAREFREE",
         heightFt = 4,
@@ -21944,6 +22216,7 @@ return {
       spriteBack = "gen/battlers/273b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "GRASS",
       dexEntry = {
         kind = "ACORN",
         heightFt = 1,
@@ -22017,6 +22290,7 @@ return {
       spriteBack = "gen/battlers/274b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "GRASS",
       dexEntry = {
         kind = "WILY",
         heightFt = 3,
@@ -22084,6 +22358,7 @@ return {
       spriteBack = "gen/battlers/275b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "GRASS",
       dexEntry = {
         kind = "WICKED",
         heightFt = 4,
@@ -22165,6 +22440,7 @@ return {
       spriteBack = "gen/battlers/276b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "BIRD",
       dexEntry = {
         kind = "TINYSWALLOW",
         heightFt = 1,
@@ -22240,6 +22516,7 @@ return {
       spriteBack = "gen/battlers/277b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "BIRD",
       dexEntry = {
         kind = "SWALLOW",
         heightFt = 2,
@@ -22313,6 +22590,7 @@ return {
       spriteBack = "gen/battlers/278b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "BIRD",
       dexEntry = {
         kind = "SEAGULL",
         heightFt = 2,
@@ -22384,6 +22662,7 @@ return {
       spriteBack = "gen/battlers/279b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "BIRD",
       dexEntry = {
         kind = "WATER BIRD",
         heightFt = 3,
@@ -22473,6 +22752,7 @@ return {
       spriteBack = "gen/battlers/280b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "FAIRY",
       dexEntry = {
         kind = "FEELING",
         heightFt = 1,
@@ -22559,6 +22839,7 @@ return {
       spriteBack = "gen/battlers/281b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "FAIRY",
       dexEntry = {
         kind = "EMOTION",
         heightFt = 2,
@@ -22634,6 +22915,7 @@ return {
       spriteBack = "gen/battlers/282b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "FAIRY",
       dexEntry = {
         kind = "EMBRACE",
         heightFt = 5,
@@ -22711,6 +22993,7 @@ return {
       spriteBack = "gen/battlers/283b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "BUG",
       dexEntry = {
         kind = "POND SKATER",
         heightFt = 1,
@@ -22802,6 +23085,7 @@ return {
       spriteBack = "gen/battlers/284b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "BUG",
       dexEntry = {
         kind = "EYEBALL",
         heightFt = 2,
@@ -22883,6 +23167,7 @@ return {
       spriteBack = "gen/battlers/285b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "GRASS",
       dexEntry = {
         kind = "MUSHROOM",
         heightFt = 1,
@@ -22958,6 +23243,7 @@ return {
       spriteBack = "gen/battlers/286b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "GRASS",
       dexEntry = {
         kind = "MUSHROOM",
         heightFt = 3,
@@ -23031,6 +23317,7 @@ return {
       spriteBack = "gen/battlers/287b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "QUADRUPED",
       dexEntry = {
         kind = "SLACKER",
         heightFt = 2,
@@ -23104,6 +23391,7 @@ return {
       spriteBack = "gen/battlers/288b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "MON",
       dexEntry = {
         kind = "WILD MONKEY",
         heightFt = 4,
@@ -23179,6 +23467,7 @@ return {
       spriteBack = "gen/battlers/289b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "MON",
       dexEntry = {
         kind = "LAZY",
         heightFt = 6,
@@ -23248,6 +23537,7 @@ return {
       spriteBack = "gen/battlers/290b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "BUG",
       dexEntry = {
         kind = "TRAINEE",
         heightFt = 1,
@@ -23311,6 +23601,7 @@ return {
       spriteBack = "gen/battlers/291b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "BUG",
       dexEntry = {
         kind = "NINJA",
         heightFt = 2,
@@ -23374,6 +23665,7 @@ return {
       spriteBack = "gen/battlers/292b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "BUG",
       dexEntry = {
         kind = "SHED",
         heightFt = 2,
@@ -23451,6 +23743,7 @@ return {
       spriteBack = "gen/battlers/293b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "MON",
       dexEntry = {
         kind = "WHISPER",
         heightFt = 2,
@@ -23520,6 +23813,7 @@ return {
       spriteBack = "gen/battlers/294b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "MON",
       dexEntry = {
         kind = "BIG VOICE",
         heightFt = 3,
@@ -23591,6 +23885,7 @@ return {
       spriteBack = "gen/battlers/295b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "MON",
       dexEntry = {
         kind = "LOUD NOISE",
         heightFt = 4,
@@ -23688,6 +23983,7 @@ return {
       spriteBack = "gen/battlers/296b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "MON",
       dexEntry = {
         kind = "GUTS",
         heightFt = 3,
@@ -23779,6 +24075,7 @@ return {
       spriteBack = "gen/battlers/297b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "MON",
       dexEntry = {
         kind = "ARM THRUST",
         heightFt = 7,
@@ -23836,6 +24133,7 @@ return {
       spriteBack = "gen/battlers/298b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "FAIRY",
       dexEntry = {
         kind = "POLKA DOT",
         heightFt = 0,
@@ -23938,6 +24236,7 @@ return {
       spriteBack = "gen/battlers/299b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "MON",
       dexEntry = {
         kind = "COMPASS",
         heightFt = 3,
@@ -24039,6 +24338,7 @@ return {
       spriteBack = "gen/battlers/300b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "QUADRUPED",
       dexEntry = {
         kind = "KITTEN",
         heightFt = 2,
@@ -24138,6 +24438,7 @@ return {
       spriteBack = "gen/battlers/301b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "QUADRUPED",
       dexEntry = {
         kind = "PRIM",
         heightFt = 3,
@@ -24233,6 +24534,7 @@ return {
       spriteBack = "gen/battlers/302b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "MON",
       dexEntry = {
         kind = "DARKNESS",
         heightFt = 1,
@@ -24320,6 +24622,7 @@ return {
       spriteBack = "gen/battlers/303b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "FAIRY",
       dexEntry = {
         kind = "DECEIVER",
         heightFt = 2,
@@ -24417,6 +24720,7 @@ return {
       spriteBack = "gen/battlers/304b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "QUADRUPED",
       dexEntry = {
         kind = "IRON ARMOR",
         heightFt = 1,
@@ -24506,6 +24810,7 @@ return {
       spriteBack = "gen/battlers/305b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "QUADRUPED",
       dexEntry = {
         kind = "IRON ARMOR",
         heightFt = 2,
@@ -24589,6 +24894,7 @@ return {
       spriteBack = "gen/battlers/306b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "MON",
       dexEntry = {
         kind = "IRON ARMOR",
         heightFt = 6,
@@ -24690,6 +24996,7 @@ return {
       spriteBack = "gen/battlers/307b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "MON",
       dexEntry = {
         kind = "MEDITATE",
         heightFt = 2,
@@ -24785,6 +25092,7 @@ return {
       spriteBack = "gen/battlers/308b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "MON",
       dexEntry = {
         kind = "MEDITATE",
         heightFt = 4,
@@ -24866,6 +25174,7 @@ return {
       spriteBack = "gen/battlers/309b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "QUADRUPED",
       dexEntry = {
         kind = "LIGHTNING",
         heightFt = 2,
@@ -24937,6 +25246,7 @@ return {
       spriteBack = "gen/battlers/310b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "QUADRUPED",
       dexEntry = {
         kind = "DISCHARGE",
         heightFt = 4,
@@ -25032,6 +25342,7 @@ return {
       spriteBack = "gen/battlers/311b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "MON",
       dexEntry = {
         kind = "CHEERING",
         heightFt = 1,
@@ -25127,6 +25438,7 @@ return {
       spriteBack = "gen/battlers/312b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "MON",
       dexEntry = {
         kind = "CHEERING",
         heightFt = 1,
@@ -25214,6 +25526,7 @@ return {
       spriteBack = "gen/battlers/313b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "BUG",
       dexEntry = {
         kind = "FIREFLY",
         heightFt = 2,
@@ -25301,6 +25614,7 @@ return {
       spriteBack = "gen/battlers/314b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "BUG",
       dexEntry = {
         kind = "FIREFLY",
         heightFt = 2,
@@ -25386,6 +25700,7 @@ return {
       spriteBack = "gen/battlers/315b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "GRASS",
       dexEntry = {
         kind = "THORN",
         heightFt = 1,
@@ -25483,6 +25798,7 @@ return {
       spriteBack = "gen/battlers/316b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "MON",
       dexEntry = {
         kind = "STOMACH",
         heightFt = 1,
@@ -25574,6 +25890,7 @@ return {
       spriteBack = "gen/battlers/317b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "MON",
       dexEntry = {
         kind = "POISON BAG",
         heightFt = 5,
@@ -25655,6 +25972,7 @@ return {
       spriteBack = "gen/battlers/318b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "WATER",
       dexEntry = {
         kind = "SAVAGE",
         heightFt = 2,
@@ -25722,6 +26040,7 @@ return {
       spriteBack = "gen/battlers/319b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "WATER",
       dexEntry = {
         kind = "BRUTAL",
         heightFt = 5,
@@ -25819,6 +26138,7 @@ return {
       spriteBack = "gen/battlers/320b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "WATER",
       dexEntry = {
         kind = "BALL WHALE",
         heightFt = 6,
@@ -25898,6 +26218,7 @@ return {
       spriteBack = "gen/battlers/321b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "WATER",
       dexEntry = {
         kind = "FLOAT WHALE",
         heightFt = 47,
@@ -25987,6 +26308,7 @@ return {
       spriteBack = "gen/battlers/322b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "QUADRUPED",
       dexEntry = {
         kind = "NUMB",
         heightFt = 2,
@@ -26070,6 +26392,7 @@ return {
       spriteBack = "gen/battlers/323b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "QUADRUPED",
       dexEntry = {
         kind = "ERUPTION",
         heightFt = 6,
@@ -26165,6 +26488,7 @@ return {
       spriteBack = "gen/battlers/324b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "QUADRUPED",
       dexEntry = {
         kind = "COAL",
         heightFt = 1,
@@ -26258,6 +26582,7 @@ return {
       spriteBack = "gen/battlers/325b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "MON",
       dexEntry = {
         kind = "BOUNCE",
         heightFt = 2,
@@ -26345,6 +26670,7 @@ return {
       spriteBack = "gen/battlers/326b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "MON",
       dexEntry = {
         kind = "MANIPULATE",
         heightFt = 2,
@@ -26424,6 +26750,7 @@ return {
       spriteBack = "gen/battlers/327b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "MON",
       dexEntry = {
         kind = "SPOT PANDA",
         heightFt = 3,
@@ -26509,6 +26836,7 @@ return {
       spriteBack = "gen/battlers/328b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "BUG",
       dexEntry = {
         kind = "ANT PIT",
         heightFt = 2,
@@ -26590,6 +26918,7 @@ return {
       spriteBack = "gen/battlers/329b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "BUG",
       dexEntry = {
         kind = "VIBRATION",
         heightFt = 3,
@@ -26665,6 +26994,7 @@ return {
       spriteBack = "gen/battlers/330b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "BIRD",
       dexEntry = {
         kind = "MYSTIC",
         heightFt = 6,
@@ -26762,6 +27092,7 @@ return {
       spriteBack = "gen/battlers/331b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "GRASS",
       dexEntry = {
         kind = "CACTUS",
         heightFt = 1,
@@ -26853,6 +27184,7 @@ return {
       spriteBack = "gen/battlers/332b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "GRASS",
       dexEntry = {
         kind = "SCARECROW",
         heightFt = 4,
@@ -26934,6 +27266,7 @@ return {
       spriteBack = "gen/battlers/333b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "BIRD",
       dexEntry = {
         kind = "COTTON BIRD",
         heightFt = 1,
@@ -27009,6 +27342,7 @@ return {
       spriteBack = "gen/battlers/334b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "BIRD",
       dexEntry = {
         kind = "HUMMING",
         heightFt = 3,
@@ -27096,6 +27430,7 @@ return {
       spriteBack = "gen/battlers/335b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "MON",
       dexEntry = {
         kind = "CAT FERRET",
         heightFt = 4,
@@ -27199,6 +27534,7 @@ return {
       spriteBack = "gen/battlers/336b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "SNAKE",
       dexEntry = {
         kind = "FANG SNAKE",
         heightFt = 8,
@@ -27270,6 +27606,7 @@ return {
       spriteBack = "gen/battlers/337b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "MON",
       dexEntry = {
         kind = "METEORITE",
         heightFt = 3,
@@ -27341,6 +27678,7 @@ return {
       spriteBack = "gen/battlers/338b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "MON",
       dexEntry = {
         kind = "METEORITE",
         heightFt = 3,
@@ -27414,6 +27752,7 @@ return {
       spriteBack = "gen/battlers/339b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "WATER",
       dexEntry = {
         kind = "WHISKERS",
         heightFt = 1,
@@ -27473,6 +27812,7 @@ return {
       spriteBack = "gen/battlers/340b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "WATER",
       dexEntry = {
         kind = "WHISKERS",
         heightFt = 2,
@@ -27562,6 +27902,7 @@ return {
       spriteBack = "gen/battlers/341b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "BUG",
       dexEntry = {
         kind = "RUFFIAN",
         heightFt = 2,
@@ -27637,6 +27978,7 @@ return {
       spriteBack = "gen/battlers/342b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "BUG",
       dexEntry = {
         kind = "ROGUE",
         heightFt = 3,
@@ -27734,6 +28076,7 @@ return {
       spriteBack = "gen/battlers/343b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "MON",
       dexEntry = {
         kind = "CLAY DOLL",
         heightFt = 1,
@@ -27817,6 +28160,7 @@ return {
       spriteBack = "gen/battlers/344b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "MON",
       dexEntry = {
         kind = "CLAY DOLL",
         heightFt = 4,
@@ -27906,6 +28250,7 @@ return {
       spriteBack = "gen/battlers/345b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "GRASS",
       dexEntry = {
         kind = "SEA LILY",
         heightFt = 3,
@@ -27981,6 +28326,7 @@ return {
       spriteBack = "gen/battlers/346b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "GRASS",
       dexEntry = {
         kind = "BARNACLE",
         heightFt = 4,
@@ -28062,6 +28408,7 @@ return {
       spriteBack = "gen/battlers/347b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "BUG",
       dexEntry = {
         kind = "OLD SHRIMP",
         heightFt = 2,
@@ -28129,6 +28476,7 @@ return {
       spriteBack = "gen/battlers/348b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "BUG",
       dexEntry = {
         kind = "PLATE",
         heightFt = 4,
@@ -28179,6 +28527,7 @@ return {
       spriteBack = "gen/battlers/349b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "WATER",
       dexEntry = {
         kind = "FISH",
         heightFt = 2,
@@ -28262,6 +28611,7 @@ return {
       spriteBack = "gen/battlers/350b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "SNAKE",
       dexEntry = {
         kind = "TENDER",
         heightFt = 20,
@@ -28345,6 +28695,7 @@ return {
       spriteBack = "gen/battlers/351b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "MON",
       dexEntry = {
         kind = "WEATHER",
         heightFt = 1,
@@ -28432,6 +28783,7 @@ return {
       spriteBack = "gen/battlers/352b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "MON",
       dexEntry = {
         kind = "COLOR SWAP",
         heightFt = 3,
@@ -28529,6 +28881,7 @@ return {
       spriteBack = "gen/battlers/353b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "MON",
       dexEntry = {
         kind = "PUPPET",
         heightFt = 2,
@@ -28620,6 +28973,7 @@ return {
       spriteBack = "gen/battlers/354b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "MON",
       dexEntry = {
         kind = "MARIONETTE",
         heightFt = 3,
@@ -28701,6 +29055,7 @@ return {
       spriteBack = "gen/battlers/355b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "MON",
       dexEntry = {
         kind = "REQUIEM",
         heightFt = 2,
@@ -28774,6 +29129,7 @@ return {
       spriteBack = "gen/battlers/356b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "MON",
       dexEntry = {
         kind = "BECKON",
         heightFt = 5,
@@ -28861,6 +29217,7 @@ return {
       spriteBack = "gen/battlers/357b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "QUADRUPED",
       dexEntry = {
         kind = "FRUIT",
         heightFt = 6,
@@ -28968,6 +29325,7 @@ return {
       spriteBack = "gen/battlers/358b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "MON",
       dexEntry = {
         kind = "WIND CHIME",
         heightFt = 2,
@@ -29043,6 +29401,7 @@ return {
       spriteBack = "gen/battlers/359b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "QUADRUPED",
       dexEntry = {
         kind = "DISASTER",
         heightFt = 3,
@@ -29079,6 +29438,7 @@ return {
       spriteBack = "gen/battlers/360b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "MON",
       dexEntry = {
         kind = "BRIGHT",
         heightFt = 2,
@@ -29169,6 +29529,7 @@ return {
       spriteBack = "gen/battlers/361b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "MON",
       dexEntry = {
         kind = "SNOW HAT",
         heightFt = 2,
@@ -29240,6 +29601,7 @@ return {
       spriteBack = "gen/battlers/362b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "MON",
       dexEntry = {
         kind = "FACE",
         heightFt = 4,
@@ -29329,6 +29691,7 @@ return {
       spriteBack = "gen/battlers/363b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "WATER",
       dexEntry = {
         kind = "CLAP",
         heightFt = 2,
@@ -29410,6 +29773,7 @@ return {
       spriteBack = "gen/battlers/364b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "WATER",
       dexEntry = {
         kind = "BALL ROLL",
         heightFt = 3,
@@ -29485,6 +29849,7 @@ return {
       spriteBack = "gen/battlers/365b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "QUADRUPED",
       dexEntry = {
         kind = "ICE BREAK",
         heightFt = 4,
@@ -29531,6 +29896,7 @@ return {
       spriteBack = "gen/battlers/366b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "WATER",
       dexEntry = {
         kind = "BIVALVE",
         heightFt = 1,
@@ -29614,6 +29980,7 @@ return {
       spriteBack = "gen/battlers/367b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "SNAKE",
       dexEntry = {
         kind = "DEEP SEA",
         heightFt = 5,
@@ -29697,6 +30064,7 @@ return {
       spriteBack = "gen/battlers/368b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "SNAKE",
       dexEntry = {
         kind = "SOUTH SEA",
         heightFt = 5,
@@ -29772,6 +30140,7 @@ return {
       spriteBack = "gen/battlers/369b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "WATER",
       dexEntry = {
         kind = "LONGEVITY",
         heightFt = 3,
@@ -29863,6 +30232,7 @@ return {
       spriteBack = "gen/battlers/370b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "WATER",
       dexEntry = {
         kind = "RENDEZVOUS",
         heightFt = 2,
@@ -29944,6 +30314,7 @@ return {
       spriteBack = "gen/battlers/371b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "SNAKE",
       dexEntry = {
         kind = "ROCK HEAD",
         heightFt = 2,
@@ -30017,6 +30388,7 @@ return {
       spriteBack = "gen/battlers/372b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "QUADRUPED",
       dexEntry = {
         kind = "ENDURANCE",
         heightFt = 3,
@@ -30084,6 +30456,7 @@ return {
       spriteBack = "gen/battlers/373b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "QUADRUPED",
       dexEntry = {
         kind = "DRAGON",
         heightFt = 4,
@@ -30120,6 +30493,7 @@ return {
       spriteBack = "gen/battlers/374b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "MON",
       dexEntry = {
         kind = "IRON BALL",
         heightFt = 2,
@@ -30197,6 +30571,7 @@ return {
       spriteBack = "gen/battlers/375b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "MON",
       dexEntry = {
         kind = "IRON CLAW",
         heightFt = 3,
@@ -30268,6 +30643,7 @@ return {
       spriteBack = "gen/battlers/376b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "MON",
       dexEntry = {
         kind = "IRON LEG",
         heightFt = 5,
@@ -30351,6 +30727,7 @@ return {
       spriteBack = "gen/battlers/377b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "MON",
       dexEntry = {
         kind = "ROCK PEAK",
         heightFt = 5,
@@ -30434,6 +30811,7 @@ return {
       spriteBack = "gen/battlers/378b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "MON",
       dexEntry = {
         kind = "ICEBERG",
         heightFt = 5,
@@ -30525,6 +30903,7 @@ return {
       spriteBack = "gen/battlers/379b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "MON",
       dexEntry = {
         kind = "IRON",
         heightFt = 6,
@@ -30616,6 +30995,7 @@ return {
       spriteBack = "gen/battlers/380b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "BIRD",
       dexEntry = {
         kind = "EON",
         heightFt = 4,
@@ -30707,6 +31087,7 @@ return {
       spriteBack = "gen/battlers/381b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "BIRD",
       dexEntry = {
         kind = "EON",
         heightFt = 6,
@@ -30778,6 +31159,7 @@ return {
       spriteBack = "gen/battlers/382b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "WATER",
       dexEntry = {
         kind = "SEA BASIN",
         heightFt = 14,
@@ -30849,6 +31231,7 @@ return {
       spriteBack = "gen/battlers/383b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "MON",
       dexEntry = {
         kind = "CONTINENT",
         heightFt = 11,
@@ -30920,6 +31303,7 @@ return {
       spriteBack = "gen/battlers/384b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "SNAKE",
       dexEntry = {
         kind = "SKY HIGH",
         heightFt = 23,
@@ -31007,6 +31391,7 @@ return {
       spriteBack = "gen/battlers/385b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "MON",
       dexEntry = {
         kind = "WISH",
         heightFt = 1,
@@ -31094,6 +31479,7 @@ return {
       spriteBack = "gen/battlers/386b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "MON",
       dexEntry = {
         kind = "DNA",
         heightFt = 5,
@@ -31175,6 +31561,7 @@ return {
       spriteBack = "gen/battlers/387b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "QUADRUPED",
       dexEntry = {
         kind = "TINY LEAF",
         heightFt = 1,
@@ -31256,6 +31643,7 @@ return {
       spriteBack = "gen/battlers/388b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "QUADRUPED",
       dexEntry = {
         kind = "GROVE",
         heightFt = 3,
@@ -31331,6 +31719,7 @@ return {
       spriteBack = "gen/battlers/389b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "QUADRUPED",
       dexEntry = {
         kind = "CONTINENT",
         heightFt = 7,
@@ -31412,6 +31801,7 @@ return {
       spriteBack = "gen/battlers/390b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "MON",
       dexEntry = {
         kind = "CHIMP",
         heightFt = 1,
@@ -31493,6 +31883,7 @@ return {
       spriteBack = "gen/battlers/391b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "MON",
       dexEntry = {
         kind = "PLAYFUL",
         heightFt = 2,
@@ -31564,6 +31955,7 @@ return {
       spriteBack = "gen/battlers/392b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "MON",
       dexEntry = {
         kind = "FLAME",
         heightFt = 3,
@@ -31649,6 +32041,7 @@ return {
       spriteBack = "gen/battlers/393b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "WATER",
       dexEntry = {
         kind = "PENGUIN",
         heightFt = 1,
@@ -31734,6 +32127,7 @@ return {
       spriteBack = "gen/battlers/394b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "WATER",
       dexEntry = {
         kind = "PENGUIN",
         heightFt = 2,
@@ -31813,6 +32207,7 @@ return {
       spriteBack = "gen/battlers/395b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "WATER",
       dexEntry = {
         kind = "EMPEROR",
         heightFt = 5,
@@ -31890,6 +32285,7 @@ return {
       spriteBack = "gen/battlers/396b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "BIRD",
       dexEntry = {
         kind = "STARLING",
         heightFt = 1,
@@ -31967,6 +32363,7 @@ return {
       spriteBack = "gen/battlers/397b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "BIRD",
       dexEntry = {
         kind = "STARLING",
         heightFt = 2,
@@ -32038,6 +32435,7 @@ return {
       spriteBack = "gen/battlers/398b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "BIRD",
       dexEntry = {
         kind = "PREDATOR",
         heightFt = 3,
@@ -32123,6 +32521,7 @@ return {
       spriteBack = "gen/battlers/399b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "QUADRUPED",
       dexEntry = {
         kind = "PLUMP MOUSE",
         heightFt = 1,
@@ -32202,6 +32601,7 @@ return {
       spriteBack = "gen/battlers/400b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "WATER",
       dexEntry = {
         kind = "BEAVER",
         heightFt = 3,
@@ -32247,6 +32647,7 @@ return {
       spriteBack = "gen/battlers/401b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "BUG",
       dexEntry = {
         kind = "CRICKET",
         heightFt = 1,
@@ -32326,6 +32727,7 @@ return {
       spriteBack = "gen/battlers/402b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "BUG",
       dexEntry = {
         kind = "CRICKET",
         heightFt = 3,
@@ -32411,6 +32813,7 @@ return {
       spriteBack = "gen/battlers/403b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "QUADRUPED",
       dexEntry = {
         kind = "FLASH",
         heightFt = 1,
@@ -32488,6 +32891,7 @@ return {
       spriteBack = "gen/battlers/404b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "QUADRUPED",
       dexEntry = {
         kind = "SPARK",
         heightFt = 2,
@@ -32559,6 +32963,7 @@ return {
       spriteBack = "gen/battlers/405b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "QUADRUPED",
       dexEntry = {
         kind = "GLEAM EYES",
         heightFt = 4,
@@ -32595,6 +33000,7 @@ return {
       spriteBack = "gen/battlers/406b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "GRASS",
       dexEntry = {
         kind = "BUD",
         heightFt = 0,
@@ -32674,6 +33080,7 @@ return {
       spriteBack = "gen/battlers/407b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "GRASS",
       dexEntry = {
         kind = "BOUQUET",
         heightFt = 2,
@@ -32751,6 +33158,7 @@ return {
       spriteBack = "gen/battlers/408b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "MON",
       dexEntry = {
         kind = "HEAD BUTT",
         heightFt = 2,
@@ -32822,6 +33230,7 @@ return {
       spriteBack = "gen/battlers/409b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "MON",
       dexEntry = {
         kind = "HEAD BUTT",
         heightFt = 5,
@@ -32899,6 +33308,7 @@ return {
       spriteBack = "gen/battlers/410b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "QUADRUPED",
       dexEntry = {
         kind = "SHIELD",
         heightFt = 1,
@@ -32970,6 +33380,7 @@ return {
       spriteBack = "gen/battlers/411b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "QUADRUPED",
       dexEntry = {
         kind = "SHIELD",
         heightFt = 4,
@@ -33024,6 +33435,7 @@ return {
       spriteBack = "gen/battlers/412b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "BUG",
       dexEntry = {
         kind = "BAGWORM",
         heightFt = 0,
@@ -33107,6 +33519,7 @@ return {
       spriteBack = "gen/battlers/413b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "BUG",
       dexEntry = {
         kind = "BAGWORM",
         heightFt = 1,
@@ -33190,6 +33603,7 @@ return {
       spriteBack = "gen/battlers/414b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "BUG",
       dexEntry = {
         kind = "MOTH",
         heightFt = 2,
@@ -33226,6 +33640,7 @@ return {
       spriteBack = "gen/battlers/415b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "BUG",
       dexEntry = {
         kind = "TINY BEE",
         heightFt = 1,
@@ -33305,6 +33720,7 @@ return {
       spriteBack = "gen/battlers/416b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "BUG",
       dexEntry = {
         kind = "BEEHIVE",
         heightFt = 3,
@@ -33388,6 +33804,7 @@ return {
       spriteBack = "gen/battlers/417b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "QUADRUPED",
       dexEntry = {
         kind = "ELESQUIRREL",
         heightFt = 1,
@@ -33477,6 +33894,7 @@ return {
       spriteBack = "gen/battlers/418b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "QUADRUPED",
       dexEntry = {
         kind = "SEA WEASEL",
         heightFt = 2,
@@ -33560,6 +33978,7 @@ return {
       spriteBack = "gen/battlers/419b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "QUADRUPED",
       dexEntry = {
         kind = "SEA WEASEL",
         heightFt = 3,
@@ -33633,6 +34052,7 @@ return {
       spriteBack = "gen/battlers/420b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "GRASS",
       dexEntry = {
         kind = "CHERRY",
         heightFt = 1,
@@ -33696,6 +34116,7 @@ return {
       spriteBack = "gen/battlers/421b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "GRASS",
       dexEntry = {
         kind = "BLOSSOM",
         heightFt = 1,
@@ -33769,6 +34190,7 @@ return {
       spriteBack = "gen/battlers/422b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "SNAKE",
       dexEntry = {
         kind = "SEA SLUG",
         heightFt = 1,
@@ -33828,6 +34250,7 @@ return {
       spriteBack = "gen/battlers/423b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "SNAKE",
       dexEntry = {
         kind = "SEA SLUG",
         heightFt = 2,
@@ -33907,6 +34330,7 @@ return {
       spriteBack = "gen/battlers/424b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "MON",
       dexEntry = {
         kind = "LONG TAIL",
         heightFt = 3,
@@ -33996,6 +34420,7 @@ return {
       spriteBack = "gen/battlers/425b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "BIRD",
       dexEntry = {
         kind = "BALLOON",
         heightFt = 1,
@@ -34071,6 +34496,7 @@ return {
       spriteBack = "gen/battlers/426b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "BIRD",
       dexEntry = {
         kind = "BLIMP",
         heightFt = 3,
@@ -34160,6 +34586,7 @@ return {
       spriteBack = "gen/battlers/427b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "MON",
       dexEntry = {
         kind = "RABBIT",
         heightFt = 1,
@@ -34239,6 +34666,7 @@ return {
       spriteBack = "gen/battlers/428b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "MON",
       dexEntry = {
         kind = "RABBIT",
         heightFt = 3,
@@ -34318,6 +34746,7 @@ return {
       spriteBack = "gen/battlers/429b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "MON",
       dexEntry = {
         kind = "MAGICAL",
         heightFt = 2,
@@ -34373,6 +34802,7 @@ return {
       spriteBack = "gen/battlers/430b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "BIRD",
       dexEntry = {
         kind = "BIG BOSS",
         heightFt = 2,
@@ -34462,6 +34892,7 @@ return {
       spriteBack = "gen/battlers/431b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "QUADRUPED",
       dexEntry = {
         kind = "CATTY",
         heightFt = 1,
@@ -34541,6 +34972,7 @@ return {
       spriteBack = "gen/battlers/432b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "QUADRUPED",
       dexEntry = {
         kind = "TIGER CAT",
         heightFt = 3,
@@ -34606,6 +35038,7 @@ return {
       spriteBack = "gen/battlers/433b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "MON",
       dexEntry = {
         kind = "BELL",
         heightFt = 0,
@@ -34703,6 +35136,7 @@ return {
       spriteBack = "gen/battlers/434b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "QUADRUPED",
       dexEntry = {
         kind = "SKUNK",
         heightFt = 1,
@@ -34786,6 +35220,7 @@ return {
       spriteBack = "gen/battlers/435b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "QUADRUPED",
       dexEntry = {
         kind = "SKUNK",
         heightFt = 3,
@@ -34867,6 +35302,7 @@ return {
       spriteBack = "gen/battlers/436b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "MON",
       dexEntry = {
         kind = "BRONZE",
         heightFt = 1,
@@ -34938,6 +35374,7 @@ return {
       spriteBack = "gen/battlers/437b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "MON",
       dexEntry = {
         kind = "BRONZE BELL",
         heightFt = 4,
@@ -35019,6 +35456,7 @@ return {
       spriteBack = "gen/battlers/438b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "MON",
       dexEntry = {
         kind = "BONSAI",
         heightFt = 1,
@@ -35116,6 +35554,7 @@ return {
       spriteBack = "gen/battlers/439b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "FAIRY",
       dexEntry = {
         kind = "MIME",
         heightFt = 2,
@@ -35173,6 +35612,7 @@ return {
       spriteBack = "gen/battlers/440b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "MON",
       dexEntry = {
         kind = "PLAYHOUSE",
         heightFt = 2,
@@ -35260,6 +35700,7 @@ return {
       spriteBack = "gen/battlers/441b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "BIRD",
       dexEntry = {
         kind = "MUSIC NOTE",
         heightFt = 1,
@@ -35339,6 +35780,7 @@ return {
       spriteBack = "gen/battlers/442b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "MON",
       dexEntry = {
         kind = "FORBIDDEN",
         heightFt = 3,
@@ -35416,6 +35858,7 @@ return {
       spriteBack = "gen/battlers/443b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "SNAKE",
       dexEntry = {
         kind = "LAND SHARK",
         heightFt = 2,
@@ -35485,6 +35928,7 @@ return {
       spriteBack = "gen/battlers/444b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "SNAKE",
       dexEntry = {
         kind = "CAVE",
         heightFt = 4,
@@ -35548,6 +35992,7 @@ return {
       spriteBack = "gen/battlers/445b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "SNAKE",
       dexEntry = {
         kind = "MACH",
         heightFt = 6,
@@ -35641,6 +36086,7 @@ return {
       spriteBack = "gen/battlers/446b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "MON",
       dexEntry = {
         kind = "BIG EATER",
         heightFt = 2,
@@ -35734,6 +36180,7 @@ return {
       spriteBack = "gen/battlers/447b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "MON",
       dexEntry = {
         kind = "EMANATION",
         heightFt = 2,
@@ -35817,6 +36264,7 @@ return {
       spriteBack = "gen/battlers/448b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "MON",
       dexEntry = {
         kind = "AURA",
         heightFt = 3,
@@ -35906,6 +36354,7 @@ return {
       spriteBack = "gen/battlers/449b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "QUADRUPED",
       dexEntry = {
         kind = "HIPPO",
         heightFt = 2,
@@ -35981,6 +36430,7 @@ return {
       spriteBack = "gen/battlers/450b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "QUADRUPED",
       dexEntry = {
         kind = "HEAVYWEIGHT",
         heightFt = 6,
@@ -36082,6 +36532,7 @@ return {
       spriteBack = "gen/battlers/451b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "BUG",
       dexEntry = {
         kind = "SCORPION",
         heightFt = 2,
@@ -36169,6 +36620,7 @@ return {
       spriteBack = "gen/battlers/452b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "BUG",
       dexEntry = {
         kind = "OGRE SCORP",
         heightFt = 4,
@@ -36254,6 +36706,7 @@ return {
       spriteBack = "gen/battlers/453b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "MON",
       dexEntry = {
         kind = "TOXIC MOUTH",
         heightFt = 2,
@@ -36325,6 +36778,7 @@ return {
       spriteBack = "gen/battlers/454b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "MON",
       dexEntry = {
         kind = "TOXIC MOUTH",
         heightFt = 4,
@@ -36404,6 +36858,7 @@ return {
       spriteBack = "gen/battlers/455b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "WATER",
       dexEntry = {
         kind = "BUG CATCHER",
         heightFt = 4,
@@ -36493,6 +36948,7 @@ return {
       spriteBack = "gen/battlers/456b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "WATER",
       dexEntry = {
         kind = "WING FISH",
         heightFt = 1,
@@ -36576,6 +37032,7 @@ return {
       spriteBack = "gen/battlers/457b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "WATER",
       dexEntry = {
         kind = "NEON",
         heightFt = 3,
@@ -36661,6 +37118,7 @@ return {
       spriteBack = "gen/battlers/458b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "BIRD",
       dexEntry = {
         kind = "KITE",
         heightFt = 3,
@@ -36738,6 +37196,7 @@ return {
       spriteBack = "gen/battlers/459b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "GRASS",
       dexEntry = {
         kind = "FROST TREE",
         heightFt = 3,
@@ -36801,6 +37260,7 @@ return {
       spriteBack = "gen/battlers/460b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "GRASS",
       dexEntry = {
         kind = "FROST TREE",
         heightFt = 7,
@@ -36868,6 +37328,7 @@ return {
       spriteBack = "gen/battlers/461b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "MON",
       dexEntry = {
         kind = "SHARP CLAW",
         heightFt = 3,
@@ -36943,6 +37404,7 @@ return {
       spriteBack = "gen/battlers/462b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "MON",
       dexEntry = {
         kind = "MAGNET AREA",
         heightFt = 3,
@@ -37006,6 +37468,7 @@ return {
       spriteBack = "gen/battlers/463b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "MON",
       dexEntry = {
         kind = "LICKING",
         heightFt = 5,
@@ -37081,6 +37544,7 @@ return {
       spriteBack = "gen/battlers/464b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "MON",
       dexEntry = {
         kind = "DRILL",
         heightFt = 7,
@@ -37160,6 +37624,7 @@ return {
       spriteBack = "gen/battlers/465b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "GRASS",
       dexEntry = {
         kind = "VINE",
         heightFt = 6,
@@ -37235,6 +37700,7 @@ return {
       spriteBack = "gen/battlers/466b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "MON",
       dexEntry = {
         kind = "THUNDERBOLT",
         heightFt = 5,
@@ -37310,6 +37776,7 @@ return {
       spriteBack = "gen/battlers/467b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "MON",
       dexEntry = {
         kind = "BLAST",
         heightFt = 5,
@@ -37389,6 +37856,7 @@ return {
       spriteBack = "gen/battlers/468b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "BIRD",
       dexEntry = {
         kind = "JUBILEE",
         heightFt = 4,
@@ -37476,6 +37944,7 @@ return {
       spriteBack = "gen/battlers/469b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "BUG",
       dexEntry = {
         kind = "OGRE DARNER",
         heightFt = 6,
@@ -37551,6 +38020,7 @@ return {
       spriteBack = "gen/battlers/470b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "QUADRUPED",
       dexEntry = {
         kind = "VERDANT",
         heightFt = 3,
@@ -37626,6 +38096,7 @@ return {
       spriteBack = "gen/battlers/471b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "QUADRUPED",
       dexEntry = {
         kind = "FRESH SNOW",
         heightFt = 2,
@@ -37713,6 +38184,7 @@ return {
       spriteBack = "gen/battlers/472b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "BIRD",
       dexEntry = {
         kind = "FANG SCORP",
         heightFt = 6,
@@ -37780,6 +38252,7 @@ return {
       spriteBack = "gen/battlers/473b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "QUADRUPED",
       dexEntry = {
         kind = "TWIN TUSK",
         heightFt = 8,
@@ -37855,6 +38328,7 @@ return {
       spriteBack = "gen/battlers/474b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "MON",
       dexEntry = {
         kind = "VIRTUAL",
         heightFt = 2,
@@ -37934,6 +38408,7 @@ return {
       spriteBack = "gen/battlers/475b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "MON",
       dexEntry = {
         kind = "BLADE",
         heightFt = 5,
@@ -38025,6 +38500,7 @@ return {
       spriteBack = "gen/battlers/476b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "MON",
       dexEntry = {
         kind = "COMPASS",
         heightFt = 4,
@@ -38096,6 +38572,7 @@ return {
       spriteBack = "gen/battlers/477b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "MON",
       dexEntry = {
         kind = "GRIPPER",
         heightFt = 7,
@@ -38167,6 +38644,7 @@ return {
       spriteBack = "gen/battlers/478b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "MON",
       dexEntry = {
         kind = "SNOW LAND",
         heightFt = 4,
@@ -38242,6 +38720,7 @@ return {
       spriteBack = "gen/battlers/479b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "MON",
       dexEntry = {
         kind = "PLASMA",
         heightFt = 1,
@@ -38317,6 +38796,7 @@ return {
       spriteBack = "gen/battlers/480b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "MON",
       dexEntry = {
         kind = "KNOWLEDGE",
         heightFt = 1,
@@ -38392,6 +38872,7 @@ return {
       spriteBack = "gen/battlers/481b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "MON",
       dexEntry = {
         kind = "EMOTION",
         heightFt = 1,
@@ -38467,6 +38948,7 @@ return {
       spriteBack = "gen/battlers/482b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "MON",
       dexEntry = {
         kind = "WILLPOWER",
         heightFt = 1,
@@ -38542,6 +39024,7 @@ return {
       spriteBack = "gen/battlers/483b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "QUADRUPED",
       dexEntry = {
         kind = "TEMPORAL",
         heightFt = 17,
@@ -38617,6 +39100,7 @@ return {
       spriteBack = "gen/battlers/484b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "WATER",
       dexEntry = {
         kind = "SPATIAL",
         heightFt = 13,
@@ -38696,6 +39180,7 @@ return {
       spriteBack = "gen/battlers/485b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "QUADRUPED",
       dexEntry = {
         kind = "LAVA DOME",
         heightFt = 5,
@@ -38779,6 +39264,7 @@ return {
       spriteBack = "gen/battlers/486b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "MON",
       dexEntry = {
         kind = "COLOSSAL",
         heightFt = 12,
@@ -38858,6 +39344,7 @@ return {
       spriteBack = "gen/battlers/487b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "WATER",
       dexEntry = {
         kind = "RENEGADE",
         heightFt = 14,
@@ -38937,6 +39424,7 @@ return {
       spriteBack = "gen/battlers/488b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "SNAKE",
       dexEntry = {
         kind = "LUNAR",
         heightFt = 4,
@@ -39004,6 +39492,7 @@ return {
       spriteBack = "gen/battlers/489b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "WATER",
       dexEntry = {
         kind = "SEA DRIFTER",
         heightFt = 1,
@@ -39075,6 +39564,7 @@ return {
       spriteBack = "gen/battlers/490b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "WATER",
       dexEntry = {
         kind = "SEAFARING",
         heightFt = 1,
@@ -39146,6 +39636,7 @@ return {
       spriteBack = "gen/battlers/491b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "MON",
       dexEntry = {
         kind = "PITCH-BLACK",
         heightFt = 4,
@@ -39221,6 +39712,7 @@ return {
       spriteBack = "gen/battlers/492b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "QUADRUPED",
       dexEntry = {
         kind = "GRATITUDE",
         heightFt = 0,
@@ -39292,6 +39784,7 @@ return {
       spriteBack = "gen/battlers/493b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "QUADRUPED",
       dexEntry = {
         kind = "ALPHA",
         heightFt = 10,
@@ -39375,6 +39868,7 @@ return {
       spriteBack = "gen/battlers/494b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "MON",
       dexEntry = {
         kind = "VICTORY",
         heightFt = 1,
@@ -39468,6 +39962,7 @@ return {
       spriteBack = "gen/battlers/495b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "GRASS",
       dexEntry = {
         kind = "GRASS SNAKE",
         heightFt = 2,
@@ -39561,6 +40056,7 @@ return {
       spriteBack = "gen/battlers/496b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "GRASS",
       dexEntry = {
         kind = "GRASS SNAKE",
         heightFt = 2,
@@ -39648,6 +40144,7 @@ return {
       spriteBack = "gen/battlers/497b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "SNAKE",
       dexEntry = {
         kind = "REGAL",
         heightFt = 10,
@@ -39741,6 +40238,7 @@ return {
       spriteBack = "gen/battlers/498b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "QUADRUPED",
       dexEntry = {
         kind = "FIRE PIG",
         heightFt = 1,
@@ -39834,6 +40332,7 @@ return {
       spriteBack = "gen/battlers/499b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "MON",
       dexEntry = {
         kind = "FIRE PIG",
         heightFt = 3,
@@ -39921,6 +40420,7 @@ return {
       spriteBack = "gen/battlers/500b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "MON",
       dexEntry = {
         kind = "MEGA FIRE PIG",
         heightFt = 5,
@@ -40014,6 +40514,7 @@ return {
       spriteBack = "gen/battlers/501b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "WATER",
       dexEntry = {
         kind = "SEA OTTER",
         heightFt = 1,
@@ -40107,6 +40608,7 @@ return {
       spriteBack = "gen/battlers/502b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "WATER",
       dexEntry = {
         kind = "DISCIPLINE",
         heightFt = 2,
@@ -40194,6 +40696,7 @@ return {
       spriteBack = "gen/battlers/503b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "QUADRUPED",
       dexEntry = {
         kind = "FORMIDABLE",
         heightFt = 4,
@@ -40295,6 +40798,7 @@ return {
       spriteBack = "gen/battlers/504b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "QUADRUPED",
       dexEntry = {
         kind = "SCOUT",
         heightFt = 1,
@@ -40390,6 +40894,7 @@ return {
       spriteBack = "gen/battlers/505b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "MON",
       dexEntry = {
         kind = "LOOKOUT",
         heightFt = 3,
@@ -40475,6 +40980,7 @@ return {
       spriteBack = "gen/battlers/506b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "QUADRUPED",
       dexEntry = {
         kind = "PUPPY",
         heightFt = 1,
@@ -40552,6 +41058,7 @@ return {
       spriteBack = "gen/battlers/507b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "QUADRUPED",
       dexEntry = {
         kind = "LOYAL DOG",
         heightFt = 2,
@@ -40623,6 +41130,7 @@ return {
       spriteBack = "gen/battlers/508b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "QUADRUPED",
       dexEntry = {
         kind = "BIG-HEARTED",
         heightFt = 3,
@@ -40700,6 +41208,7 @@ return {
       spriteBack = "gen/battlers/509b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "QUADRUPED",
       dexEntry = {
         kind = "DEVIOUS",
         heightFt = 1,
@@ -40763,6 +41272,7 @@ return {
       spriteBack = "gen/battlers/510b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "QUADRUPED",
       dexEntry = {
         kind = "CRUEL",
         heightFt = 3,
@@ -40860,6 +41370,7 @@ return {
       spriteBack = "gen/battlers/511b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "GRASS",
       dexEntry = {
         kind = "GRASS MONKEY",
         heightFt = 2,
@@ -40951,6 +41462,7 @@ return {
       spriteBack = "gen/battlers/512b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "GRASS",
       dexEntry = {
         kind = "THORN MONKEY",
         heightFt = 3,
@@ -41048,6 +41560,7 @@ return {
       spriteBack = "gen/battlers/513b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "MON",
       dexEntry = {
         kind = "HIGH TEMP",
         heightFt = 2,
@@ -41139,6 +41652,7 @@ return {
       spriteBack = "gen/battlers/514b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "MON",
       dexEntry = {
         kind = "EMBER",
         heightFt = 3,
@@ -41236,6 +41750,7 @@ return {
       spriteBack = "gen/battlers/515b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "WATER",
       dexEntry = {
         kind = "SPRAY",
         heightFt = 2,
@@ -41327,6 +41842,7 @@ return {
       spriteBack = "gen/battlers/516b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "WATER",
       dexEntry = {
         kind = "GEYSER",
         heightFt = 3,
@@ -41416,6 +41932,7 @@ return {
       spriteBack = "gen/battlers/517b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "QUADRUPED",
       dexEntry = {
         kind = "DREAM EATER",
         heightFt = 2,
@@ -41499,6 +42016,7 @@ return {
       spriteBack = "gen/battlers/518b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "MON",
       dexEntry = {
         kind = "DROWSING",
         heightFt = 3,
@@ -41580,6 +42098,7 @@ return {
       spriteBack = "gen/battlers/519b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "BIRD",
       dexEntry = {
         kind = "TINY PIGEON",
         heightFt = 1,
@@ -41653,6 +42172,7 @@ return {
       spriteBack = "gen/battlers/520b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "BIRD",
       dexEntry = {
         kind = "WILD PIGEON",
         heightFt = 2,
@@ -41720,6 +42240,7 @@ return {
       spriteBack = "gen/battlers/521b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "BIRD",
       dexEntry = {
         kind = "PROUD",
         heightFt = 3,
@@ -41805,6 +42326,7 @@ return {
       spriteBack = "gen/battlers/522b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "QUADRUPED",
       dexEntry = {
         kind = "ELECTRIFIED",
         heightFt = 2,
@@ -41888,6 +42410,7 @@ return {
       spriteBack = "gen/battlers/523b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "QUADRUPED",
       dexEntry = {
         kind = "THUNDERBOLT",
         heightFt = 5,
@@ -41969,6 +42492,7 @@ return {
       spriteBack = "gen/battlers/524b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "MON",
       dexEntry = {
         kind = "MANTLE",
         heightFt = 1,
@@ -42042,6 +42566,7 @@ return {
       spriteBack = "gen/battlers/525b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "WATER",
       dexEntry = {
         kind = "ORE",
         heightFt = 2,
@@ -42109,6 +42634,7 @@ return {
       spriteBack = "gen/battlers/526b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "WATER",
       dexEntry = {
         kind = "COMPRESSED",
         heightFt = 5,
@@ -42190,6 +42716,7 @@ return {
       spriteBack = "gen/battlers/527b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "BIRD",
       dexEntry = {
         kind = "BAT",
         heightFt = 1,
@@ -42257,6 +42784,7 @@ return {
       spriteBack = "gen/battlers/528b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "BIRD",
       dexEntry = {
         kind = "COURTING",
         heightFt = 2,
@@ -42342,6 +42870,7 @@ return {
       spriteBack = "gen/battlers/529b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "MON",
       dexEntry = {
         kind = "MOLE",
         heightFt = 1,
@@ -42413,6 +42942,7 @@ return {
       spriteBack = "gen/battlers/530b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "MON",
       dexEntry = {
         kind = "SUBTERRENE",
         heightFt = 2,
@@ -42504,6 +43034,7 @@ return {
       spriteBack = "gen/battlers/531b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "MON",
       dexEntry = {
         kind = "HEARING",
         heightFt = 3,
@@ -42589,6 +43120,7 @@ return {
       spriteBack = "gen/battlers/532b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "MON",
       dexEntry = {
         kind = "MUSCULAR",
         heightFt = 2,
@@ -42666,6 +43198,7 @@ return {
       spriteBack = "gen/battlers/533b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "MON",
       dexEntry = {
         kind = "MUSCULAR",
         heightFt = 3,
@@ -42737,6 +43270,7 @@ return {
       spriteBack = "gen/battlers/534b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "MON",
       dexEntry = {
         kind = "MUSCULAR",
         heightFt = 4,
@@ -42822,6 +43356,7 @@ return {
       spriteBack = "gen/battlers/535b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "WATER",
       dexEntry = {
         kind = "TADPOLE",
         heightFt = 1,
@@ -42899,6 +43434,7 @@ return {
       spriteBack = "gen/battlers/536b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "WATER",
       dexEntry = {
         kind = "VIBRATION",
         heightFt = 2,
@@ -42970,6 +43506,7 @@ return {
       spriteBack = "gen/battlers/537b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "WATER",
       dexEntry = {
         kind = "VIBRATION",
         heightFt = 4,
@@ -43045,6 +43582,7 @@ return {
       spriteBack = "gen/battlers/538b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "MON",
       dexEntry = {
         kind = "JUDO",
         heightFt = 4,
@@ -43120,6 +43658,7 @@ return {
       spriteBack = "gen/battlers/539b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "MON",
       dexEntry = {
         kind = "KARATE",
         heightFt = 4,
@@ -43185,6 +43724,7 @@ return {
       spriteBack = "gen/battlers/540b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "BUG",
       dexEntry = {
         kind = "SEWING",
         heightFt = 1,
@@ -43221,6 +43761,7 @@ return {
       spriteBack = "gen/battlers/541b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "BUG",
       dexEntry = {
         kind = "LEAF-WRAPPED",
         heightFt = 1,
@@ -43292,6 +43833,7 @@ return {
       spriteBack = "gen/battlers/542b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "BUG",
       dexEntry = {
         kind = "NURTURING",
         heightFt = 3,
@@ -43373,6 +43915,7 @@ return {
       spriteBack = "gen/battlers/543b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "BUG",
       dexEntry = {
         kind = "CENTIPEDE",
         heightFt = 1,
@@ -43446,6 +43989,7 @@ return {
       spriteBack = "gen/battlers/544b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "BUG",
       dexEntry = {
         kind = "CURLIPEDE",
         heightFt = 3,
@@ -43517,6 +44061,7 @@ return {
       spriteBack = "gen/battlers/545b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "BUG",
       dexEntry = {
         kind = "MEGAPEDE",
         heightFt = 8,
@@ -43614,6 +44159,7 @@ return {
       spriteBack = "gen/battlers/546b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "GRASS",
       dexEntry = {
         kind = "COTTON PUFF",
         heightFt = 1,
@@ -43705,6 +44251,7 @@ return {
       spriteBack = "gen/battlers/547b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "GRASS",
       dexEntry = {
         kind = "WINDVEILED",
         heightFt = 2,
@@ -43798,6 +44345,7 @@ return {
       spriteBack = "gen/battlers/548b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "GRASS",
       dexEntry = {
         kind = "BULB",
         heightFt = 1,
@@ -43885,6 +44433,7 @@ return {
       spriteBack = "gen/battlers/549b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "GRASS",
       dexEntry = {
         kind = "FLOWERING",
         heightFt = 3,
@@ -43972,6 +44521,7 @@ return {
       spriteBack = "gen/battlers/550b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "WATER",
       dexEntry = {
         kind = "HOSTILE",
         heightFt = 3,
@@ -44061,6 +44611,7 @@ return {
       spriteBack = "gen/battlers/551b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "QUADRUPED",
       dexEntry = {
         kind = "DESERT CROC",
         heightFt = 2,
@@ -44142,6 +44693,7 @@ return {
       spriteBack = "gen/battlers/552b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "QUADRUPED",
       dexEntry = {
         kind = "DESERT CROC",
         heightFt = 3,
@@ -44221,6 +44773,7 @@ return {
       spriteBack = "gen/battlers/553b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "MON",
       dexEntry = {
         kind = "INTIMIDATION",
         heightFt = 4,
@@ -44306,6 +44859,7 @@ return {
       spriteBack = "gen/battlers/554b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "MON",
       dexEntry = {
         kind = "ZEN CHARM",
         heightFt = 2,
@@ -44377,6 +44931,7 @@ return {
       spriteBack = "gen/battlers/555b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "QUADRUPED",
       dexEntry = {
         kind = "BLAZING",
         heightFt = 4,
@@ -44468,6 +45023,7 @@ return {
       spriteBack = "gen/battlers/556b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "GRASS",
       dexEntry = {
         kind = "CACTUS",
         heightFt = 3,
@@ -44553,6 +45109,7 @@ return {
       spriteBack = "gen/battlers/557b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "BUG",
       dexEntry = {
         kind = "ROCK INN",
         heightFt = 1,
@@ -44624,6 +45181,7 @@ return {
       spriteBack = "gen/battlers/558b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "BUG",
       dexEntry = {
         kind = "STONE HOME",
         heightFt = 4,
@@ -44713,6 +45271,7 @@ return {
       spriteBack = "gen/battlers/559b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "MON",
       dexEntry = {
         kind = "SHEDDING",
         heightFt = 2,
@@ -44788,6 +45347,7 @@ return {
       spriteBack = "gen/battlers/560b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "MON",
       dexEntry = {
         kind = "HOODLUM",
         heightFt = 3,
@@ -44871,6 +45431,7 @@ return {
       spriteBack = "gen/battlers/561b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "BIRD",
       dexEntry = {
         kind = "AVIANOID",
         heightFt = 4,
@@ -44964,6 +45525,7 @@ return {
       spriteBack = "gen/battlers/562b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "MON",
       dexEntry = {
         kind = "SPIRIT",
         heightFt = 1,
@@ -45043,6 +45605,7 @@ return {
       spriteBack = "gen/battlers/563b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "MON",
       dexEntry = {
         kind = "COFFIN",
         heightFt = 5,
@@ -45140,6 +45703,7 @@ return {
       spriteBack = "gen/battlers/564b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "QUADRUPED",
       dexEntry = {
         kind = "PROTOTURTLE",
         heightFt = 2,
@@ -45223,6 +45787,7 @@ return {
       spriteBack = "gen/battlers/565b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "WATER",
       dexEntry = {
         kind = "PROTOTURTLE",
         heightFt = 3,
@@ -45320,6 +45885,7 @@ return {
       spriteBack = "gen/battlers/566b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "BIRD",
       dexEntry = {
         kind = "FIRST BIRD",
         heightFt = 1,
@@ -45403,6 +45969,7 @@ return {
       spriteBack = "gen/battlers/567b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "BIRD",
       dexEntry = {
         kind = "FIRST BIRD",
         heightFt = 4,
@@ -45500,6 +46067,7 @@ return {
       spriteBack = "gen/battlers/568b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "MON",
       dexEntry = {
         kind = "TRASH BAG",
         heightFt = 2,
@@ -45583,6 +46151,7 @@ return {
       spriteBack = "gen/battlers/569b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "MON",
       dexEntry = {
         kind = "TRASH HEAP",
         heightFt = 6,
@@ -45668,6 +46237,7 @@ return {
       spriteBack = "gen/battlers/570b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "QUADRUPED",
       dexEntry = {
         kind = "TRICKY FOX",
         heightFt = 2,
@@ -45739,6 +46309,7 @@ return {
       spriteBack = "gen/battlers/571b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "MON",
       dexEntry = {
         kind = "ILLUSION FOX",
         heightFt = 5,
@@ -45824,6 +46395,7 @@ return {
       spriteBack = "gen/battlers/572b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "QUADRUPED",
       dexEntry = {
         kind = "CHINCHILLA",
         heightFt = 1,
@@ -45903,6 +46475,7 @@ return {
       spriteBack = "gen/battlers/573b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "QUADRUPED",
       dexEntry = {
         kind = "SCARF",
         heightFt = 1,
@@ -45988,6 +46561,7 @@ return {
       spriteBack = "gen/battlers/574b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "MON",
       dexEntry = {
         kind = "FIXATION",
         heightFt = 1,
@@ -46065,6 +46639,7 @@ return {
       spriteBack = "gen/battlers/575b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "MON",
       dexEntry = {
         kind = "MANIPULATE",
         heightFt = 2,
@@ -46136,6 +46711,7 @@ return {
       spriteBack = "gen/battlers/576b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "MON",
       dexEntry = {
         kind = "ASTRAL BODY",
         heightFt = 4,
@@ -46225,6 +46801,7 @@ return {
       spriteBack = "gen/battlers/577b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "MON",
       dexEntry = {
         kind = "CELL",
         heightFt = 1,
@@ -46306,6 +46883,7 @@ return {
       spriteBack = "gen/battlers/578b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "MON",
       dexEntry = {
         kind = "MITOSIS",
         heightFt = 2,
@@ -46381,6 +46959,7 @@ return {
       spriteBack = "gen/battlers/579b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "MON",
       dexEntry = {
         kind = "MULTIPLYING",
         heightFt = 3,
@@ -46474,6 +47053,7 @@ return {
       spriteBack = "gen/battlers/580b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "BIRD",
       dexEntry = {
         kind = "WATER BIRD",
         heightFt = 1,
@@ -46561,6 +47141,7 @@ return {
       spriteBack = "gen/battlers/581b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "BIRD",
       dexEntry = {
         kind = "WHITE BIRD",
         heightFt = 4,
@@ -46646,6 +47227,7 @@ return {
       spriteBack = "gen/battlers/582b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "MON",
       dexEntry = {
         kind = "FRESH SNOW",
         heightFt = 1,
@@ -46723,6 +47305,7 @@ return {
       spriteBack = "gen/battlers/583b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "MON",
       dexEntry = {
         kind = "ICY SNOW",
         heightFt = 3,
@@ -46794,6 +47377,7 @@ return {
       spriteBack = "gen/battlers/584b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "MON",
       dexEntry = {
         kind = "SNOWSTORM",
         heightFt = 4,
@@ -46883,6 +47467,7 @@ return {
       spriteBack = "gen/battlers/585b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "QUADRUPED",
       dexEntry = {
         kind = "SEASON",
         heightFt = 2,
@@ -46966,6 +47551,7 @@ return {
       spriteBack = "gen/battlers/586b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "QUADRUPED",
       dexEntry = {
         kind = "SEASON",
         heightFt = 6,
@@ -47041,6 +47627,7 @@ return {
       spriteBack = "gen/battlers/587b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "QUADRUPED",
       dexEntry = {
         kind = "SKY SQUIRREL",
         heightFt = 1,
@@ -47126,6 +47713,7 @@ return {
       spriteBack = "gen/battlers/588b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "BUG",
       dexEntry = {
         kind = "CLAMPING",
         heightFt = 1,
@@ -47201,6 +47789,7 @@ return {
       spriteBack = "gen/battlers/589b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "BUG",
       dexEntry = {
         kind = "CAVALRY",
         heightFt = 3,
@@ -47286,6 +47875,7 @@ return {
       spriteBack = "gen/battlers/590b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "GRASS",
       dexEntry = {
         kind = "MUSHROOM",
         heightFt = 0,
@@ -47357,6 +47947,7 @@ return {
       spriteBack = "gen/battlers/591b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "GRASS",
       dexEntry = {
         kind = "MUSHROOM",
         heightFt = 2,
@@ -47442,6 +48033,7 @@ return {
       spriteBack = "gen/battlers/592b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "WATER",
       dexEntry = {
         kind = "FLOATING",
         heightFt = 3,
@@ -47513,6 +48105,7 @@ return {
       spriteBack = "gen/battlers/593b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "WATER",
       dexEntry = {
         kind = "FLOATING",
         heightFt = 7,
@@ -47608,6 +48201,7 @@ return {
       spriteBack = "gen/battlers/594b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "WATER",
       dexEntry = {
         kind = "CARING",
         heightFt = 3,
@@ -47693,6 +48287,7 @@ return {
       spriteBack = "gen/battlers/595b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "BUG",
       dexEntry = {
         kind = "ATTACHING",
         heightFt = 0,
@@ -47764,6 +48359,7 @@ return {
       spriteBack = "gen/battlers/596b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "BUG",
       dexEntry = {
         kind = "ELESPIDER",
         heightFt = 2,
@@ -47841,6 +48437,7 @@ return {
       spriteBack = "gen/battlers/597b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "GRASS",
       dexEntry = {
         kind = "THORN SEED",
         heightFt = 2,
@@ -47904,6 +48501,7 @@ return {
       spriteBack = "gen/battlers/598b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "WATER",
       dexEntry = {
         kind = "THORN POD",
         heightFt = 3,
@@ -47989,6 +48587,7 @@ return {
       spriteBack = "gen/battlers/599b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "MON",
       dexEntry = {
         kind = "GEAR",
         heightFt = 1,
@@ -48066,6 +48665,7 @@ return {
       spriteBack = "gen/battlers/600b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "MON",
       dexEntry = {
         kind = "GEAR",
         heightFt = 2,
@@ -48141,6 +48741,7 @@ return {
       spriteBack = "gen/battlers/601b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "MON",
       dexEntry = {
         kind = "GEAR",
         heightFt = 2,
@@ -48177,6 +48778,7 @@ return {
       spriteBack = "gen/battlers/602b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "WATER",
       dexEntry = {
         kind = "ELEFISH",
         heightFt = 0,
@@ -48254,6 +48856,7 @@ return {
       spriteBack = "gen/battlers/603b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "WATER",
       dexEntry = {
         kind = "ELEFISH",
         heightFt = 3,
@@ -48325,6 +48928,7 @@ return {
       spriteBack = "gen/battlers/604b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "WATER",
       dexEntry = {
         kind = "ELEFISH",
         heightFt = 6,
@@ -48406,6 +49010,7 @@ return {
       spriteBack = "gen/battlers/605b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "MON",
       dexEntry = {
         kind = "CEREBRAL",
         heightFt = 1,
@@ -48473,6 +49078,7 @@ return {
       spriteBack = "gen/battlers/606b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "MON",
       dexEntry = {
         kind = "CEREBRAL",
         heightFt = 3,
@@ -48566,6 +49172,7 @@ return {
       spriteBack = "gen/battlers/607b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "MON",
       dexEntry = {
         kind = "CANDLE",
         heightFt = 1,
@@ -48651,6 +49258,7 @@ return {
       spriteBack = "gen/battlers/608b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "MON",
       dexEntry = {
         kind = "LAMP",
         heightFt = 2,
@@ -48734,6 +49342,7 @@ return {
       spriteBack = "gen/battlers/609b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "MON",
       dexEntry = {
         kind = "LURING",
         heightFt = 3,
@@ -48835,6 +49444,7 @@ return {
       spriteBack = "gen/battlers/610b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "SNAKE",
       dexEntry = {
         kind = "TUSK",
         heightFt = 2,
@@ -48928,6 +49538,7 @@ return {
       spriteBack = "gen/battlers/611b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "SNAKE",
       dexEntry = {
         kind = "AXE JAW",
         heightFt = 3,
@@ -49015,6 +49626,7 @@ return {
       spriteBack = "gen/battlers/612b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "SNAKE",
       dexEntry = {
         kind = "AXE JAW",
         heightFt = 5,
@@ -49108,6 +49720,7 @@ return {
       spriteBack = "gen/battlers/613b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "MON",
       dexEntry = {
         kind = "CHILL",
         heightFt = 1,
@@ -49191,6 +49804,7 @@ return {
       spriteBack = "gen/battlers/614b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "QUADRUPED",
       dexEntry = {
         kind = "FREEZING",
         heightFt = 8,
@@ -49294,6 +49908,7 @@ return {
       spriteBack = "gen/battlers/615b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "MON",
       dexEntry = {
         kind = "CRYSTALLIZING",
         heightFt = 3,
@@ -49379,6 +49994,7 @@ return {
       spriteBack = "gen/battlers/616b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "BUG",
       dexEntry = {
         kind = "SNAIL",
         heightFt = 1,
@@ -49454,6 +50070,7 @@ return {
       spriteBack = "gen/battlers/617b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "BUG",
       dexEntry = {
         kind = "SHELL OUT",
         heightFt = 2,
@@ -49529,6 +50146,7 @@ return {
       spriteBack = "gen/battlers/618b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "WATER",
       dexEntry = {
         kind = "TRAP",
         heightFt = 2,
@@ -49614,6 +50232,7 @@ return {
       spriteBack = "gen/battlers/619b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "MON",
       dexEntry = {
         kind = "MARTIAL ARTS",
         heightFt = 2,
@@ -49685,6 +50304,7 @@ return {
       spriteBack = "gen/battlers/620b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "MON",
       dexEntry = {
         kind = "MARTIAL ARTS",
         heightFt = 4,
@@ -49760,6 +50380,7 @@ return {
       spriteBack = "gen/battlers/621b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "SNAKE",
       dexEntry = {
         kind = "CAVE",
         heightFt = 5,
@@ -49853,6 +50474,7 @@ return {
       spriteBack = "gen/battlers/622b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "MON",
       dexEntry = {
         kind = "AUTOMATON",
         heightFt = 3,
@@ -49932,6 +50554,7 @@ return {
       spriteBack = "gen/battlers/623b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "MON",
       dexEntry = {
         kind = "AUTOMATON",
         heightFt = 9,
@@ -50021,6 +50644,7 @@ return {
       spriteBack = "gen/battlers/624b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "MON",
       dexEntry = {
         kind = "SHARP BLADE",
         heightFt = 1,
@@ -50096,6 +50720,7 @@ return {
       spriteBack = "gen/battlers/625b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "MON",
       dexEntry = {
         kind = "SWORD BLADE",
         heightFt = 5,
@@ -50171,6 +50796,7 @@ return {
       spriteBack = "gen/battlers/626b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "QUADRUPED",
       dexEntry = {
         kind = "BASH BUFFALO",
         heightFt = 5,
@@ -50256,6 +50882,7 @@ return {
       spriteBack = "gen/battlers/627b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "BIRD",
       dexEntry = {
         kind = "EAGLET",
         heightFt = 1,
@@ -50327,6 +50954,7 @@ return {
       spriteBack = "gen/battlers/628b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "BIRD",
       dexEntry = {
         kind = "VALIANT",
         heightFt = 4,
@@ -50412,6 +51040,7 @@ return {
       spriteBack = "gen/battlers/629b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "BIRD",
       dexEntry = {
         kind = "DIAPERED",
         heightFt = 1,
@@ -50483,6 +51112,7 @@ return {
       spriteBack = "gen/battlers/630b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "BIRD",
       dexEntry = {
         kind = "BONE VULTURE",
         heightFt = 3,
@@ -50570,6 +51200,7 @@ return {
       spriteBack = "gen/battlers/631b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "MON",
       dexEntry = {
         kind = "ANTEATER",
         heightFt = 4,
@@ -50657,6 +51288,7 @@ return {
       spriteBack = "gen/battlers/632b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "BUG",
       dexEntry = {
         kind = "IRON ANT",
         heightFt = 1,
@@ -50754,6 +51386,7 @@ return {
       spriteBack = "gen/battlers/633b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "QUADRUPED",
       dexEntry = {
         kind = "IRATE",
         heightFt = 2,
@@ -50843,6 +51476,7 @@ return {
       spriteBack = "gen/battlers/634b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "QUADRUPED",
       dexEntry = {
         kind = "HOSTILE",
         heightFt = 4,
@@ -50930,6 +51564,7 @@ return {
       spriteBack = "gen/battlers/635b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "SNAKE",
       dexEntry = {
         kind = "BRUTAL",
         heightFt = 5,
@@ -51011,6 +51646,7 @@ return {
       spriteBack = "gen/battlers/636b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "BUG",
       dexEntry = {
         kind = "TORCH",
         heightFt = 3,
@@ -51082,6 +51718,7 @@ return {
       spriteBack = "gen/battlers/637b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "BUG",
       dexEntry = {
         kind = "SUN",
         heightFt = 5,
@@ -51153,6 +51790,7 @@ return {
       spriteBack = "gen/battlers/638b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "QUADRUPED",
       dexEntry = {
         kind = "IRON WILL",
         heightFt = 6,
@@ -51224,6 +51862,7 @@ return {
       spriteBack = "gen/battlers/639b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "QUADRUPED",
       dexEntry = {
         kind = "CAVERN",
         heightFt = 6,
@@ -51295,6 +51934,7 @@ return {
       spriteBack = "gen/battlers/640b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "QUADRUPED",
       dexEntry = {
         kind = "GRASSLAND",
         heightFt = 6,
@@ -51382,6 +52022,7 @@ return {
       spriteBack = "gen/battlers/641b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "BIRD",
       dexEntry = {
         kind = "CYCLONE",
         heightFt = 4,
@@ -51469,6 +52110,7 @@ return {
       spriteBack = "gen/battlers/642b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "BIRD",
       dexEntry = {
         kind = "BOLT STRIKE",
         heightFt = 4,
@@ -51544,6 +52186,7 @@ return {
       spriteBack = "gen/battlers/643b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "BIRD",
       dexEntry = {
         kind = "VAST WHITE",
         heightFt = 10,
@@ -51619,6 +52262,7 @@ return {
       spriteBack = "gen/battlers/644b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "SNAKE",
       dexEntry = {
         kind = "DEEP BLACK",
         heightFt = 9,
@@ -51710,6 +52354,7 @@ return {
       spriteBack = "gen/battlers/645b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "BIRD",
       dexEntry = {
         kind = "ABUNDANCE",
         heightFt = 4,
@@ -51785,6 +52430,7 @@ return {
       spriteBack = "gen/battlers/646b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "SNAKE",
       dexEntry = {
         kind = "BOUNDARY",
         heightFt = 9,
@@ -51856,6 +52502,7 @@ return {
       spriteBack = "gen/battlers/647b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "QUADRUPED",
       dexEntry = {
         kind = "COLT",
         heightFt = 4,
@@ -51943,6 +52590,7 @@ return {
       spriteBack = "gen/battlers/648b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "MON",
       dexEntry = {
         kind = "MELODY",
         heightFt = 2,
@@ -52026,6 +52674,7 @@ return {
       spriteBack = "gen/battlers/649b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "BUG",
       dexEntry = {
         kind = "PALEOZOIC",
         heightFt = 4,
@@ -52111,6 +52760,7 @@ return {
       spriteBack = "gen/battlers/650b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "GRASS",
       dexEntry = {
         kind = "SPIKY NUT",
         heightFt = 1,
@@ -52196,6 +52846,7 @@ return {
       spriteBack = "gen/battlers/651b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "GRASS",
       dexEntry = {
         kind = "SPIKY ARMOR",
         heightFt = 2,
@@ -52283,6 +52934,7 @@ return {
       spriteBack = "gen/battlers/652b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "GRASS",
       dexEntry = {
         kind = "SPIKY ARMOR",
         heightFt = 5,
@@ -52376,6 +53028,7 @@ return {
       spriteBack = "gen/battlers/653b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "QUADRUPED",
       dexEntry = {
         kind = "FOX",
         heightFt = 1,
@@ -52469,6 +53122,7 @@ return {
       spriteBack = "gen/battlers/654b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "MON",
       dexEntry = {
         kind = "FOX",
         heightFt = 3,
@@ -52560,6 +53214,7 @@ return {
       spriteBack = "gen/battlers/655b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "MON",
       dexEntry = {
         kind = "FOX",
         heightFt = 4,
@@ -52645,6 +53300,7 @@ return {
       spriteBack = "gen/battlers/656b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "QUADRUPED",
       dexEntry = {
         kind = "BUBBLE FROG",
         heightFt = 1,
@@ -52730,6 +53386,7 @@ return {
       spriteBack = "gen/battlers/657b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "WATER",
       dexEntry = {
         kind = "BUBBLE FROG",
         heightFt = 2,
@@ -52817,6 +53474,7 @@ return {
       spriteBack = "gen/battlers/658b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "WATER",
       dexEntry = {
         kind = "NINJA",
         heightFt = 4,
@@ -52906,6 +53564,7 @@ return {
       spriteBack = "gen/battlers/659b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "MON",
       dexEntry = {
         kind = "DIGGING",
         heightFt = 1,
@@ -52985,6 +53644,7 @@ return {
       spriteBack = "gen/battlers/660b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "MON",
       dexEntry = {
         kind = "DIGGING",
         heightFt = 3,
@@ -53062,6 +53722,7 @@ return {
       spriteBack = "gen/battlers/661b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "BIRD",
       dexEntry = {
         kind = "TINY ROBIN",
         heightFt = 1,
@@ -53131,6 +53792,7 @@ return {
       spriteBack = "gen/battlers/662b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "BIRD",
       dexEntry = {
         kind = "EMBER",
         heightFt = 2,
@@ -53198,6 +53860,7 @@ return {
       spriteBack = "gen/battlers/663b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "BIRD",
       dexEntry = {
         kind = "SCORCHING",
         heightFt = 3,
@@ -53243,6 +53906,7 @@ return {
       spriteBack = "gen/battlers/664b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "BUG",
       dexEntry = {
         kind = "SCATTERDUST",
         heightFt = 1,
@@ -53279,6 +53943,7 @@ return {
       spriteBack = "gen/battlers/665b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "BUG",
       dexEntry = {
         kind = "SCATTERDUST",
         heightFt = 1,
@@ -53350,6 +54015,7 @@ return {
       spriteBack = "gen/battlers/666b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "BUG",
       dexEntry = {
         kind = "SCALE",
         heightFt = 3,
@@ -53439,6 +54105,7 @@ return {
       spriteBack = "gen/battlers/667b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "QUADRUPED",
       dexEntry = {
         kind = "LION CUB",
         heightFt = 2,
@@ -53522,6 +54189,7 @@ return {
       spriteBack = "gen/battlers/668b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "QUADRUPED",
       dexEntry = {
         kind = "ROYAL",
         heightFt = 4,
@@ -53607,6 +54275,7 @@ return {
       spriteBack = "gen/battlers/669b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "FAIRY",
       dexEntry = {
         kind = "SINGLE BLOOM",
         heightFt = 0,
@@ -53692,6 +54361,7 @@ return {
       spriteBack = "gen/battlers/670b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "FAIRY",
       dexEntry = {
         kind = "SINGLE BLOOM",
         heightFt = 0,
@@ -53771,6 +54441,7 @@ return {
       spriteBack = "gen/battlers/671b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "FAIRY",
       dexEntry = {
         kind = "GARDEN",
         heightFt = 3,
@@ -53864,6 +54535,7 @@ return {
       spriteBack = "gen/battlers/672b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "QUADRUPED",
       dexEntry = {
         kind = "MOUNT",
         heightFt = 2,
@@ -53951,6 +54623,7 @@ return {
       spriteBack = "gen/battlers/673b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "QUADRUPED",
       dexEntry = {
         kind = "MOUNT",
         heightFt = 5,
@@ -54032,6 +54705,7 @@ return {
       spriteBack = "gen/battlers/674b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "MON",
       dexEntry = {
         kind = "PLAYFUL",
         heightFt = 2,
@@ -54103,6 +54777,7 @@ return {
       spriteBack = "gen/battlers/675b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "MON",
       dexEntry = {
         kind = "DAUNTING",
         heightFt = 6,
@@ -54178,6 +54853,7 @@ return {
       spriteBack = "gen/battlers/676b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "QUADRUPED",
       dexEntry = {
         kind = "POODLE",
         heightFt = 3,
@@ -54247,6 +54923,7 @@ return {
       spriteBack = "gen/battlers/677b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "MON",
       dexEntry = {
         kind = "RESTRAINT",
         heightFt = 1,
@@ -54334,6 +55011,7 @@ return {
       spriteBack = "gen/battlers/678b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "MON",
       dexEntry = {
         kind = "CONSTRAINT",
         heightFt = 2,
@@ -54419,6 +55097,7 @@ return {
       spriteBack = "gen/battlers/679b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "MON",
       dexEntry = {
         kind = "SWORD",
         heightFt = 2,
@@ -54496,6 +55175,7 @@ return {
       spriteBack = "gen/battlers/680b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "MON",
       dexEntry = {
         kind = "SWORD",
         heightFt = 2,
@@ -54567,6 +55247,7 @@ return {
       spriteBack = "gen/battlers/681b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "MON",
       dexEntry = {
         kind = "ROYAL SWORD",
         heightFt = 5,
@@ -54656,6 +55337,7 @@ return {
       spriteBack = "gen/battlers/682b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "FAIRY",
       dexEntry = {
         kind = "PERFUME",
         heightFt = 0,
@@ -54735,6 +55417,7 @@ return {
       spriteBack = "gen/battlers/683b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "FAIRY",
       dexEntry = {
         kind = "FRAGRANCE",
         heightFt = 2,
@@ -54824,6 +55507,7 @@ return {
       spriteBack = "gen/battlers/684b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "FAIRY",
       dexEntry = {
         kind = "COTTON CANDY",
         heightFt = 1,
@@ -54903,6 +55587,7 @@ return {
       spriteBack = "gen/battlers/685b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "FAIRY",
       dexEntry = {
         kind = "MERINGUE",
         heightFt = 2,
@@ -54992,6 +55677,7 @@ return {
       spriteBack = "gen/battlers/686b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "WATER",
       dexEntry = {
         kind = "REVOLVING",
         heightFt = 1,
@@ -55067,6 +55753,7 @@ return {
       spriteBack = "gen/battlers/687b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "MON",
       dexEntry = {
         kind = "OVERTURNING",
         heightFt = 4,
@@ -55148,6 +55835,7 @@ return {
       spriteBack = "gen/battlers/688b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "WATER",
       dexEntry = {
         kind = "TWO-HANDED",
         heightFt = 1,
@@ -55219,6 +55907,7 @@ return {
       spriteBack = "gen/battlers/689b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "WATER",
       dexEntry = {
         kind = "COLLECTIVE",
         heightFt = 4,
@@ -55300,6 +55989,7 @@ return {
       spriteBack = "gen/battlers/690b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "WATER",
       dexEntry = {
         kind = "MOCK KELP",
         heightFt = 1,
@@ -55371,6 +56061,7 @@ return {
       spriteBack = "gen/battlers/691b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "SNAKE",
       dexEntry = {
         kind = "MOCK KELP",
         heightFt = 5,
@@ -55452,6 +56143,7 @@ return {
       spriteBack = "gen/battlers/692b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "BUG",
       dexEntry = {
         kind = "WATER GUN",
         heightFt = 1,
@@ -55519,6 +56211,7 @@ return {
       spriteBack = "gen/battlers/693b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "SNAKE",
       dexEntry = {
         kind = "HOWITZER",
         heightFt = 4,
@@ -55600,6 +56293,7 @@ return {
       spriteBack = "gen/battlers/694b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "MON",
       dexEntry = {
         kind = "GENERATOR",
         heightFt = 1,
@@ -55675,6 +56369,7 @@ return {
       spriteBack = "gen/battlers/695b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "MON",
       dexEntry = {
         kind = "GENERATOR",
         heightFt = 3,
@@ -55760,6 +56455,7 @@ return {
       spriteBack = "gen/battlers/696b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "SNAKE",
       dexEntry = {
         kind = "ROYAL HEIR",
         heightFt = 2,
@@ -55839,6 +56535,7 @@ return {
       spriteBack = "gen/battlers/697b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "SNAKE",
       dexEntry = {
         kind = "DESPOT",
         heightFt = 8,
@@ -55932,6 +56629,7 @@ return {
       spriteBack = "gen/battlers/698b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "QUADRUPED",
       dexEntry = {
         kind = "TUNDRA",
         heightFt = 4,
@@ -56011,6 +56709,7 @@ return {
       spriteBack = "gen/battlers/699b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "QUADRUPED",
       dexEntry = {
         kind = "TUNDRA",
         heightFt = 8,
@@ -56086,6 +56785,7 @@ return {
       spriteBack = "gen/battlers/700b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "QUADRUPED",
       dexEntry = {
         kind = "INTERTWINING",
         heightFt = 3,
@@ -56173,6 +56873,7 @@ return {
       spriteBack = "gen/battlers/701b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "BIRD",
       dexEntry = {
         kind = "WRESTLING",
         heightFt = 2,
@@ -56256,6 +56957,7 @@ return {
       spriteBack = "gen/battlers/702b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "FAIRY",
       dexEntry = {
         kind = "ANTENNA",
         heightFt = 0,
@@ -56335,6 +57037,7 @@ return {
       spriteBack = "gen/battlers/703b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "FAIRY",
       dexEntry = {
         kind = "JEWEL",
         heightFt = 1,
@@ -56412,6 +57115,7 @@ return {
       spriteBack = "gen/battlers/704b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "SNAKE",
       dexEntry = {
         kind = "SOFT TISSUE",
         heightFt = 1,
@@ -56481,6 +57185,7 @@ return {
       spriteBack = "gen/battlers/705b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "SNAKE",
       dexEntry = {
         kind = "SOFT TISSUE",
         heightFt = 2,
@@ -56548,6 +57253,7 @@ return {
       spriteBack = "gen/battlers/706b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "SNAKE",
       dexEntry = {
         kind = "DRAGON",
         heightFt = 6,
@@ -56631,6 +57337,7 @@ return {
       spriteBack = "gen/battlers/707b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "FAIRY",
       dexEntry = {
         kind = "KEY RING",
         heightFt = 0,
@@ -56720,6 +57427,7 @@ return {
       spriteBack = "gen/battlers/708b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "GRASS",
       dexEntry = {
         kind = "STUMP",
         heightFt = 1,
@@ -56795,6 +57503,7 @@ return {
       spriteBack = "gen/battlers/709b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "WATER",
       dexEntry = {
         kind = "ELDER TREE",
         heightFt = 4,
@@ -56888,6 +57597,7 @@ return {
       spriteBack = "gen/battlers/710b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "GRASS",
       dexEntry = {
         kind = "PUMPKIN",
         heightFt = 1,
@@ -56971,6 +57681,7 @@ return {
       spriteBack = "gen/battlers/711b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "GRASS",
       dexEntry = {
         kind = "PUMPKIN",
         heightFt = 2,
@@ -57064,6 +57775,7 @@ return {
       spriteBack = "gen/battlers/712b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "QUADRUPED",
       dexEntry = {
         kind = "ICE CHUNK",
         heightFt = 3,
@@ -57147,6 +57859,7 @@ return {
       spriteBack = "gen/battlers/713b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "QUADRUPED",
       dexEntry = {
         kind = "ICEBERG",
         heightFt = 6,
@@ -57236,6 +57949,7 @@ return {
       spriteBack = "gen/battlers/714b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "BIRD",
       dexEntry = {
         kind = "SOUND WAVE",
         heightFt = 1,
@@ -57315,6 +58029,7 @@ return {
       spriteBack = "gen/battlers/715b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "BIRD",
       dexEntry = {
         kind = "SOUND WAVE",
         heightFt = 4,
@@ -57414,6 +58129,7 @@ return {
       spriteBack = "gen/battlers/716b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "QUADRUPED",
       dexEntry = {
         kind = "LIFE",
         heightFt = 9,
@@ -57513,6 +58229,7 @@ return {
       spriteBack = "gen/battlers/717b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "BIRD",
       dexEntry = {
         kind = "DESTRUCTION",
         heightFt = 19,
@@ -57588,6 +58305,7 @@ return {
       spriteBack = "gen/battlers/718b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "SNAKE",
       dexEntry = {
         kind = "ORDER",
         heightFt = 16,
@@ -57671,6 +58389,7 @@ return {
       spriteBack = "gen/battlers/719b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "FAIRY",
       dexEntry = {
         kind = "JEWEL",
         heightFt = 2,
@@ -57762,6 +58481,7 @@ return {
       spriteBack = "gen/battlers/720b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "MON",
       dexEntry = {
         kind = "MISCHIEF",
         heightFt = 1,
@@ -57857,6 +58577,7 @@ return {
       spriteBack = "gen/battlers/721b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "QUADRUPED",
       dexEntry = {
         kind = "STEAM",
         heightFt = 5,
@@ -57942,6 +58663,7 @@ return {
       spriteBack = "gen/battlers/722b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "BIRD",
       dexEntry = {
         kind = "GRASS QUILL",
         heightFt = 1,
@@ -58019,6 +58741,7 @@ return {
       spriteBack = "gen/battlers/723b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "BIRD",
       dexEntry = {
         kind = "BLADE QUILL",
         heightFt = 2,
@@ -58090,6 +58813,7 @@ return {
       spriteBack = "gen/battlers/724b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "BIRD",
       dexEntry = {
         kind = "ARROW QUILL",
         heightFt = 5,
@@ -58175,6 +58899,7 @@ return {
       spriteBack = "gen/battlers/725b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "QUADRUPED",
       dexEntry = {
         kind = "FIRE CAT",
         heightFt = 1,
@@ -58252,6 +58977,7 @@ return {
       spriteBack = "gen/battlers/726b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "QUADRUPED",
       dexEntry = {
         kind = "FIRE CAT",
         heightFt = 2,
@@ -58323,6 +59049,7 @@ return {
       spriteBack = "gen/battlers/727b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "MON",
       dexEntry = {
         kind = "HEEL",
         heightFt = 5,
@@ -58408,6 +59135,7 @@ return {
       spriteBack = "gen/battlers/728b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "WATER",
       dexEntry = {
         kind = "SEA LION",
         heightFt = 1,
@@ -58485,6 +59213,7 @@ return {
       spriteBack = "gen/battlers/729b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "WATER",
       dexEntry = {
         kind = "POP STAR",
         heightFt = 2,
@@ -58556,6 +59285,7 @@ return {
       spriteBack = "gen/battlers/730b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "WATER",
       dexEntry = {
         kind = "SOLOIST",
         heightFt = 5,
@@ -58641,6 +59371,7 @@ return {
       spriteBack = "gen/battlers/731b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "BIRD",
       dexEntry = {
         kind = "WOODPECKER",
         heightFt = 1,
@@ -58726,6 +59457,7 @@ return {
       spriteBack = "gen/battlers/732b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "BIRD",
       dexEntry = {
         kind = "BUGLE BEAK",
         heightFt = 2,
@@ -58805,6 +59537,7 @@ return {
       spriteBack = "gen/battlers/733b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "BIRD",
       dexEntry = {
         kind = "CANNON",
         heightFt = 3,
@@ -58902,6 +59635,7 @@ return {
       spriteBack = "gen/battlers/734b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "QUADRUPED",
       dexEntry = {
         kind = "LOITERING",
         heightFt = 1,
@@ -58993,6 +59727,7 @@ return {
       spriteBack = "gen/battlers/735b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "QUADRUPED",
       dexEntry = {
         kind = "STAKEOUT",
         heightFt = 2,
@@ -59062,6 +59797,7 @@ return {
       spriteBack = "gen/battlers/736b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "BUG",
       dexEntry = {
         kind = "LARVA",
         heightFt = 1,
@@ -59136,6 +59872,7 @@ return {
       spriteBack = "gen/battlers/737b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "SNAKE",
       dexEntry = {
         kind = "BATTERY",
         heightFt = 1,
@@ -59199,6 +59936,7 @@ return {
       spriteBack = "gen/battlers/738b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "BUG",
       dexEntry = {
         kind = "STAG BEETLE",
         heightFt = 4,
@@ -59284,6 +60022,7 @@ return {
       spriteBack = "gen/battlers/739b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "BUG",
       dexEntry = {
         kind = "BOXING",
         heightFt = 2,
@@ -59363,6 +60102,7 @@ return {
       spriteBack = "gen/battlers/740b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "BUG",
       dexEntry = {
         kind = "WOOLLY CRAB",
         heightFt = 5,
@@ -59454,6 +60194,7 @@ return {
       spriteBack = "gen/battlers/741b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "BIRD",
       dexEntry = {
         kind = "DANCING",
         heightFt = 2,
@@ -59527,6 +60268,7 @@ return {
       spriteBack = "gen/battlers/742b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "BUG",
       dexEntry = {
         kind = "BEE FLY",
         heightFt = 0,
@@ -59586,6 +60328,7 @@ return {
       spriteBack = "gen/battlers/743b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "BUG",
       dexEntry = {
         kind = "BEE FLY",
         heightFt = 0,
@@ -59671,6 +60414,7 @@ return {
       spriteBack = "gen/battlers/744b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "QUADRUPED",
       dexEntry = {
         kind = "PUPPY",
         heightFt = 1,
@@ -59742,6 +60486,7 @@ return {
       spriteBack = "gen/battlers/745b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "QUADRUPED",
       dexEntry = {
         kind = "WOLF",
         heightFt = 2,
@@ -59821,6 +60566,7 @@ return {
       spriteBack = "gen/battlers/746b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "WATER",
       dexEntry = {
         kind = "SMALL FRY",
         heightFt = 0,
@@ -59898,6 +60644,7 @@ return {
       spriteBack = "gen/battlers/747b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "WATER",
       dexEntry = {
         kind = "BRUTAL STAR",
         heightFt = 1,
@@ -59961,6 +60708,7 @@ return {
       spriteBack = "gen/battlers/748b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "WATER",
       dexEntry = {
         kind = "BRUTAL STAR",
         heightFt = 2,
@@ -60042,6 +60790,7 @@ return {
       spriteBack = "gen/battlers/749b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "QUADRUPED",
       dexEntry = {
         kind = "DONKEY",
         heightFt = 3,
@@ -60109,6 +60858,7 @@ return {
       spriteBack = "gen/battlers/750b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "QUADRUPED",
       dexEntry = {
         kind = "DRAFT HORSE",
         heightFt = 8,
@@ -60194,6 +60944,7 @@ return {
       spriteBack = "gen/battlers/751b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "WATER",
       dexEntry = {
         kind = "WATER BUBBLE",
         heightFt = 1,
@@ -60265,6 +61016,7 @@ return {
       spriteBack = "gen/battlers/752b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "BUG",
       dexEntry = {
         kind = "WATER BUBBLE",
         heightFt = 5,
@@ -60342,6 +61094,7 @@ return {
       spriteBack = "gen/battlers/753b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "GRASS",
       dexEntry = {
         kind = "SICKLE GRASS",
         heightFt = 1,
@@ -60405,6 +61158,7 @@ return {
       spriteBack = "gen/battlers/754b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "GRASS",
       dexEntry = {
         kind = "BLOOM SICKLE",
         heightFt = 2,
@@ -60486,6 +61240,7 @@ return {
       spriteBack = "gen/battlers/755b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "GRASS",
       dexEntry = {
         kind = "ILLUMINATING",
         heightFt = 0,
@@ -60553,6 +61308,7 @@ return {
       spriteBack = "gen/battlers/756b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "GRASS",
       dexEntry = {
         kind = "ILLUMINATING",
         heightFt = 3,
@@ -60638,6 +61394,7 @@ return {
       spriteBack = "gen/battlers/757b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "QUADRUPED",
       dexEntry = {
         kind = "TOXIC LIZARD",
         heightFt = 2,
@@ -60705,6 +61462,7 @@ return {
       spriteBack = "gen/battlers/758b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "QUADRUPED",
       dexEntry = {
         kind = "TOXIC LIZARD",
         heightFt = 3,
@@ -60790,6 +61548,7 @@ return {
       spriteBack = "gen/battlers/759b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "QUADRUPED",
       dexEntry = {
         kind = "FLAILING",
         heightFt = 1,
@@ -60861,6 +61620,7 @@ return {
       spriteBack = "gen/battlers/760b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "MON",
       dexEntry = {
         kind = "STRONG ARM",
         heightFt = 6,
@@ -60934,6 +61694,7 @@ return {
       spriteBack = "gen/battlers/761b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "GRASS",
       dexEntry = {
         kind = "FRUIT",
         heightFt = 1,
@@ -60999,6 +61760,7 @@ return {
       spriteBack = "gen/battlers/762b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "GRASS",
       dexEntry = {
         kind = "FRUIT",
         heightFt = 2,
@@ -61062,6 +61824,7 @@ return {
       spriteBack = "gen/battlers/763b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "GRASS",
       dexEntry = {
         kind = "FRUIT",
         heightFt = 3,
@@ -61157,6 +61920,7 @@ return {
       spriteBack = "gen/battlers/764b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "FAIRY",
       dexEntry = {
         kind = "POSY PICKER",
         heightFt = 0,
@@ -61236,6 +62000,7 @@ return {
       spriteBack = "gen/battlers/765b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "MON",
       dexEntry = {
         kind = "SAGE",
         heightFt = 4,
@@ -61315,6 +62080,7 @@ return {
       spriteBack = "gen/battlers/766b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "MON",
       dexEntry = {
         kind = "TEAMWORK",
         heightFt = 6,
@@ -61351,6 +62117,7 @@ return {
       spriteBack = "gen/battlers/767b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "WATER",
       dexEntry = {
         kind = "TURN TAIL",
         heightFt = 1,
@@ -61426,6 +62193,7 @@ return {
       spriteBack = "gen/battlers/768b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "BUG",
       dexEntry = {
         kind = "HARD SCALE",
         heightFt = 6,
@@ -61511,6 +62279,7 @@ return {
       spriteBack = "gen/battlers/769b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "SNAKE",
       dexEntry = {
         kind = "SAND HEAP",
         heightFt = 1,
@@ -61582,6 +62351,7 @@ return {
       spriteBack = "gen/battlers/770b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "SNAKE",
       dexEntry = {
         kind = "SAND CASTLE",
         heightFt = 4,
@@ -61661,6 +62431,7 @@ return {
       spriteBack = "gen/battlers/771b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "SNAKE",
       dexEntry = {
         kind = "SEA CUCUMBER",
         heightFt = 1,
@@ -61742,6 +62513,7 @@ return {
       spriteBack = "gen/battlers/772b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "QUADRUPED",
       dexEntry = {
         kind = "SYNTHETIC",
         heightFt = 6,
@@ -61813,6 +62585,7 @@ return {
       spriteBack = "gen/battlers/773b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "QUADRUPED",
       dexEntry = {
         kind = "SYNTHETIC",
         heightFt = 7,
@@ -61900,6 +62673,7 @@ return {
       spriteBack = "gen/battlers/774b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "BIRD",
       dexEntry = {
         kind = "METEOR",
         heightFt = 1,
@@ -61975,6 +62749,7 @@ return {
       spriteBack = "gen/battlers/775b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "MON",
       dexEntry = {
         kind = "DROWSING",
         heightFt = 1,
@@ -62058,6 +62833,7 @@ return {
       spriteBack = "gen/battlers/776b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "SNAKE",
       dexEntry = {
         kind = "BLAST TURTLE",
         heightFt = 6,
@@ -62137,6 +62913,7 @@ return {
       spriteBack = "gen/battlers/777b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "MON",
       dexEntry = {
         kind = "ROLY-POLY",
         heightFt = 1,
@@ -62208,6 +62985,7 @@ return {
       spriteBack = "gen/battlers/778b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "SNAKE",
       dexEntry = {
         kind = "DISGUISE",
         heightFt = 0,
@@ -62283,6 +63061,7 @@ return {
       spriteBack = "gen/battlers/779b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "WATER",
       dexEntry = {
         kind = "GNASH TEETH",
         heightFt = 2,
@@ -62358,6 +63137,7 @@ return {
       spriteBack = "gen/battlers/780b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "SNAKE",
       dexEntry = {
         kind = "PLACID",
         heightFt = 9,
@@ -62453,6 +63233,7 @@ return {
       spriteBack = "gen/battlers/781b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "GRASS",
       dexEntry = {
         kind = "SEA CREEPER",
         heightFt = 12,
@@ -62534,6 +63315,7 @@ return {
       spriteBack = "gen/battlers/782b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "QUADRUPED",
       dexEntry = {
         kind = "SCALY",
         heightFt = 2,
@@ -62611,6 +63393,7 @@ return {
       spriteBack = "gen/battlers/783b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "SNAKE",
       dexEntry = {
         kind = "SCALY",
         heightFt = 3,
@@ -62690,6 +63473,7 @@ return {
       spriteBack = "gen/battlers/784b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "SNAKE",
       dexEntry = {
         kind = "SCALY",
         heightFt = 5,
@@ -62781,6 +63565,7 @@ return {
       spriteBack = "gen/battlers/785b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "FAIRY",
       dexEntry = {
         kind = "LAND SPIRIT",
         heightFt = 5,
@@ -62872,6 +63657,7 @@ return {
       spriteBack = "gen/battlers/786b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "FAIRY",
       dexEntry = {
         kind = "LAND SPIRIT",
         heightFt = 3,
@@ -62963,6 +63749,7 @@ return {
       spriteBack = "gen/battlers/787b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "GRASS",
       dexEntry = {
         kind = "LAND SPIRIT",
         heightFt = 6,
@@ -63058,6 +63845,7 @@ return {
       spriteBack = "gen/battlers/788b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "WATER",
       dexEntry = {
         kind = "LAND SPIRIT",
         heightFt = 4,
@@ -63094,6 +63882,7 @@ return {
       spriteBack = "gen/battlers/789b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "MON",
       dexEntry = {
         kind = "NEBULA",
         heightFt = 0,
@@ -63135,6 +63924,7 @@ return {
       spriteBack = "gen/battlers/790b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "MON",
       dexEntry = {
         kind = "PROTOSTAR",
         heightFt = 0,
@@ -63214,6 +64004,7 @@ return {
       spriteBack = "gen/battlers/791b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "QUADRUPED",
       dexEntry = {
         kind = "SUNNE",
         heightFt = 11,
@@ -63293,6 +64084,7 @@ return {
       spriteBack = "gen/battlers/792b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "BIRD",
       dexEntry = {
         kind = "MOONE",
         heightFt = 13,
@@ -63384,6 +64176,7 @@ return {
       spriteBack = "gen/battlers/793b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "WATER",
       dexEntry = {
         kind = "PARASITE",
         heightFt = 3,
@@ -63471,6 +64264,7 @@ return {
       spriteBack = "gen/battlers/794b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "WATER",
       dexEntry = {
         kind = "SWOLLEN",
         heightFt = 7,
@@ -63558,6 +64352,7 @@ return {
       spriteBack = "gen/battlers/795b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "BUG",
       dexEntry = {
         kind = "LISSOME",
         heightFt = 5,
@@ -63645,6 +64440,7 @@ return {
       spriteBack = "gen/battlers/796b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "MON",
       dexEntry = {
         kind = "GLOWING",
         heightFt = 12,
@@ -63732,6 +64528,7 @@ return {
       spriteBack = "gen/battlers/797b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "BIRD",
       dexEntry = {
         kind = "LAUNCH",
         heightFt = 30,
@@ -63819,6 +64616,7 @@ return {
       spriteBack = "gen/battlers/798b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "GRASS",
       dexEntry = {
         kind = "DRAWN SWORD",
         heightFt = 1,
@@ -63910,6 +64708,7 @@ return {
       spriteBack = "gen/battlers/799b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "SNAKE",
       dexEntry = {
         kind = "JUNKIVORE",
         heightFt = 18,
@@ -63985,6 +64784,7 @@ return {
       spriteBack = "gen/battlers/800b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "MON",
       dexEntry = {
         kind = "PRISM",
         heightFt = 7,
@@ -64076,6 +64876,7 @@ return {
       spriteBack = "gen/battlers/801b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "FAIRY",
       dexEntry = {
         kind = "ARTIFICIAL",
         heightFt = 3,
@@ -64151,6 +64952,7 @@ return {
       spriteBack = "gen/battlers/802b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "MON",
       dexEntry = {
         kind = "GLOOMDWELLER",
         heightFt = 2,
@@ -64224,6 +65026,7 @@ return {
       spriteBack = "gen/battlers/803b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "MON",
       dexEntry = {
         kind = "POISON PIN",
         heightFt = 2,
@@ -64295,6 +65098,7 @@ return {
       spriteBack = "gen/battlers/804b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "BIRD",
       dexEntry = {
         kind = "POISON PIN",
         heightFt = 11,
@@ -64382,6 +65186,7 @@ return {
       spriteBack = "gen/battlers/805b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "QUADRUPED",
       dexEntry = {
         kind = "RAMPART",
         heightFt = 18,
@@ -64469,6 +65274,7 @@ return {
       spriteBack = "gen/battlers/806b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "MON",
       dexEntry = {
         kind = "FIREWORKS",
         heightFt = 5,
@@ -64548,6 +65354,7 @@ return {
       spriteBack = "gen/battlers/807b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "MON",
       dexEntry = {
         kind = "THUNDERCLAP",
         heightFt = 4,
@@ -64621,6 +65428,7 @@ return {
       spriteBack = "gen/battlers/810b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "GRASS",
       dexEntry = {
         kind = "CHIMP",
         heightFt = 1,
@@ -64686,6 +65494,7 @@ return {
       spriteBack = "gen/battlers/811b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "GRASS",
       dexEntry = {
         kind = "BEAT",
         heightFt = 2,
@@ -64749,6 +65558,7 @@ return {
       spriteBack = "gen/battlers/812b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "GRASS",
       dexEntry = {
         kind = "DRUMMER",
         heightFt = 6,
@@ -64830,6 +65640,7 @@ return {
       spriteBack = "gen/battlers/819b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "MON",
       dexEntry = {
         kind = "CHEEKY",
         heightFt = 1,
@@ -64897,6 +65708,7 @@ return {
       spriteBack = "gen/battlers/820b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "MON",
       dexEntry = {
         kind = "GREEDY",
         heightFt = 2,
@@ -64970,6 +65782,7 @@ return {
       spriteBack = "gen/battlers/821b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "BIRD",
       dexEntry = {
         kind = "TINY BIRD",
         heightFt = 0,
@@ -65035,6 +65848,7 @@ return {
       spriteBack = "gen/battlers/822b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "BIRD",
       dexEntry = {
         kind = "RAVEN",
         heightFt = 2,
@@ -65094,6 +65908,7 @@ return {
       spriteBack = "gen/battlers/823b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "BIRD",
       dexEntry = {
         kind = "RAVEN",
         heightFt = 7,
@@ -65167,6 +65982,7 @@ return {
       spriteBack = "gen/battlers/827b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "QUADRUPED",
       dexEntry = {
         kind = "FOX",
         heightFt = 2,
@@ -65230,6 +66046,7 @@ return {
       spriteBack = "gen/battlers/828b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "QUADRUPED",
       dexEntry = {
         kind = "FOX",
         heightFt = 3,
@@ -65303,6 +66120,7 @@ return {
       spriteBack = "gen/battlers/829b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "GRASS",
       dexEntry = {
         kind = "FLOWERING",
         heightFt = 1,
@@ -65366,6 +66184,7 @@ return {
       spriteBack = "gen/battlers/830b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "GRASS",
       dexEntry = {
         kind = "COTTON BLOOM",
         heightFt = 1,
@@ -65431,6 +66250,7 @@ return {
       spriteBack = "gen/battlers/833b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "QUADRUPED",
       dexEntry = {
         kind = "SNAPPING",
         heightFt = 1,
@@ -65486,6 +66306,7 @@ return {
       spriteBack = "gen/battlers/834b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "QUADRUPED",
       dexEntry = {
         kind = "BITE",
         heightFt = 3,
@@ -65559,6 +66380,7 @@ return {
       spriteBack = "gen/battlers/835b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "QUADRUPED",
       dexEntry = {
         kind = "PUPPY",
         heightFt = 1,
@@ -65622,6 +66444,7 @@ return {
       spriteBack = "gen/battlers/836b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "QUADRUPED",
       dexEntry = {
         kind = "DOG",
         heightFt = 3,
@@ -65658,6 +66481,7 @@ return {
       spriteBack = "gen/battlers/840b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "SNAKE",
       dexEntry = {
         kind = "APPLE CORE",
         heightFt = 0,
@@ -65733,6 +66557,7 @@ return {
       spriteBack = "gen/battlers/842b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "QUADRUPED",
       dexEntry = {
         kind = "APPLE NECTAR",
         heightFt = 1,
@@ -65796,6 +66621,7 @@ return {
       spriteBack = "gen/battlers/845b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "BIRD",
       dexEntry = {
         kind = "GULP",
         heightFt = 2,
@@ -65832,6 +66658,7 @@ return {
       spriteBack = "gen/battlers/848b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "MON",
       dexEntry = {
         kind = "BABY",
         heightFt = 1,
@@ -65915,6 +66742,7 @@ return {
       spriteBack = "gen/battlers/849b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "MON",
       dexEntry = {
         kind = "PUNK",
         heightFt = 5,
@@ -65996,6 +66824,7 @@ return {
       spriteBack = "gen/battlers/850b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "WATER",
       dexEntry = {
         kind = "RADIATOR",
         heightFt = 2,
@@ -66063,6 +66892,7 @@ return {
       spriteBack = "gen/battlers/851b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "WATER",
       dexEntry = {
         kind = "RADIATOR",
         heightFt = 9,
@@ -66134,6 +66964,7 @@ return {
       spriteBack = "gen/battlers/854b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "MON",
       dexEntry = {
         kind = "BLACK TEA",
         heightFt = 0,
@@ -66213,6 +67044,7 @@ return {
       spriteBack = "gen/battlers/865b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "BIRD",
       dexEntry = {
         kind = "WILD DUCK",
         heightFt = 2,
@@ -66288,6 +67120,7 @@ return {
       spriteBack = "gen/battlers/866b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "QUADRUPED",
       dexEntry = {
         kind = "SEED",
         heightFt = 7,
@@ -66351,6 +67184,7 @@ return {
       spriteBack = "gen/battlers/867b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "SNAKE",
       dexEntry = {
         kind = "FLAME",
         heightFt = 5,
@@ -66414,6 +67248,7 @@ return {
       spriteBack = "gen/battlers/868b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "BIRD",
       dexEntry = {
         kind = "FLAME",
         heightFt = 5,
@@ -66485,6 +67320,7 @@ return {
       spriteBack = "gen/battlers/869b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "WATER",
       dexEntry = {
         kind = "SHELLFISH",
         heightFt = 5,
@@ -66564,6 +67400,7 @@ return {
       spriteBack = "gen/battlers/870b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "BUG",
       dexEntry = {
         kind = "POISON BEE",
         heightFt = 4,
@@ -66647,6 +67484,7 @@ return {
       spriteBack = "gen/battlers/871b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "BIRD",
       dexEntry = {
         kind = "BIRD",
         heightFt = 7,
@@ -66718,6 +67556,7 @@ return {
       spriteBack = "gen/battlers/872b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "MON",
       dexEntry = {
         kind = "PSI",
         heightFt = 3,
@@ -66801,6 +67640,7 @@ return {
       spriteBack = "gen/battlers/873b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "WATER",
       dexEntry = {
         kind = "HERMIT CRAB",
         heightFt = 6,
@@ -66872,6 +67712,7 @@ return {
       spriteBack = "gen/battlers/874b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "MON",
       dexEntry = {
         kind = "SHADOW",
         heightFt = 4,
@@ -66955,6 +67796,7 @@ return {
       spriteBack = "gen/battlers/875b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "MON",
       dexEntry = {
         kind = "PARENT",
         heightFt = 7,
@@ -67038,6 +67880,7 @@ return {
       spriteBack = "gen/battlers/876b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "BUG",
       dexEntry = {
         kind = "STAG BEETLE",
         heightFt = 5,
@@ -67121,6 +67964,7 @@ return {
       spriteBack = "gen/battlers/877b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "SNAKE",
       dexEntry = {
         kind = "ATROCIOUS",
         heightFt = 21,
@@ -67200,6 +68044,7 @@ return {
       spriteBack = "gen/battlers/878b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "BIRD",
       dexEntry = {
         kind = "FOSSIL",
         heightFt = 6,
@@ -67287,6 +68132,7 @@ return {
       spriteBack = "gen/battlers/879b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "SNAKE",
       dexEntry = {
         kind = "LIGHT",
         heightFt = 4,
@@ -67378,6 +68224,7 @@ return {
       spriteBack = "gen/battlers/880b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "SNAKE",
       dexEntry = {
         kind = "IRON SNAKE",
         heightFt = 34,
@@ -67449,6 +68296,7 @@ return {
       spriteBack = "gen/battlers/881b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "BUG",
       dexEntry = {
         kind = "PINCER",
         heightFt = 6,
@@ -67528,6 +68376,7 @@ return {
       spriteBack = "gen/battlers/882b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "BUG",
       dexEntry = {
         kind = "SINGLE HORN",
         heightFt = 5,
@@ -67615,6 +68464,7 @@ return {
       spriteBack = "gen/battlers/883b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "QUADRUPED",
       dexEntry = {
         kind = "DARK",
         heightFt = 6,
@@ -67690,6 +68540,7 @@ return {
       spriteBack = "gen/battlers/884b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "GRASS",
       dexEntry = {
         kind = "FOREST",
         heightFt = 6,
@@ -67765,6 +68616,7 @@ return {
       spriteBack = "gen/battlers/885b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "MON",
       dexEntry = {
         kind = "BLAZE",
         heightFt = 6,
@@ -67840,6 +68692,7 @@ return {
       spriteBack = "gen/battlers/886b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "WATER",
       dexEntry = {
         kind = "MUD FISH",
         heightFt = 6,
@@ -67915,6 +68768,7 @@ return {
       spriteBack = "gen/battlers/887b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "FAIRY",
       dexEntry = {
         kind = "EMBRACE",
         heightFt = 5,
@@ -68010,6 +68864,7 @@ return {
       spriteBack = "gen/battlers/888b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "MON",
       dexEntry = {
         kind = "DARKNESS",
         heightFt = 1,
@@ -68097,6 +68952,7 @@ return {
       spriteBack = "gen/battlers/889b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "FAIRY",
       dexEntry = {
         kind = "DECEIVER",
         heightFt = 3,
@@ -68180,6 +69036,7 @@ return {
       spriteBack = "gen/battlers/890b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "MON",
       dexEntry = {
         kind = "IRON ARMOR",
         heightFt = 7,
@@ -68275,6 +69132,7 @@ return {
       spriteBack = "gen/battlers/891b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "MON",
       dexEntry = {
         kind = "MEDITATE",
         heightFt = 4,
@@ -68346,6 +69204,7 @@ return {
       spriteBack = "gen/battlers/892b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "QUADRUPED",
       dexEntry = {
         kind = "DISCHARGE",
         heightFt = 5,
@@ -68413,6 +69272,7 @@ return {
       spriteBack = "gen/battlers/893b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "WATER",
       dexEntry = {
         kind = "BRUTAL",
         heightFt = 8,
@@ -68496,6 +69356,7 @@ return {
       spriteBack = "gen/battlers/894b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "QUADRUPED",
       dexEntry = {
         kind = "ERUPTION",
         heightFt = 8,
@@ -68571,6 +69432,7 @@ return {
       spriteBack = "gen/battlers/895b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "BIRD",
       dexEntry = {
         kind = "HUMMING",
         heightFt = 4,
@@ -68662,6 +69524,7 @@ return {
       spriteBack = "gen/battlers/896b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "MON",
       dexEntry = {
         kind = "MARIONETTE",
         heightFt = 3,
@@ -68737,6 +69600,7 @@ return {
       spriteBack = "gen/battlers/897b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "QUADRUPED",
       dexEntry = {
         kind = "DISASTER",
         heightFt = 3,
@@ -68808,6 +69672,7 @@ return {
       spriteBack = "gen/battlers/898b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "MON",
       dexEntry = {
         kind = "FACE",
         heightFt = 6,
@@ -68875,6 +69740,7 @@ return {
       spriteBack = "gen/battlers/899b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "QUADRUPED",
       dexEntry = {
         kind = "DRAGON",
         heightFt = 5,
@@ -68946,6 +69812,7 @@ return {
       spriteBack = "gen/battlers/900b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "MON",
       dexEntry = {
         kind = "IRON LEG",
         heightFt = 8,
@@ -69037,6 +69904,7 @@ return {
       spriteBack = "gen/battlers/901b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "BIRD",
       dexEntry = {
         kind = "EON",
         heightFt = 5,
@@ -69128,6 +69996,7 @@ return {
       spriteBack = "gen/battlers/902b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "BIRD",
       dexEntry = {
         kind = "EON",
         heightFt = 7,
@@ -69207,6 +70076,7 @@ return {
       spriteBack = "gen/battlers/903b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "MON",
       dexEntry = {
         kind = "RABBIT",
         heightFt = 4,
@@ -69270,6 +70140,7 @@ return {
       spriteBack = "gen/battlers/904b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "SNAKE",
       dexEntry = {
         kind = "MACH",
         heightFt = 6,
@@ -69353,6 +70224,7 @@ return {
       spriteBack = "gen/battlers/905b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "MON",
       dexEntry = {
         kind = "AURA",
         heightFt = 4,
@@ -69416,6 +70288,7 @@ return {
       spriteBack = "gen/battlers/906b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "GRASS",
       dexEntry = {
         kind = "FROST TREE",
         heightFt = 8,
@@ -69507,6 +70380,7 @@ return {
       spriteBack = "gen/battlers/907b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "FAIRY",
       dexEntry = {
         kind = "HEARING",
         heightFt = 4,
@@ -69590,6 +70464,7 @@ return {
       spriteBack = "gen/battlers/908b.png",
       frontSize = 7,
       trueColor = true,
+      icon = "FAIRY",
       dexEntry = {
         kind = "JEWEL",
         heightFt = 3,

@@ -118,6 +118,32 @@ EVO_LEVEL_APPROX = {
     "HasMove": 32, "HasInParty": 32, "Location": 32,
     "HoldItem": 38, "DayHoldItem": 38, "NightHoldItem": 38,
 }
+# trade evolutions become level-ups (no link cable needed): plain trades
+# land where those lines naturally peak, held-item trades a bit later
+EVO_TRADE_LEVEL = 37
+EVO_TRADE_ITEM_LEVEL = 42
+
+# party menu icon: the engine's built-in Gen 1 icon classes, picked by
+# Essentials body shape first (2 serpentine, 3 fins, 10 tentacles,
+# 8 quadruped, 9 winged, 13/14 insectoid), type second, monster last
+ICON_BY_SHAPE = {
+    2: "SNAKE", 3: "WATER", 10: "WATER", 8: "QUADRUPED",
+    9: "BIRD", 13: "BUG", 14: "BUG",
+}
+ICON_BY_TYPE = {
+    "GRASS": "GRASS", "BUG": "BUG", "WATER": "WATER",
+    "FAIRY": "FAIRY", "FLYING": "BIRD", "DRAGON": "SNAKE",
+}
+
+
+def icon_for(shape, types):
+    icon = ICON_BY_SHAPE.get(shape)
+    if icon:
+        return icon
+    for t in types:
+        if t in ICON_BY_TYPE:
+            return ICON_BY_TYPE[t]
+    return "MON"
 
 TILE = 8
 FRONT_TARGET_PX = 56   # native Gen 1 front pic, drawn at 1x everywhere
@@ -235,6 +261,7 @@ def parse_pokemon(path):
             "pokedex": f.get("Pokedex", ""),
             "heightM": float(f.get("Height", 0) or 0),
             "weightKg": float(f.get("Weight", 0) or 0),
+            "shape": int(f.get("Shape", 0) or 0),
         })
     return species
 
@@ -480,6 +507,7 @@ def build_mega_output(megas, species_recs, species_raw, opts, report,
         rec["spriteBack"] = "gen/battlers/%03db.png" % next_dex
         rec["frontSize"] = 7
         rec["trueColor"] = True
+        rec["icon"] = icon_for(raw["shape"], rec["types"])
         rec["dexEntry"] = dex_entry({
             "id": rec["id"], "kind": raw["kind"],
             "heightM": mg["heightM"] or raw["heightM"],
@@ -563,11 +591,13 @@ def build_species_output(species, move_ids, real_type_ids, opts, report,
                     report.append("species %s: %s condition dropped, plain "
                                   "level %s" % (sp["id"], method, param))
             elif method == "Trade":
-                evos.append(OrderedDict([("method", "TRADE"),
+                level = EVO_TRADE_ITEM_LEVEL if param else EVO_TRADE_LEVEL
+                evos.append(OrderedDict([("method", "LEVEL"),
+                                         ("level", level),
                                          ("species", target)]))
-                if param:
-                    report.append("species %s: trade held item %s ignored"
-                                  % (sp["id"], param))
+                report.append("species %s: Trade%s -> level %d"
+                              % (sp["id"],
+                                 param and "(%s)" % param or "", level))
             elif method in ("Item", "ItemMale", "ItemFemale"):
                 stone = EVO_ITEM_MAP.get(param) or EVO_ITEM_APPROX.get(param)
                 if stone:
@@ -616,6 +646,7 @@ def build_species_output(species, move_ids, real_type_ids, opts, report,
                            for lvl, mv in learn]
         rec["evolutions"] = evos
         rec.update(sprite_fields(sp["dex"], opts.battlers, report))
+        rec["icon"] = icon_for(sp["shape"], rec["types"])
         rec["dexEntry"] = dex_entry(sp, dex_texts)
         out.append(rec)
     if deferred_evos:
