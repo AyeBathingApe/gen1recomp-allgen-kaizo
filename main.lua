@@ -509,13 +509,18 @@ return function(mod)
       -- matches its PBS spelling (BULBASAUR) must patch -- register
       -- collides against the engine's base data
       if pokemonReg:get(finalId) ~= nil then
-        -- vanilla species: Genesis balance in place, vanilla art kept
+        -- vanilla species: Genesis balance AND Genesis art, so the
+        -- classic 151 match the fan-made style of the rest of the dex
         pokemonReg:patch(finalId, {
           types = sp.types,
           baseStats = sp.baseStats,
           catchRate = sp.catchRate,
           baseExp = sp.baseExp,
           growthRate = sp.growthRate,
+          spriteFront = mod.path .. "/" .. sp.spriteFront,
+          spriteBack = mod.path .. "/" .. sp.spriteBack,
+          frontSize = sp.frontSize,
+          trueColor = true,
           level1Moves = aliasMoves(sp.level1Moves),
           learnset = (function()
             local rows = {}

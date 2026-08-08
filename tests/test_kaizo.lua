@@ -85,11 +85,12 @@ if hasGen then
     and Data.text[Data.pokemon.TOGEPI.dexEntry.text] ~= nil,
     "dex entry text id resolves through the text registry")
   -- The seeded base species was patched in place: Genesis types landed,
-  -- vanilla art fields stayed untouched, and no duplicate registration.
+  -- fan-made art replaced the vanilla pic, and no duplicate registration.
   T.check(Data.pokemon.BULBASAUR.types[1] == "GRASS",
     "vanilla-id species patched with Genesis types")
-  T.check(Data.pokemon.BULBASAUR.spriteFront == nil,
-    "vanilla-id species keeps vanilla art")
+  T.check(type(Data.pokemon.BULBASAUR.spriteFront) == "string"
+    and Data.pokemon.BULBASAUR.spriteFront:find("gen/battlers/001.png", 1, true) ~= nil,
+    "vanilla-id species patched with Genesis art")
 
   -- Integration: with the whole dex registered, the fixture trainer's
   -- bench fills to six from the Genesis pools, the route's rare tail

@@ -3,6 +3,17 @@
 All notable changes to this mod are documented here. Format follows
 [Keep a Changelog](https://keepachangelog.com/), versions follow semver.
 
+## 0.6.0 - 2026-08-08
+
+### Changed
+
+- The original 151 now use the RBGenesis fan-made battler art too (front
+  and back, full color), so the whole dex shares one aesthetic instead of
+  mixing vanilla Game Boy art with the imported style. The art was
+  already in the data pack -- the mod now patches it onto the vanilla
+  records alongside the Genesis balance. Disabling the mod still restores
+  vanilla art exactly.
+
 ## 0.5.0 - 2026-08-07
 
 ### Fixed
