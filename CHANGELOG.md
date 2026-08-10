@@ -3,6 +3,18 @@
 All notable changes to this mod are documented here. Format follows
 [Keep a Changelog](https://keepachangelog.com/), versions follow semver.
 
+## 0.8.3 - 2026-08-10
+
+### Fixed
+
+- Mega back sprites: the fan pack only draws dedicated back art for 4 of
+  the 43 mega forms, and the old fallback used the BASE species' back --
+  so a sent-out mega looked like its regular form from behind (reported
+  as "megas have no back sprite"). Megas without real back art now use
+  their own mega front, cropped and fitted to Gen 1 back dimensions, so
+  the battle view always shows the mega. Forms with genuine back art
+  (Ampharos, Gardevoir, Sableye, Lopunny) keep it.
+
 ## 0.8.2 - 2026-08-08
 
 ### Fixed

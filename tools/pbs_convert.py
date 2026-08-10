@@ -507,11 +507,13 @@ def build_mega_output(megas, species_recs, species_raw, opts, report,
             report.append("mega %s form %d: no battler art, skipped"
                           % (mg["base"], mg["form"]))
             continue
+        # back pic: the form's own back when the pack has one; otherwise
+        # the mega FRONT downscaled to back size -- the base species' back
+        # read as "my mega has no back sprite" to players
         back = os.path.join(opts.battlers,
                             "%03d_%db.png" % (raw["dex"], mg["form"]))
         if not os.path.exists(back):
-            back = os.path.join(opts.battlers, "%03db.png" % raw["dex"])
-            back = back if os.path.exists(back) else None
+            back = front
         suffix = ""
         m = re.search(r"\s([XY])$", mg["formName"] or "")
         if m:
@@ -823,10 +825,9 @@ def main():
             fit_sprite(front, os.path.join(dst, "%03d.png" % dex),
                        FRONT_TARGET_PX)
             copied += 1
-            if back:
-                fit_sprite(back, os.path.join(dst, "%03db.png" % dex),
-                           BACK_TARGET_PX)
-                copied += 1
+            fit_sprite(back, os.path.join(dst, "%03db.png" % dex),
+                       BACK_TARGET_PX)
+            copied += 1
         report.append("sprites: fitted %d battler pics to %s "
                       "(front <=%dpx, back <=%dpx)"
                       % (copied, dst, FRONT_TARGET_PX, BACK_TARGET_PX))
